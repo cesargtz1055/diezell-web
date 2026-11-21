@@ -46,3 +46,22 @@ body.dz3-sheet-open{overflow:hidden!important}
 @media(min-width:780px){body:has(.dz3-mini),body.dz3:has(.dz3-mini){padding-bottom:84px}.dz3-mini{bottom:0;min-height:72px}.dz3-mini-inner{width:min(100% - 56px,1220px)}.dz3-mini-progress{left:max(0px,calc((100% - 1220px)/2));right:max(0px,calc((100% - 1220px)/2))}.dz3-tabbar{display:none}.dz3-sheet-panel{border-radius:24px;align-self:center;padding:24px 30px 30px}.dz3-sheet-cover{width:200px}}
 @media(max-width:365px){.dz3-mini-inner{gap:5px;width:calc(100% - 14px)}.dz3-mini-cover{flex-basis:42px;width:42px;height:42px}.dz3-mini-icon{min-width:42px;min-height:42px}.dz3-mini-info strong{font-size:13px}}
 @media(prefers-reduced-motion:reduce){.dz3-sheet *{transition:none!important}}
+
+/* Archived features restyled, never hidden behind legacy system UI. */
+.dz3-album-embed{grid-column:1/-1;margin-top:10px;border-top:1px solid #48545e;padding-top:12px;color:#ede8e4}
+.dz3-album-embed summary{cursor:pointer;display:flex;align-items:center;min-height:44px;font-size:14px;font-weight:800;color:#ffbc9e}
+.dz3-album-embed iframe{display:block;width:100%;border:0;border-radius:12px;margin-top:14px;min-height:352px;background:#111}
+.dz3-photo-credit,.dz3-member-credit{margin-top:8px;font-size:12px;color:#d1d6dd}
+.dz3-photo-credit summary,.dz3-member-credit summary{min-height:36px;display:flex;align-items:center;cursor:pointer;font-weight:750;color:#ffbaa0}
+.dz3-photo-credit div,.dz3-member-credit div{padding:11px 0 5px;line-height:1.65}
+.dz3-photo-credit p,.dz3-member-credit p{margin:0}
+.dz3-photo-credit a,.dz3-member-credit a{color:#ffbaa0!important;text-decoration:underline;text-underline-offset:3px}
+.dz3-song-tracklist{max-width:810px;margin-top:18px;background:#192128;border:1px solid #47525f;border-radius:13px;padding:10px 16px}
+.dz3-song-tracklist summary{font-weight:800;color:#ffbd9f;cursor:pointer;padding:9px 0;min-height:42px;display:flex;align-items:center}
+.dz3-song-ol{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:0;counter-reset:song}
+.dz3-song-ol li{display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:center;gap:9px;border-top:1px solid #46505b;padding:13px 0;min-width:0;font-size:13px;line-height:1.5}
+.dz3-song-ol li .track-num{color:#afb6c0;font-variant-numeric:tabular-nums}
+.dz3-song-ol li .track-titulo{min-width:0;overflow-wrap:anywhere}
+.dz3-song-ol li .track-titulo a{color:#f6f2ed!important;text-decoration:none}
+.dz3-song-ol li .track-titulo a:hover{text-decoration:underline}
+.dz3-song-ol li .track-dur{color:#bcc4cd;font-variant-numeric:tabular-nums;white-space:nowrap}
