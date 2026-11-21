@@ -42,7 +42,7 @@ for figure in figures:
     anchor=re.search(r'<a\s+href="(https?://[^"]+)"',figure)
     href=anchor.group(1) if anchor else None
     link=('<a href="'+escape(href,quote=True)+'" target="_blank" rel="noopener">Ver fuente ↗</a>') if href else ''
-    credit_match=re.search(r'<div class="foto-popover"[^>]*>[\\s\\S]*?<p>([\\s\\S]*?)</p>',figure)
+    credit_match=re.search(r'<div class="foto-popover"[^>]*>[\s\S]*?<p>([\s\S]*?)</p>',figure)
     credit=credit_match.group(1) if credit_match else ''
     details=('<details class="dz3-photo-credit"><summary>Fotografía y créditos</summary><div>'+credit+'</div></details>') if credit else ''
     gallery.append('<figure class="dz3-photo"><img src="'+escape(src,quote=True)+'" alt="'+escape(description,quote=True)+'" loading="lazy" width="680" height="850">'
