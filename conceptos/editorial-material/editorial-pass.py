@@ -9,7 +9,7 @@ root=Path('site/nuevo')
 pages={
  'escuchar.html':{
   'intro':'Explora álbumes y sencillos, escucha adelantos y conoce la historia de cada canción.',
-  'nav':[('Álbumes','album-insania'),('Caótico','album-caotico')],
+  'nav':[('Álbumes','album-insania'),('Caótico','album-caotico'),('Escuchar adelantos','reproductor')],
   'labels':{'Reproductor':'Escucha y explora','Sencillos':'Canciones y sencillos'}},
  'en-vivo.html':{
   'intro':'Conoce los conciertos y registros audiovisuales disponibles en el archivo. Las fotografías y videos documentan presentaciones pasadas.',
