@@ -44,6 +44,13 @@ def check(root: Path) -> list[str]:
         require('id="dz3-sheet-spotify"' in html and
                 'id="dz3-sheet-youtube"' in html,
                 f"{page.relative_to(root)}: missing platform links")
+    # Every song page must also survive under /nuevo/, not only at the root.
+    for page in pages:
+        counterpart = root / "nuevo" / "canciones" / page.name
+        require(counterpart.is_file(), f"Missing /nuevo/ song page: {page.name}")
+        if counterpart.is_file():
+            require(page.read_bytes() == counterpart.read_bytes(),
+                    f"Song page differs from /nuevo/: {page.name}")
     app = root / "app.js"
     if app.is_file():
         require("PREVIEW_LIMIT_SECONDS = 90" in app.read_text(encoding="utf-8"),
