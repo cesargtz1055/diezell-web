@@ -10,7 +10,7 @@ def svg(paths):
     return '<svg viewBox="0 0 24 24" aria-hidden="true">'+paths+'</svg>'
 icons={
  'Inicio':svg('<path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V21h13V10.5"/><path d="M10 21v-7h4v7"/>'),
- 'Música':svg('<path d="M3.5 14a8.5 8.5 0 0 1 17 0"/><rect x="3  y="13" width="4.5" height="7" rx="1.5"/><rect x="16.5" y="13" width="4.5" height="7" rx="1.5"/>'),
+ 'Música':svg('<path d="M3.5 14a8.5 8.5 0 0 1 17 0"/><rect x="3" y="13" width="4.5" height="7" rx="1.5"/><rect x="16.5" y="13" width="4.5" height="7" rx="1.5"/>'),
  'En vivo':svg('<rect x="2.5" y="6" width="13" height="12" rx="2"/><path d="M15.5 10.5 21 7v10l-5.5-3.5"/>'),
  'Caóticos':svg('<path d="m12 3 2.7 5.8 6.3.7-4.7 4.3 1.3 6.2-5.6-3.2L6.4 20l1.3-6.2L3 9.5l6.3-.7z"/>'),
  'Banda':svg('<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5.5a3.5 3.5 0 0 1 0 5.5"/><path d="M17.5 14.5a6.5 6.5 0 0 1 4 5.5"/>')
@@ -52,22 +52,8 @@ sheet='''<section class="dz3-sheet" id="dz3-player-sheet" role="dialog" aria-mod
   <button id="dock-prev" type="button" aria-label="Canción anterior" hidden></button>
  </div>
 </section>'''
-# Restore the original two full-album Spotify embeds without eager-loading
-# third-party players or competing with the site's single audio element.
-from html import escape,unescape
-orig_music=Path('site/escuchar.html').read_text(encoding='utf-8')
-embeds=re.findall(r'<iframe[^>]*src="(https://open\.spotify\.com/embed/album/[^"]+)"',orig_music)
-assert len(embeds)==2,f'Expected two original Spotify album embeds, got {len(embeds)}'
-music_path=root/'escuchar.html'
-music_html=music_path.read_text(encoding='utf-8')
-for album_id,src in zip(('album-insania','album-caotico'),embeds):
-    details=('<details class="dz3-album-embed" data-embed-src="'+escape(unescape(src),quote=True)+'">'
-             '<summary>Escuchar álbum completo en Spotify</summary><div class="dz3-embed-target"></div></details>')
-    pattern=r'(<article class="dz3-album" id="'+album_id+r'">[\s\S]*?)(</article>)'
-    music_html,count=re.subn(pattern,lambda m:m.group(1)+details+m.group(2),music_html,count=1)
-    assert count==1,album_id
-music_path.write_text(music_html,encoding='utf-8')
-
+# The album section links to Spotify externally. Do not insert iframe players:
+# they duplicate the single preview engine and create competing audio.
 names=[('Inicio','index.html'),('Música','escuchar.html'),('En vivo','en-vivo.html'),('Caóticos','caoticos.html'),('Banda','banda.html')]
 for page in pages:
     depth=len(page.relative_to(root).parts)-1
