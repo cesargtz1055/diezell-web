@@ -90,7 +90,7 @@ jobs:
           links=list(dict.fromkeys(albums+singles))
           assert len(albums)==21 and len(links)==27, f'Unexpected catalog: {len(albums)} album tracks, {len(links)} unique songs'
           assert all((Path('site/nuevo')/path).is_file() for path in links), 'Song detail page missing'
-          Path('site/nuevo/dz3-links.js').write_text('window.DZ3_LINKS='+json.dumps(links,ensure_ascii=False)+';\\n',encoding='utf-8')
+          Path('site/nuevo/dz3-links.js').write_text('window.DZ3_LINKS='+json.dumps(links,ensure_ascii=False)+';',encoding='utf-8')
           print('Rebuilt Music with',len(links),'linked song pages')
           PY
           python3 - <<'PY'
