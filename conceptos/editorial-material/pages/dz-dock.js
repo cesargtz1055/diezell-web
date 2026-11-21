@@ -25,7 +25,8 @@
 
   function track(){
     const title=byId('dock-titulo')?.textContent?.trim();
-    return (window.DZ_FALLBACK||[]).find(item=>item.titulo===title)||null;
+    const album=byId('dock-album')?.textContent?.trim()||'';
+    return (window.DZ_FALLBACK||[]).find(item=>item.titulo===title && (!item.album || album.includes(item.album)))||null;
   }
   function formatSeconds(time){
     const seconds=Math.max(0,Math.floor(Number.isFinite(time)?time:0));
@@ -61,6 +62,13 @@
       else byId('dz3-sheet-youtube').removeAttribute('href');
       byId('dz3-sheet-spotify').hidden=!item.spotify;
       byId('dz3-sheet-youtube').hidden=!item.youtube;
+    } else {
+      // Never show links for a different song while metadata is loading.
+      ['dz3-sheet-spotify','dz3-sheet-youtube'].forEach(id=>{
+        const link=byId(id);
+        link.removeAttribute('href');
+        link.hidden=true;
+      });
     }
     const ended=audio.ended||(!audio.paused?false:t>=MAX_SECONDS-.05);
     byId('dz3-sheet-cta').hidden=!ended;
