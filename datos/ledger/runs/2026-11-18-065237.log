@@ -1,0 +1,178 @@
+=== CORTE DIARIO DIEZELL — 2026-11-18T06:52:37Z UTC / 2026-11-18 00:52 America/Mexico_City ===
+--- deezer.py ---
+[2026-11-18T00:52:38-06:00]   salto (ya existe corte de hoy): Deezer / deezer_fans / deezer
+[2026-11-18T00:52:38-06:00]   salto (ya existe corte de hoy): Deezer / deezer_albums / deezer
+[2026-11-18T00:52:39-06:00]   salto (ya existe corte de hoy): Deezer / deezer_track_rank / canción:Mi Más Sentido Pésame (Murió El Sentido Común)
+[2026-11-18T00:52:39-06:00]   salto (ya existe corte de hoy): Deezer / deezer_track_rank / canción:El Mejor De Mis Errores
+[2026-11-18T00:52:39-06:00]   salto (ya existe corte de hoy): Deezer / deezer_track_rank / canción:Sin Rencores
+[2026-11-18T00:52:39-06:00]   salto (ya existe corte de hoy): Deezer / deezer_track_rank / canción:De Espaldas
+[2026-11-18T00:52:39-06:00]   salto (ya existe corte de hoy): Deezer / deezer_track_rank / canción:El Último Soldado En Pie
+[2026-11-18T00:52:39-06:00]   Deezer: fans=884 álbumes=13 top=5 álbumes_listados=13
+[2026-11-18T00:52:39-06:00] OK deezer
+--- youtube_rss.py ---
+[2026-11-18T00:52:41-06:00]   salto (ya existe corte de hoy): YouTube RSS / youtube_video_feed_count / feed
+[2026-11-18T00:52:41-06:00]   salto (ya existe corte de hoy): YouTube RSS / youtube_video_new / video:Vex7ibUYCGE
+[2026-11-18T00:52:41-06:00]   salto (ya existe corte de hoy): YouTube RSS / youtube_video_new / video:dHO9zYdvqRw
+[2026-11-18T00:52:41-06:00]   salto (ya existe corte de hoy): YouTube RSS / youtube_video_new / video:dW5nYoljAiw
+[2026-11-18T00:52:41-06:00]   salto (ya existe corte de hoy): YouTube RSS / youtube_video_new / video:frybXWNuNFM
+[2026-11-18T00:52:41-06:00]   salto (ya existe corte de hoy): YouTube RSS / youtube_video_new / video:fluD9OwLufg
+[2026-11-18T00:52:41-06:00]   salto (ya existe corte de hoy): YouTube RSS / youtube_video_new / video:orkoavwSTpI
+[2026-11-18T00:52:41-06:00]   salto (ya existe corte de hoy): YouTube RSS / youtube_video_new / video:vkXMjq2s_5E
+[2026-11-18T00:52:41-06:00]   salto (ya existe corte de hoy): YouTube RSS / youtube_video_new / video:zK9zoSTwvXE
+[2026-11-18T00:52:41-06:00]   salto (ya existe corte de hoy): YouTube RSS / youtube_video_new / video:GqjEW2RTQPI
+[2026-11-18T00:52:41-06:00]   salto (ya existe corte de hoy): YouTube RSS / youtube_video_new / video:HzltKgR-Vro
+[2026-11-18T00:52:41-06:00]   salto (ya existe corte de hoy): YouTube RSS / youtube_video_new / video:vmbx7LKQhOA
+[2026-11-18T00:52:41-06:00]   salto (ya existe corte de hoy): YouTube RSS / youtube_video_new / video:2lrGUZnwr6Q
+[2026-11-18T00:52:41-06:00]   salto (ya existe corte de hoy): YouTube RSS / youtube_video_new / video:zaJliFVlAqI
+[2026-11-18T00:52:41-06:00]   salto (ya existe corte de hoy): YouTube RSS / youtube_video_new / video:zIoKeQzSpuQ
+[2026-11-18T00:52:41-06:00]   salto (ya existe corte de hoy): YouTube RSS / youtube_video_new / video:fwH6tZM-u5E
+[2026-11-18T00:52:41-06:00]   YouTube RSS: 15 videos en el feed, 0 nuevos
+[2026-11-18T00:52:41-06:00] OK youtube_rss
+--- youtube_public.py ---
+[2026-11-18T00:52:45-06:00]   salto (ya existe corte de hoy): YouTube / youtube_subscribers / canal
+[2026-11-18T00:52:45-06:00]   salto (ya existe corte de hoy): YouTube / youtube_videos_total / canal
+[2026-11-18T00:52:45-06:00]   YouTube canal: suscriptores y total de videos extraídos
+[2026-11-18T00:52:45-06:00] OK youtube_public
+--- youtube_video.py ---
+[2026-11-18T00:52:48-06:00]   salto (ya existe corte de hoy): YouTube / youtube_video_views / video:MuvgZpXqsY8
+[2026-11-18T00:52:48-06:00]   salto (ya existe corte de hoy): YouTube / youtube_video_likes / video:MuvgZpXqsY8
+[2026-11-18T00:52:48-06:00]   video MuvgZpXqsY8: views=575245 likes=8643 comentarios_incrustados=False
+[2026-11-18T00:52:49-06:00]   salto (ya existe corte de hoy): YouTube / youtube_video_views / video:tIEk-WAnrLE
+[2026-11-18T00:52:49-06:00]   video tIEk-WAnrLE: views=226699 likes=None comentarios_incrustados=False
+[2026-11-18T00:52:50-06:00]   salto (ya existe corte de hoy): YouTube / youtube_video_views / video:yUvkRgX-RC8
+[2026-11-18T00:52:50-06:00]   salto (ya existe corte de hoy): YouTube / youtube_video_likes / video:yUvkRgX-RC8
+[2026-11-18T00:52:50-06:00]   video yUvkRgX-RC8: views=58254 likes=1919 comentarios_incrustados=False
+[2026-11-18T00:52:52-06:00]   salto (ya existe corte de hoy): YouTube / youtube_video_views / video:Vex7ibUYCGE
+[2026-11-18T00:52:52-06:00]   salto (ya existe corte de hoy): YouTube / youtube_video_likes / video:Vex7ibUYCGE
+[2026-11-18T00:52:52-06:00]   video Vex7ibUYCGE: views=1815 likes=92 comentarios_incrustados=False
+[2026-11-18T00:52:53-06:00]   salto (ya existe corte de hoy): YouTube / youtube_video_views / video:dHO9zYdvqRw
+[2026-11-18T00:52:53-06:00]   video dHO9zYdvqRw: views=1425 likes=None comentarios_incrustados=False
+[2026-11-18T00:52:54-06:00]   salto (ya existe corte de hoy): YouTube / youtube_video_views / video:dW5nYoljAiw
+[2026-11-18T00:52:54-06:00]   salto (ya existe corte de hoy): YouTube / youtube_video_likes / video:dW5nYoljAiw
+[2026-11-18T00:52:54-06:00]   video dW5nYoljAiw: views=1046 likes=87 comentarios_incrustados=False
+[2026-11-18T00:53:05-06:00]   salto (ya existe corte de hoy): YouTube / youtube_video_views / video:frybXWNuNFM
+[2026-11-18T00:53:05-06:00]   salto (ya existe corte de hoy): YouTube / youtube_video_likes / video:frybXWNuNFM
+[2026-11-18T00:53:05-06:00]   video frybXWNuNFM: views=1271 likes=73 comentarios_incrustados=False
+[2026-11-18T00:53:06-06:00]   salto (ya existe corte de hoy): YouTube / youtube_video_views / video:fluD9OwLufg
+[2026-11-18T00:53:06-06:00]   salto (ya existe corte de hoy): YouTube / youtube_video_likes / video:fluD9OwLufg
+[2026-11-18T00:53:06-06:00]   video fluD9OwLufg: views=2081 likes=171 comentarios_incrustados=False
+[2026-11-18T00:53:06-06:00] OK youtube_video
+--- tiktok_public.py ---
+[2026-11-18T00:53:09-06:00]   salto (ya existe corte de hoy): TikTok / tiktok_followers / perfil
+[2026-11-18T00:53:09-06:00]   salto (ya existe corte de hoy): TikTok / tiktok_following / perfil
+[2026-11-18T00:53:09-06:00]   salto (ya existe corte de hoy): TikTok / tiktok_videos_total / perfil
+[2026-11-18T00:53:09-06:00]   salto (ya existe corte de hoy): TikTok / tiktok_total_likes / perfil
+[2026-11-18T00:53:09-06:00]   salto (ya existe corte de hoy): TikTok / tiktok_heart / perfil
+[2026-11-18T00:53:09-06:00]   salto (ya existe corte de hoy): TikTok / tiktok_digg / perfil
+[2026-11-18T00:53:09-06:00]   salto (ya existe corte de hoy): TikTok / tiktok_friends / perfil
+[2026-11-18T00:53:09-06:00]   TikTok perfil: seguidores=13800 videos=75 likes=129100 itemList=0 (sin videos incrustados)
+[2026-11-18T00:53:09-06:00] OK tiktok_public
+--- tiktok_tag.py ---
+[2026-11-18T00:53:12-06:00]   #Diezell: HTTP 200, 384757 bytes, videoCount=no, ids de video encontrados: 0
+[2026-11-18T00:53:13-06:00]   #Caoticos: HTTP 200, 385859 bytes, videoCount=no, ids de video encontrados: 0
+[2026-11-18T00:53:16-06:00]   #INSANIA: HTTP 200, 384783 bytes, videoCount=no, ids de video encontrados: 0
+[2026-11-18T00:53:16-06:00]   ningún hashtag devolvió videos ni conteos parseables
+[2026-11-18T00:53:16-06:00] FAIL tiktok_tag: sin datos utilizables (ver log)
+--- instagram_public.py ---
+[2026-11-18T00:53:18-06:00]   Instagram web_profile_info: error: HTTP 429 https://www.instagram.com/api/v1/users/web_profile_info/?username=diezellmx 
+[2026-11-18T00:53:20-06:00]   Instagram página: HTTP 200, 542204 bytes — muro de login, sin datos del perfil
+[2026-11-18T00:53:20-06:00] FAIL instagram_public: sin datos utilizables (ver log)
+--- soundcloud.py ---
+[2026-11-18T00:53:22-06:00]   SoundCloud https://soundcloud.com/diezell: HTTP 200 → usuario: Alycyalyna
+[2026-11-18T00:53:23-06:00]   SoundCloud https://soundcloud.com/diezellmx: error: HTTP 404 https://soundcloud.com/diezellmx 
+[2026-11-18T00:53:24-06:00]   SoundCloud https://soundcloud.com/diezell-oficial: error: HTTP 404 https://soundcloud.com/diezell-oficial 
+[2026-11-18T00:53:24-06:00]   SoundCloud: perfil de Diezell no localizado en ningún slug
+[2026-11-18T00:53:24-06:00] FAIL soundcloud: sin datos utilizables (ver log)
+--- reddit.py ---
+[2026-11-18T00:53:26-06:00]   Reddit https://www.reddit.com/search.json?q=Diezell&sort=new&limit=25: error: HTTP 403 https://www.reddit.com/search.json?q=Diezell&sort=new&limit=25 
+[2026-11-18T00:53:26-06:00]   Reddit https://api.reddit.com/search?q=Diezell&sort=new&limit=25: error: HTTP 403 https://api.reddit.com/search?q=Diezell&sort=new&limit=25 
+[2026-11-18T00:53:28-06:00]   Reddit https://old.reddit.com/search.json?q=Diezell&sort=new&limit=25: HTTP 200, devuelve HTML (340933 bytes) en vez de JSON — bloqueado
+[2026-11-18T00:53:28-06:00]   Reddit: ningún endpoint .json devolvió datos utilizables
+[2026-11-18T00:53:28-06:00] FAIL reddit: sin datos utilizables (ver log)
+--- google_news_rss.py ---
+[2026-11-18T00:53:32-06:00]   salto (ya existe corte de hoy): Google News RSS / news_mentions / q:Diezell
+[2026-11-18T00:53:32-06:00]   Google News 'Diezell': 5 noticias
+[2026-11-18T00:53:34-06:00]   salto (ya existe corte de hoy): Google News RSS / news_mentions / q:Diezell banda Monterrey
+[2026-11-18T00:53:34-06:00]   Google News 'Diezell banda Monterrey': 2 noticias
+[2026-11-18T00:53:34-06:00]   Google News total: 2 noticias, 0 menciones nuevas
+[2026-11-18T00:53:34-06:00] OK google_news_rss
+--- bing_news_rss.py ---
+[2026-11-18T00:53:37-06:00]   salto (ya existe corte de hoy): Bing News RSS / news_mentions / q:Diezell
+[2026-11-18T00:53:37-06:00]   Bing News: 1 noticias, 1 menciones nuevas
+[2026-11-18T00:53:37-06:00] OK bing_news_rss
+--- press_rss.py ---
+[2026-11-18T00:53:39-06:00]   salto (ya existe corte de hoy): Prensa RSS / press_mentions / medio:Puro Rock Puro
+[2026-11-18T00:53:39-06:00]   Puro Rock Puro: 10 artículos en el feed, 0 sobre Diezell
+[2026-11-18T00:53:40-06:00]   salto (ya existe corte de hoy): Prensa RSS / press_mentions / medio:Follow Control
+[2026-11-18T00:53:40-06:00]   Follow Control: 9 artículos en el feed, 0 sobre Diezell
+[2026-11-18T00:53:41-06:00]   + 2026-11-18 Prensa RSS | press_mentions = 0 artículos sobre Diezell
+[2026-11-18T00:53:41-06:00]   Mr Indie: 0 artículos en el feed, 0 sobre Diezell
+[2026-11-18T00:53:43-06:00]   salto (ya existe corte de hoy): Prensa RSS / press_mentions / medio:Punkeando
+[2026-11-18T00:53:43-06:00]   Punkeando: 10 artículos en el feed, 0 sobre Diezell
+[2026-11-18T00:53:43-06:00]   Prensa: ningún artículo sobre Diezell en los feeds de hoy
+[2026-11-18T00:53:43-06:00] FAIL press_rss: sin datos utilizables (ver log)
+--- musicbrainz.py ---
+[2026-11-18T00:53:45-06:00]   MusicBrainz: artista 'Diezell' no encontrado (count 0)
+[2026-11-18T00:53:48-06:00]   MusicBrainz: lanzamiento 'Caótico' tampoco encontrado
+[2026-11-18T00:53:48-06:00] FAIL musicbrainz: sin datos utilizables (ver log)
+--- itunes.py ---
+[2026-11-18T00:53:52-06:00]   salto (ya existe corte de hoy): iTunes / itunes_albums / artista
+[2026-11-18T00:53:55-06:00]   salto (ya existe corte de hoy): iTunes / itunes_songs / artista
+[2026-11-18T00:53:56-06:00]   salto (ya existe corte de hoy): iTunes / itunes_podcasts / búsqueda
+[2026-11-18T00:53:56-06:00]   iTunes: álbumes=13 canciones=33 podcasts=0 (filtrados: sin MacDiezell ni Diezel)
+[2026-11-18T00:53:56-06:00] OK itunes
+--- spotify_public.py ---
+[2026-11-18T00:53:58-06:00]   Viberate: error: HTTP 403 https://www.viberate.com/artist/diezell/ 
+[2026-11-18T00:54:01-06:00]   Music Metrics Vault: error: HTTP 404 https://musicmetricsvault.com/artists/diezell 
+[2026-11-18T00:54:02-06:00]   Spotify web: HTTP 200, 169782 bytes, oyentes_mensuales=no
+[2026-11-18T00:54:02-06:00]   Spotify oyentes: ninguna vía pública devolvió el dato
+[2026-11-18T00:54:02-06:00] FAIL spotify_public: sin datos utilizables (ver log)
+--- lastfm_public.py ---
+[2026-11-18T00:54:04-06:00]   Last.fm: HTTP 200, 3036 bytes — página de reto anti-bot, sin datos
+[2026-11-18T00:54:04-06:00] FAIL lastfm_public: sin datos utilizables (ver log)
+--- setlistfm_public.py ---
+[2026-11-18T00:54:06-06:00]   setlist.fm: HTTP 202, 2007 bytes — respuesta vacía (anti-bot)
+[2026-11-18T00:54:06-06:00] FAIL setlistfm_public: sin datos utilizables (ver log)
+--- bandsintown_public.py ---
+[2026-11-18T00:54:08-06:00]   Bandsintown: error: HTTP 403 https://www.bandsintown.com/a/diezell 
+[2026-11-18T00:54:08-06:00] FAIL bandsintown_public: sin datos utilizables (ver log)
+--- songkick_public.py ---
+[2026-11-18T00:54:11-06:00]   salto (ya existe corte de hoy): Songkick / songkick_tracked_fans / artista
+[2026-11-18T00:54:11-06:00]   salto (ya existe corte de hoy): Songkick / songkick_upcoming_events / artista
+[2026-11-18T00:54:11-06:00]   salto (ya existe corte de hoy): Songkick / songkick_past_events / artista
+[2026-11-18T00:54:11-06:00]   Songkick: fans=764 próximos=0 pasados_en_página=3
+[2026-11-18T00:54:11-06:00] OK songkick_public
+--- facebook_public.py ---
+[2026-11-18T00:54:13-06:00]   Facebook: error: HTTP 400 https://www.facebook.com/diezelloficial 
+[2026-11-18T00:54:13-06:00] FAIL facebook_public: sin datos utilizables (ver log)
+--- wikipedia.py ---
+[2026-11-18T00:54:16-06:00]   Wikipedia: artículo 'Diezell' existe: False
+[2026-11-18T00:54:16-06:00] FAIL wikipedia: sin datos utilizables (ver log)
+--- wayback.py ---
+[2026-11-18T00:54:19-06:00]   Wayback CDX Spotify: 3 capturas (primera: 20220228041741, última: 20241007105455)
+[2026-11-18T00:54:21-06:00]   Wayback CDX Viberate: 4 capturas (primera: 20250815145512, última: 20260513152215)
+[2026-11-18T00:54:23-06:00]   Wayback CDX YouTube: 0 capturas (primera: -, última: -)
+[2026-11-18T00:54:25-06:00]   Wayback CDX Instagram: 0 capturas (primera: -, última: -)
+[2026-11-18T00:54:28-06:00]   Wayback CDX Music Metrics Vault: 0 capturas (primera: -, última: -)
+[2026-11-18T00:54:31-06:00]   Wayback snapshot 20250815145512: error: HTTP 429 https://web.archive.org/web/20250815145512id_/https://www.viberate.com/artist/diezell/ 
+[2026-11-18T00:54:31-06:00]   Wayback snapshot 20250815145512: HTTP None, 0 bytes — sin contenido útil
+[2026-11-18T00:54:32-06:00]   Wayback snapshot 20241007105455: error: HTTP 429 https://web.archive.org/web/20241007105455id_/https://open.spotify.com/artist/2mEQCZzgLbG0mWCwaAEb3g 
+[2026-11-18T00:54:32-06:00]   Wayback snapshot 20241007105455: HTTP None, 0 bytes — sin contenido útil
+[2026-11-18T00:54:32-06:00]   Wayback: inventario CDX guardado; snapshots: ninguna cifra verificable
+[2026-11-18T00:54:32-06:00] OK wayback
+--- trends.py ---
+[2026-11-18T00:54:36-06:00]   Google Trends explore: error: HTTP 429 https://trends.google.com/trends/api/explore?hl=es&tz=-360&req=%7B%22comparisonItem%22:%5B%7B%22keyword%22:%22Diezell%22%2C%22geo%22:%22MX%22%2C%22time%22:%22today%2012-m%22%7D%5D%2C%22category%22:0%2C%22property%22:%22%22%7D 
+[2026-11-18T00:54:36-06:00] FAIL trends: sin datos utilizables (ver log)
+--- charts.py ---
+[2026-11-18T00:54:39-06:00]   Charts: Diezell no está en Deezer chart global (top 10)
+[2026-11-18T00:54:41-06:00]   Charts: Diezell no está en iTunes México top canciones (25)
+[2026-11-18T00:54:43-06:00]   Charts: Diezell no está en iTunes México top álbumes (25)
+[2026-11-18T00:54:43-06:00] OK charts
+--- stories.py ---
+[2026-11-18T00:54:46-06:00]   TikTok: sin indicador de historia activa en la página pública
+[2026-11-18T00:54:46-06:00]   Instagram: rescate imposible sin login (ver README)
+[2026-11-18T00:54:46-06:00] FAIL stories: sin datos utilizables (ver log)
+--- commenters.py ---
+[2026-11-18T00:54:47-06:00]   commenters: 0 autores en 0 mes(es)
+[2026-11-18T00:54:47-06:00] OK commenters
+=== FIN DEL CORTE — registros en el ledger: 167 ===

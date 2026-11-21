@@ -1,0 +1,15 @@
+CORRECCIÓN ÚNICA G3 (18 nov 2026, 01:2x CST) — única corrección
+permitida al ledger en esta auditoría:
+- mentions.json: se eliminó 1 mención duplicada ("Diezell Monterrey
+  Tickets", JamBase vía Bing News). La URL normalizada es la misma
+  (https://www.jambase.com/show/diezell-foro-tims-20261113); el
+  duplicado venía del parámetro de tracking tid= de Bing, distinto
+  en cada fetch. Se conservó la primera aparición
+  (seen_first 2026-11-18T00:36:49-06:00) y se eliminó la segunda
+  (seen_first 2026-11-18T00:53:37-06:00).
+- common.add_mention ahora normaliza URLs (desempaqueta apiclick de
+  Bing y quita query/fragmento) y además dedup por (fuente, título,
+  fecha), para que no vuelva a pasar.
+- SoundCloud: al registro semilla soundcloud_followers=13 (15 nov)
+  se le añadió una nota de duda en el detalle (no se borró):
+  soundcloud.com/diezell es otro usuario (Alycyalyna).

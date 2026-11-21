@@ -1,0 +1,104 @@
+=== CORTE DIARIO DIEZELL — 2026-11-18T06:41:06Z UTC / 2026-11-18 00:41 America/Mexico_City ===
+--- deezer.py ---
+[2026-11-18T00:41:06-06:00] FAIL deezer: URLError: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+--- youtube_rss.py ---
+[2026-11-18T00:41:07-06:00] FAIL youtube_rss: URLError: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+--- youtube_public.py ---
+[2026-11-18T00:41:08-06:00] FAIL youtube_public: URLError: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+--- youtube_video.py ---
+[2026-11-18T00:41:10-06:00]   video MuvgZpXqsY8: error al descargar: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:10-06:00]   video tIEk-WAnrLE: error al descargar: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:10-06:00]   video yUvkRgX-RC8: error al descargar: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:10-06:00]   video Vex7ibUYCGE: error al descargar: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:10-06:00]   video dHO9zYdvqRw: error al descargar: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:10-06:00]   video dW5nYoljAiw: error al descargar: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:10-06:00]   video frybXWNuNFM: error al descargar: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:10-06:00]   video fluD9OwLufg: error al descargar: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:10-06:00]   ningún video devolvió datos
+[2026-11-18T00:41:10-06:00] FAIL youtube_video: sin datos utilizables (ver log)
+--- tiktok_public.py ---
+[2026-11-18T00:41:11-06:00] FAIL tiktok_public: URLError: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+--- tiktok_tag.py ---
+[2026-11-18T00:41:12-06:00]   #Diezell: error al descargar: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:12-06:00]   #Caoticos: error al descargar: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:12-06:00]   #INSANIA: error al descargar: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:12-06:00]   ningún hashtag devolvió videos ni conteos parseables
+[2026-11-18T00:41:12-06:00] FAIL tiktok_tag: sin datos utilizables (ver log)
+--- instagram_public.py ---
+[2026-11-18T00:41:13-06:00]   Instagram web_profile_info: error: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:13-06:00]   Instagram página: error: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:13-06:00] FAIL instagram_public: sin datos utilizables (ver log)
+--- soundcloud.py ---
+[2026-11-18T00:41:14-06:00]   SoundCloud https://soundcloud.com/diezell: error: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:14-06:00]   SoundCloud https://soundcloud.com/diezellmx: error: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:14-06:00]   SoundCloud https://soundcloud.com/diezell-oficial: error: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:14-06:00]   SoundCloud: perfil de Diezell no localizado en ningún slug
+[2026-11-18T00:41:14-06:00] FAIL soundcloud: sin datos utilizables (ver log)
+--- reddit.py ---
+[2026-11-18T00:41:15-06:00]   Reddit https://www.reddit.com/search.json?q=Diezell&sort=new&limit=25: error: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:15-06:00]   Reddit https://api.reddit.com/search?q=Diezell&sort=new&limit=25: error: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:15-06:00]   Reddit https://old.reddit.com/search.json?q=Diezell&sort=new&limit=25: error: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:15-06:00]   Reddit: ningún endpoint .json devolvió datos utilizables
+[2026-11-18T00:41:15-06:00] FAIL reddit: sin datos utilizables (ver log)
+--- google_news_rss.py ---
+[2026-11-18T00:41:16-06:00]   Google News 'Diezell': error: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:16-06:00]   Google News 'Diezell banda Monterrey': error: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:16-06:00]   Google News: sin resultados en ninguna búsqueda
+[2026-11-18T00:41:16-06:00] FAIL google_news_rss: sin datos utilizables (ver log)
+--- bing_news_rss.py ---
+[2026-11-18T00:41:17-06:00] FAIL bing_news_rss: URLError: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+--- press_rss.py ---
+[2026-11-18T00:41:19-06:00]   Puro Rock Puro: error al descargar: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:19-06:00]   Follow Control: error al descargar: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:19-06:00]   Mr Indie: error al descargar: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:19-06:00]   Punkeando: error al descargar: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:19-06:00]   Prensa: ningún artículo sobre Diezell en los feeds de hoy
+[2026-11-18T00:41:19-06:00] FAIL press_rss: sin datos utilizables (ver log)
+--- musicbrainz.py ---
+[2026-11-18T00:41:20-06:00] FAIL musicbrainz: URLError: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+--- itunes.py ---
+[2026-11-18T00:41:21-06:00] FAIL itunes: URLError: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+--- spotify_public.py ---
+[2026-11-18T00:41:22-06:00]   Viberate: error: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:22-06:00]   Music Metrics Vault: error: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:22-06:00]   Spotify web: error: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:22-06:00]   Spotify oyentes: ninguna vía pública devolvió el dato
+[2026-11-18T00:41:22-06:00] FAIL spotify_public: sin datos utilizables (ver log)
+--- lastfm_public.py ---
+[2026-11-18T00:41:23-06:00] FAIL lastfm_public: URLError: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+--- setlistfm_public.py ---
+[2026-11-18T00:41:24-06:00]   setlist.fm: error: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:24-06:00] FAIL setlistfm_public: sin datos utilizables (ver log)
+--- bandsintown_public.py ---
+[2026-11-18T00:41:25-06:00]   Bandsintown: error: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:25-06:00] FAIL bandsintown_public: sin datos utilizables (ver log)
+--- songkick_public.py ---
+[2026-11-18T00:41:26-06:00] FAIL songkick_public: URLError: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+--- facebook_public.py ---
+[2026-11-18T00:41:28-06:00]   Facebook: error: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:28-06:00] FAIL facebook_public: sin datos utilizables (ver log)
+--- wikipedia.py ---
+[2026-11-18T00:41:29-06:00] FAIL wikipedia: URLError: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+--- wayback.py ---
+[2026-11-18T00:41:30-06:00]   Wayback CDX Spotify: error: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:30-06:00]   Wayback CDX Viberate: error: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:30-06:00]   Wayback CDX YouTube: error: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:30-06:00]   Wayback CDX Instagram: error: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:30-06:00]   Wayback CDX Music Metrics Vault: error: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:30-06:00]   Wayback snapshot 20250815145512: error: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:30-06:00]   Wayback snapshot 20250815145512: HTTP None, 0 bytes — sin contenido útil
+[2026-11-18T00:41:30-06:00]   Wayback snapshot 20241007105455: error: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:30-06:00]   Wayback snapshot 20241007105455: HTTP None, 0 bytes — sin contenido útil
+[2026-11-18T00:41:30-06:00]   Wayback: inventario CDX guardado; snapshots: ninguna cifra verificable
+[2026-11-18T00:41:30-06:00] OK wayback
+--- trends.py ---
+[2026-11-18T00:41:31-06:00]   Google Trends explore: error: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+[2026-11-18T00:41:31-06:00] FAIL trends: sin datos utilizables (ver log)
+--- charts.py ---
+[2026-11-18T00:41:32-06:00] FAIL charts: URLError: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+--- stories.py ---
+[2026-11-18T00:41:33-06:00] FAIL stories: URLError: <urlopen error [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1000)>
+--- commenters.py ---
+[2026-11-18T00:41:34-06:00]   commenters: 0 autores en 0 mes(es)
+[2026-11-18T00:41:34-06:00] OK commenters
+=== FIN DEL CORTE — registros en el ledger: 166 ===
