@@ -153,6 +153,7 @@ jobs:
               assert 'dz3-song' in html and 'dz-song.css' in html, str(song)
               assert html.count('id="dz-player"')==1 and html.count('id="dz-audio"')==1, str(song)
               assert 'class="stripes"' not in html, str(song)
+              assert '#titulo-sencillos' not in html, str(song)
           home=(root/'index.html').read_text(encoding='utf-8')
           assert 'Prototipo visual.' not in home
           assert 'Diezell en cifras' in home
