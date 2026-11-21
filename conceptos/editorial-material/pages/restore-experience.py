@@ -52,6 +52,22 @@ sheet='''<section class="dz3-sheet" id="dz3-player-sheet" role="dialog" aria-mod
   <button id="dock-prev" type="button" aria-label="Canción anterior" hidden></button>
  </div>
 </section>'''
+# Restore the original two full-album Spotify embeds without eager-loading
+# third-party players or competing with the site's single audio element.
+from html import escape,unescape
+orig_music=Path('site/escuchar.html').read_text(encoding='utf-8')
+embeds=re.findall(r'<iframe[^>]*src="(https://open\.spotify\.com/embed/album/[^"]+)"',orig_music)
+assert len(embeds)==2,f'Expected two original Spotify album embeds, got {len(embeds)}'
+music_path=root/'escuchar.html'
+music_html=music_path.read_text(encoding='utf-8')
+for album_id,src in zip(('album-insania','album-caotico'),embeds):
+    details=('<details class="dz3-album-embed" data-embed-src="'+escape(unescape(src),quote=True)+'">'
+             '<summary>Escuchar álbum completo en Spotify</summary><div class="dz3-embed-target"></div></details>')
+    pattern=r'(<article class="dz3-album" id="'+album_id+r'">[\s\S]*?)(</article>)'
+    music_html,count=re.subn(pattern,lambda m:m.group(1)+details+m.group(2),music_html,count=1)
+    assert count==1,album_id
+music_path.write_text(music_html,encoding='utf-8')
+
 names=[('Inicio','index.html'),('Música','escuchar.html'),('En vivo','en-vivo.html'),('Caóticos','caoticos.html'),('Banda','banda.html')]
 for page in pages:
     depth=len(page.relative_to(root).parts)-1
