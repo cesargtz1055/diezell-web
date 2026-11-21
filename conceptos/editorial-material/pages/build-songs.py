@@ -69,6 +69,12 @@ for file in files:
     page+='''<main id="contenido"><section class="dz3-song-hero"><div class="dz3-wrap dz3-song-hero-grid"><div><nav class="dz3-song-crumb" aria-label="Ruta"><a href="../escuchar.html">Música</a><span aria-hidden="true">/</span><a href="'''+safe_url(album_href)+'''">'''+escape(album.split(' · ')[0])+'''</a></nav><p class="dz3-eyebrow">Ficha de canción · Diezell</p><h1>'''+escape(title)+'''</h1><p class="dz3-song-meta">'''+escape(album)+(' · '+escape(duration) if duration else '')+'''</p><a class="dz3-song-listen-link" href="#reproductor">Escuchar adelanto ↓</a></div><div class="dz3-song-art">'''+('<span class="dz3-song-placeholder">DIEZELL</span>' if cover_hidden else '<img src="'+safe_url(image)+'" alt="Portada de '+escape(album.split(' · ')[0],quote=True)+'" width="640" height="640">')+'''</div></div></section>'''
     page+=media
     page+='''<section class="dz3-section dz3-wrap" id="mas-de-esta-cancion" aria-labelledby="mas-title"><div class="dz3-section-heading"><p class="dz3-eyebrow">Sigue explorando</p><h2 id="mas-title">Dentro de la discografía.</h2><p>Esta canción tiene un lugar en el catálogo de Diezell. Puedes volver al álbum o descubrir otra canción.</p></div><nav class="dz3-song-related" aria-label="Canciones relacionadas">'''+''.join(related)+'''</nav>'''+('<p class="dz3-song-lyrics">'+lyrics_link+'</p>' if lyrics_link else '')+'''</section>'''
+    # Original full tracklist remains accessible, but collapsed to avoid repetition.
+    same_album=cap(r'<ol class="tracklist">([\\s\\S]*?)</ol>',source)
+    if same_album:
+        label=plain(cap(r'<h2 id="titulo-mismo-album">([\\s\\S]*?)</h2>',source)) or 'álbum'
+        tracklist='<details class="dz3-song-tracklist"><summary>Ver todas las canciones de '+escape(label)+'</summary><ol class="dz3-song-ol">'+same_album+'</ol></details>'
+        page=page.replace('</nav>'+('<p class="dz3-song-lyrics">' if lyrics_link else '</section>'),'</nav>'+tracklist+('<p class="dz3-song-lyrics">' if lyrics_link else '</section>'),1)
     page+=stats+foot
     assert page.count('id="dz-player"')==1 and page.count('id="dz-audio"')==1
     assert page.count('<h1>')==1
