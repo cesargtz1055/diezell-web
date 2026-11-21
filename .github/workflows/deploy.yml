@@ -241,7 +241,7 @@ jobs:
           set -e
           # Preserve the complete original version for rollback and comparison.
           mkdir -p site/anterior
-          find site -mindepth 1 -maxdepth 1 ! -name anterior ! -name nuevo ! -name preview -exec cp -a '{}' site/anterior/ \\;
+          find site -mindepth 1 -maxdepth 1 ! -name anterior ! -name nuevo ! -name preview -exec cp -a '{}' site/anterior/ \;
           # /nuevo/ remains a stable comparison URL; the root becomes the same design.
           cp -a site/nuevo/. site/
           python3 - <<'PY'
