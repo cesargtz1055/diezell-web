@@ -23,3 +23,9 @@ for name in pages:
     assert len(re.findall(r'<h1\b', html)) == 1, f"{name}: one H1 expected"
     assert 'href="escuchar.html"' in html, f"{name}: Music link missing"
 print("PASS: catalog order, unique audio, dock, platforms, editorial pages")
+
+# Expanded-player regression: previous control must work both with and without
+# the inline Music player, and rewinding must clear the completion CTA.
+assert "byId('dz-anterior')||previous" in dock, "Expanded previous needs inline/dock fallback"
+assert "control.click()" in dock, "Expanded previous must delegate to app engine"
+assert "audio.currentTime<MAX_SECONDS-.05" in dock, "Rewind should clear completion state"
