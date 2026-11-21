@@ -177,7 +177,7 @@ jobs:
           test -s site/nuevo/dz3-links.js
           node --check site/nuevo/dz-rebuild.js
           node --check site/nuevo/dz3-links.js
-          grep -q 'site-modern.css' site/nuevo/escuchar.html
+          grep -q 'dz-rebuild.css' site/nuevo/escuchar.html
           grep -q 'class="quick"' site/nuevo/index.html
 
       - name: Verify original and preview stay separate
