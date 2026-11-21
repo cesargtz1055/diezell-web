@@ -145,6 +145,12 @@ p { margin: 0 0 1rem; }
 .hero { background: var(--dark); color: var(--on-dark); }
 .hero-foto { display: block; }
 .hero-foto img { width: 100%; aspect-ratio: 4 / 5; max-height: 78vh; object-fit: cover; object-position: 50% 18%; display: block; }
+
+/* A 360 px el subtítulo del hero quedaba tapado por la barra fija del reproductor:
+   foto más baja para que el panel suba y el subtítulo se lea completo. */
+@media (max-width: 380px) {
+  .hero-foto img { aspect-ratio: 1 / 1; }
+}
 .hero-panel { padding: 12px var(--gutter) calc(var(--section) + 8px); position: relative; text-align: center; }
 .hero-kicker { color: var(--on-dark); }
 .hero-kicker::before { content: none; }
