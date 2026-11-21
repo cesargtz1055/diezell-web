@@ -98,6 +98,11 @@ jobs:
           git show "FETCH_HEAD:conceptos/editorial-material/pages/dz-live.css" > site/nuevo/dz-live.css
           git show "FETCH_HEAD:conceptos/editorial-material/pages/build-live.py" > /tmp/diezell-build-live.py
           python3 /tmp/diezell-build-live.py
+          # Rebuild Banda from complete source data, preserving primary references.
+          git show "FETCH_HEAD:conceptos/editorial-material/pages/banda.html" > site/nuevo/banda.html
+          git show "FETCH_HEAD:conceptos/editorial-material/pages/dz-band.css" > site/nuevo/dz-band.css
+          git show "FETCH_HEAD:conceptos/editorial-material/pages/build-band.py" > /tmp/diezell-build-band.py
+          python3 /tmp/diezell-build-band.py
           python3 - <<'PY'
           from pathlib import Path
           root=Path('site/nuevo')
@@ -111,6 +116,10 @@ jobs:
           assert 'dz3-live' in live and 'dz-live.css' in live
           assert live.count('class="dz3-photo"')>=8
           assert live.count('class="dz3-tour-date')==10
+          band=(root/'banda.html').read_text(encoding='utf-8')
+          assert 'dz3-band' in band and 'dz-band.css' in band
+          assert band.count('class="dz3-member"')==4
+          assert band.count('<time>')>=7
           home=(root/'index.html').read_text(encoding='utf-8')
           assert 'Prototipo visual.' not in home
           assert 'Diezell en cifras' in home
@@ -122,7 +131,7 @@ jobs:
           assert len(pages)>=35
           for page in pages:
               text=page.read_text(encoding='utf-8')
-              assert ('site-modern.css' in text or page in (root/'index.html',root/'escuchar.html',root/'en-vivo.html')), str(page)
+              assert ('site-modern.css' in text or page in (root/'index.html',root/'escuchar.html',root/'en-vivo.html',root/'banda.html')), str(page)
               assert '</html>' in text.lower(), str(page)
           print('PASS: editorial structure, player uniqueness, archive navigation,',len(pages),'HTML pages')
           PY
