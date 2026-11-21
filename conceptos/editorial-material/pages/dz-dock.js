@@ -113,11 +113,20 @@
   });
   sheetPlay.addEventListener('click',()=>play?.click());
   sheetNext.addEventListener('click',()=>next?.click());
-  sheetPrevious.addEventListener('click',()=>previous?.click());
+  sheetPrevious.addEventListener('click',()=>{
+    // Music page has a visible previous control; other pages use the dock's
+    // hidden previous control. Both delegate to the SAME app.js audio engine.
+    const control=byId('dz-anterior')||previous;
+    if(control)control.click();
+    else setStatus('No se pudo cambiar al adelanto anterior.');
+  });
   byId('dz3-sheet-next-after').addEventListener('click',()=>next?.click());
   function seek(frac){
     if(!audio.src)return;
     audio.currentTime=Math.min(MAX_SECONDS,Math.max(0,frac*MAX_SECONDS));
+    // Seeking backwards must dismiss the finished-preview CTA immediately.
+    // The app engine owns the primary CTA; this sheet has its own state.
+    byId('dz3-sheet-cta').hidden=audio.currentTime<MAX_SECONDS-.05;
     sync();
   }
   progress.addEventListener('click',event=>{
@@ -138,6 +147,8 @@
     sync();
   });
   audio.addEventListener('playing',()=>setStatus(''));
+  audio.addEventListener('abort',()=>setStatus(''));
+  audio.addEventListener('loadstart',()=>setStatus(''));
   audio.addEventListener('stalled',()=>setStatus('El adelanto está tardando en cargar.'));
   const title=byId('dock-titulo');
   if(title){
