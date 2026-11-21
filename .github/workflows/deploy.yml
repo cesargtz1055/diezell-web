@@ -75,6 +75,8 @@ jobs:
           print('Modernized existing HTML pages:',count)
           assert count>=30, 'Expected full site, not homepage only'
           PY
+          git show "FETCH_HEAD:conceptos/editorial-material/editorial-pass.py" > /tmp/diezell-editorial-pass.py
+          python3 /tmp/diezell-editorial-pass.py
           test -f site/nuevo/escuchar.html
           test -f site/nuevo/en-vivo.html
           test -f site/nuevo/banda.html
