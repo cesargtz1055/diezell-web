@@ -77,6 +77,30 @@ jobs:
           PY
           git show "FETCH_HEAD:conceptos/editorial-material/editorial-pass.py" > /tmp/diezell-editorial-pass.py
           python3 /tmp/diezell-editorial-pass.py
+          python3 - <<'PY'
+          from pathlib import Path
+          root=Path('site/nuevo')
+          music=(root/'escuchar.html').read_text(encoding='utf-8')
+          assert music.count('id="dz-player"')==1
+          assert music.count('id="dz-audio"')==1
+          assert music.count('id="reproductor"')==1
+          assert music.find('id="album-insania"') < music.find('id="reproductor"'), 'Catalog must precede player'
+          assert 'dz-music-page' in music
+          home=(root/'index.html').read_text(encoding='utf-8')
+          assert 'Prototipo visual.' not in home
+          assert 'Diezell en cifras' in home
+          assert 'Unirme a los Caóticos' not in home
+          caoticos=(root/'caoticos.html').read_text(encoding='utf-8')
+          assert 'Unirme en Instagram' not in caoticos
+          assert 'id="titulo-caoticos"' in caoticos
+          pages=list(root.rglob('*.html'))
+          assert len(pages)>=35
+          for page in pages:
+              text=page.read_text(encoding='utf-8')
+              assert 'site-modern.css' in text or page==root/'index.html', str(page)
+              assert '<main' in text.lower(), str(page)
+          print('PASS: editorial structure, player uniqueness, archive navigation,',len(pages),'HTML pages')
+          PY
           test -f site/nuevo/escuchar.html
           test -f site/nuevo/en-vivo.html
           test -f site/nuevo/banda.html
