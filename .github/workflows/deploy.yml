@@ -1,23 +1,65 @@
-name: Deploy Diezell a Pages
+name: Diezell — build, preview and deploy
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: |
+      - name: Unpack site assets
+        run: |
           mkdir -p site
           unzip -o -q parte-1.zip -d site
           unzip -o -q parte-2.zip -d site
           unzip -o -q parte-3.zip -d site
-      - uses: actions/upload-pages-artifact@v3
+      - name: Overlay versioned, reviewable sources
+        run: |
+          # This makes HTML/CSS/JS PR diffs actually affect the deployed site.
+          # Each file only overlays if tracked on this branch.
+          for file in escuchar.html styles.css app.js music-catalog.js; do
+            if [ -f "$file" ]; then cp "$file" "site/$file"; fi
+          done
+      - name: Validate music experience
+        run: |
+          node --check site/app.js
+          if [ -f site/music-catalog.js ]; then node --check site/music-catalog.js; fi
+          test -f site/audio/playlist.json
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          site = Path("site")
+          text = (site / "escuchar.html").read_text(encoding="utf-8")
+          assert text.count('id="dz-player"') == 1, "There must be one primary music player"
+          assert "open.spotify.com/embed/" not in text, "Duplicate embeds were not removed"
+          assert text.count('href="canciones/') >= 27, "Missing song detail links"
+          for url in re.findall(r'href="(canciones/[^"]+\.html)"', text):
+              assert (site / url).exists(), f"Missing song detail page: {url}"
+          if (site / "music-catalog.js").exists():
+              assert 'music-catalog.js' in text, "Catalog JavaScript not loaded"
+          print("Music UX checks passed")
+          PY
+      - name: Upload reviewable PR preview
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: diezell-ux-preview
+          path: site/
+          retention-days: 7
+      - name: Upload GitHub Pages artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
         with:
           path: site
-      - uses: actions/deploy-pages@v4
+      - name: Deploy published site
+        if: github.event_name != 'pull_request'
+        uses: actions/deploy-pages@v4
