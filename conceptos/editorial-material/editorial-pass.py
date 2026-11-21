@@ -78,13 +78,13 @@ if home.exists():
 music=root/'escuchar.html'
 if music.exists():
     source=music.read_text(encoding='utf-8')
-    match=re.search(r'<section\\b[^>]*\\bid="reproductor"[^>]*>[\\s\\S]*?</section>',source,re.I)
+    match=re.search(r'<section\b[^>]*\bid="reproductor"[^>]*>[\s\S]*?</section>',source,re.I)
     if match:
         player=match.group(0)
         source=source[:match.start()]+source[match.end():]
         close=source.lower().find('</main>')
         if close!=-1:
-            source=source[:close]+player+'\\n'+source[close:]
+            source=source[:close]+player+chr(10)+source[close:]
     source=source.replace('Escucha y explora','Reproductor de adelantos')
     music.write_text(source,encoding='utf-8')
 # Do not show internal production messages on the new editorial homepage.
