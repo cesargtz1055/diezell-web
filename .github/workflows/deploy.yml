@@ -44,22 +44,45 @@ jobs:
             git show "FETCH_HEAD:$file" > "site/preview/$file"
           done
 
-      - name: Add independent mobile-first concept at /nuevo/
+      - name: Build complete modernized site at /nuevo/ without changing originals
         run: |
           set -e
+          # Copy original files without recursively copying existing previews.
           mkdir -p site/nuevo
+          find site -mindepth 1 -maxdepth 1 ! -name preview ! -name nuevo -exec cp -a '{}' site/nuevo/ \;
           git fetch --depth=1 origin chatgpt/direccion-visual-material-editorial
           git show "FETCH_HEAD:conceptos/editorial-material/index.html" > site/nuevo/index.html
-          # The source lives two directories deep, but the published preview
-          # lives one directory below the website root.
-          sed -i 's|../../|../|g' site/nuevo/index.html
-          test -s site/nuevo/index.html
-          test -f site/images/en-vivo-insania.jpg
-          test -f site/images/insania.jpg
-          test -f site/images/caotico.jpg
-          test -f site/images/en-vivo-monterrey.jpg
+          git show "FETCH_HEAD:conceptos/editorial-material/site-modern.css" > site/nuevo/site-modern.css
+          python3 - <<'PY'
+          from pathlib import Path
+          from html import escape
+          root=Path('site/nuevo')
+          css=root/'site-modern.css'
+          assert css.is_file()
+          count=0
+          for page in root.rglob('*.html'):
+              if page==root/'index.html':
+                  continue
+              text=page.read_text(encoding='utf-8')
+              if '</head>' not in text.lower():
+                  continue
+              rel='../'*len(page.relative_to(root).parts[:-1])
+              tag=f'<link rel="stylesheet" href="{rel}site-modern.css">'
+              import re
+              text=re.sub(r'</head>',lambda _:tag+'\\n</head>',text,count=1,flags=re.I)
+              page.write_text(text,encoding='utf-8')
+              count+=1
+          print('Modernized existing HTML pages:',count)
+          assert count>=30, 'Expected full site, not homepage only'
+          PY
+          test -f site/nuevo/escuchar.html
+          test -f site/nuevo/en-vivo.html
+          test -f site/nuevo/banda.html
+          test -f site/nuevo/caoticos.html
+          test -f site/nuevo/images/en-vivo-insania.jpg
+          test -f site/nuevo/audio/playlist.json
+          grep -q 'site-modern.css' site/nuevo/escuchar.html
           grep -q 'class="quick"' site/nuevo/index.html
-          grep -q 'class="menu-btn"' site/nuevo/index.html
 
       - name: Verify original and preview stay separate
         run: |
