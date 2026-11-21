@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Música — DIEZELL</title>
+  <meta name="description" content="La música de Diezell: INSANIA (2025), Caótico (2023) y sus sencillos, con adelantos de 1:30 y la página de cada canción.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/insania.jpg">
+</head>
+
+<body class="music-page">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="index.html" aria-label="Diezell — ir al inicio"><span class="dzl-badge" aria-hidden="true">DZL</span>DIEZELL</a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-principal" aria-label="Abrir menú">☰</button>
+      <nav class="nav" id="nav-principal" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a class="active" href="escuchar.html" aria-current="page">Música</a>
+        <a href="en-vivo.html">En vivo</a>
+        <a href="caoticos.html">Caóticos</a>
+        <a href="banda.html">Banda</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- Dirección de arte editorial: navegación primero, reproducción después. -->
+    <section class="music-hero" aria-labelledby="music-title">
+      <div class="wrap music-hero-layout">
+        <div class="music-hero-copy">
+          <p class="music-overline"><span aria-hidden="true">✳</span> DIEZELL / ARCHIVO SONORO</p>
+          <h1 id="music-title">LA MÚSICA<br>NO SE <em>EXPLICA.</em><br>SE ESCUCHA.</h1>
+          <p class="music-hero-lead">Dos discos, sencillos y un archivo para descubrir cada canción. Entra a su ficha, conoce los detalles o escucha un adelanto.</p>
+          <div class="music-hero-buttons">
+            <a class="music-hero-primary" href="#catalogo">Explorar las canciones <span aria-hidden="true">↗</span></a>
+            <a class="music-hero-secondary" href="#reproductor">Escuchar adelantos <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="music-hero-facts" aria-label="Contenido de la discografía">
+            <span><strong>02</strong> ÁLBUMES</span><span><strong>27</strong> FICHAS DE CANCIONES</span><span>DESDE 2021</span>
+          </div>
+        </div>
+        <figure class="music-hero-photo">
+          <img src="images/en-vivo-insania.jpg" alt="René de Diezell en concierto bajo luces azules" width="1280" height="1600" fetchpriority="high">
+          <figcaption><span>UN ARCHIVO PARA ESCUCHAR</span><strong>Y VOLVER A ENCONTRAR.</strong></figcaption>
+        </figure>
+      </div>
+      <span class="music-hero-index" aria-hidden="true">DZL / 27</span>
+    </section>
+
+    <nav class="wrap music-paths" aria-label="Ir a una sección de Música">
+      <a href="#catalogo"><span>01 / EXPLORA</span><strong>Las canciones</strong><span aria-hidden="true">↗</span></a>
+      <a href="#reproductor"><span>02 / ESCUCHA</span><strong>Un adelanto</strong><span aria-hidden="true">↗</span></a>
+      <a href="#album-insania"><span>03 / DESCUBRE</span><strong>Los álbumes</strong><span aria-hidden="true">↗</span></a>
+    </nav>
+
+    <section class="music-catalog-section" id="catalogo" aria-labelledby="music-catalog-title">
+      <div class="wrap">
+        <div class="music-section-heading">
+          <div><p class="music-label">ARCHIVO / 001—027</p><h2 id="music-catalog-title">CADA CANCIÓN.<br><em>SU PROPIA HISTORIA.</em></h2></div>
+          <p>No son solo pistas de audio: cada canción tiene una ficha individual con enlaces, álbum y datos disponibles. Selecciona una para conocerla.</p>
+        </div>
+        <div class="music-catalog-toolbar">
+          <label for="music-search">Buscar una canción</label>
+          <input id="music-search" type="search" placeholder="Ej. Suspensión, Sin Rencores…" autocomplete="off" aria-controls="music-catalog-grid">
+          <div class="music-filters" role="group" aria-label="Filtrar canciones por lanzamiento">
+            <button type="button" class="is-selected" data-music-filter="all" aria-pressed="true">Todas</button>
+            <button type="button" data-music-filter="insania" aria-pressed="false">INSANIA</button>
+            <button type="button" data-music-filter="caotico" aria-pressed="false">Caótico</button>
+            <button type="button" data-music-filter="sencillos" aria-pressed="false">Sencillos</button>
+          </div>
+        </div>
+        <div class="music-result-row"><output id="music-catalog-count" role="status" aria-live="polite">Preparando catálogo…</output><span>SELECCIONA UNA CANCIÓN PARA VER SU FICHA ↘</span></div>
+        <div class="music-catalog-grid" id="music-catalog-grid" aria-label="Fichas de canciones"></div>
+        <p class="music-empty" id="music-empty" hidden>No encontramos esa canción. Prueba con otro título o cambia el filtro.</p>
+        <noscript><p>Para explorar las canciones sin JavaScript, consulta las listas de INSANIA, Caótico y sencillos más abajo.</p></noscript>
+      </div>
+    </section>
+
+    <section class="section reproductor" id="reproductor" aria-labelledby="titulo-reproductor">
+      <div class="wrap">
+        <p class="music-label music-label--light">ESCUCHA / 90 SEGUNDOS</p>
+        <h2 id="titulo-reproductor">UN SOLO REPRODUCTOR.</h2>
+        <p class="lead">Prueba una canción aquí o elige «Escuchar adelanto» desde su ficha en el catálogo. Para escucharla completa, ve a los canales oficiales de la banda.</p>
+        <div class="dz-player" id="dz-player">
+          <div class="dz-now">
+            <div class="dz-cover" id="dz-cover-wrap">
+              <img id="dz-cover" src="images/insania.jpg" alt="Portada de INSANIA" width="160" height="160">
+              <span class="dz-cover-dzl" id="dz-cover-dzl" hidden>DZL</span>
+            </div>
+            <div class="dz-now-info">
+              <strong id="dz-titulo">Suspensión…</strong>
+              <span id="dz-album">Diezell · INSANIA</span>
+              <div class="dz-completa">
+                <a class="dz-link" id="dz-spotify" href="https://open.spotify.com/album/3LGm9FVg9cswGMo5YneJ88" target="_blank" rel="noopener">Spotify ↗</a>
+                <a class="dz-link" id="dz-youtube" href="https://www.youtube.com/watch?v=xAJttFYLxO8" target="_blank" rel="noopener">YouTube ↗</a>
+              </div>
+            </div>
+            <span class="dz-badge">Adelanto 1:30</span>
+          </div>
+          <div class="dz-controls">
+            <button class="dz-btn" id="dz-anterior" type="button" aria-label="Adelanto anterior">⏮</button>
+            <button class="dz-btn dz-btn--play" id="dz-play" type="button" aria-label="Reproducir o pausar">▶</button>
+            <button class="dz-btn" id="dz-siguiente" type="button" aria-label="Siguiente adelanto">⏭</button>
+          </div>
+          <div class="dz-progreso-row">
+            <span class="dz-tiempo" id="dz-actual">0:00</span>
+            <div class="dz-progreso" id="dz-progreso" role="slider" aria-label="Progreso del adelanto" aria-valuemin="0" aria-valuemax="90" aria-valuenow="0" tabindex="0">
+              <div class="dz-progreso-relleno" id="dz-progreso-relleno"></div>
+            </div>
+            <span class="dz-tiempo">1:30</span>
+          </div>
+          <div class="dz-volumen">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6.5 9H3v6h3.5L11 19z" fill="currentColor" stroke="none"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18 6a8.5 8.5 0 0 1 0 12"/></svg>
+            <input type="range" id="dz-vol" min="0" max="100" value="90" aria-label="Volumen">
+          </div>
+          <div class="dz-cta" id="dz-cta" hidden>
+            <p><strong>Se acabó el adelanto</strong><br><span id="dz-cta-titulo">Suspensión…</span> sigue completa aquí, para apoyar a la banda:</p>
+            <div class="dz-cta-botones">
+              <a class="dz-btn-cta dz-btn-cta--principal" id="dz-cta-spotify" href="https://open.spotify.com/album/3LGm9FVg9cswGMo5YneJ88" target="_blank" rel="noopener">Escuchar completa en Spotify ↗</a>
+              <a class="dz-btn-cta" id="dz-cta-youtube" href="https://www.youtube.com/watch?v=xAJttFYLxO8" target="_blank" rel="noopener">Ver en YouTube ↗</a>
+              <button class="dz-btn-cta" id="dz-cta-siguiente" type="button">Siguiente adelanto →</button>
+            </div>
+          </div>
+        </div>
+<p class="rep-nota">Adelantos de 90 segundos con permiso de Diezell. La reproducción completa está disponible mediante los enlaces oficiales.</p>
+      </div>
+    </section>
+
+    <section class="album-screen" aria-labelledby="album-insania">
+      <div class="wrap album-grid">
+        <figure class="cover-col foto-wrap">
+          <img src="images/insania.jpg" alt="Portada oficial de INSANIA (2025): fondo gris, DIEZELL arriba y tres paneles verticales en blanco y negro; abajo, INSANIA invertido, que se lee VINVSNI" width="640" height="640" loading="lazy">
+          <button class="foto-info" type="button" aria-expanded="false" aria-controls="info-insania" aria-label="Ver crédito de la portada">i</button>
+          <div class="foto-popover" id="info-insania" role="dialog" aria-label="Crédito de la portada" hidden>
+            <button class="foto-popover-cerrar" type="button" aria-label="Cerrar crédito">×</button>
+            <p><strong>INSANIA · 2025</strong><br>Portada oficial</p>
+          </div>
+        </figure>
+        <div>
+          <p class="kicker">Segundo álbum · 01 / 02</p>
+          <h2 id="album-insania" class="album-flag">INSANIA <em>— 2025</em></h2>
+          <p class="album-meta">28 de noviembre de 2025 · 10 canciones · 36:46 · Duraciones según Deezer, 20 nov 2026</p>
+          <p class="album-concepto">Diez canciones sobre vulnerabilidad, culpa, nostalgia y duelo.</p>
+          <p class="lyric-big">“Hace frío aquí, no pude salir / Cuesta respirar hacia el final”&nbsp;<cite>— Suspensión… · <a href="https://www.letras.com/diezell/" target="_blank" rel="noopener">Letra completa ↗</a></cite></p>
+          <ol class="tracklist">
+            <li><span class="track-num">01</span><a class="track-titulo" href="canciones/suspension.html">Suspensión...</a><span class="track-dur">3:58</span></li>
+            <li><span class="track-num">02</span><a class="track-titulo" href="canciones/mas-que-ayer-menos-que-manana.html">Más Que Ayer, Menos Que Mañana</a><span class="track-dur">3:29</span></li>
+            <li><span class="track-num">03</span><a class="track-titulo" href="canciones/dias-felices-los-lunes.html">Días Felices: Los Lunes</a><span class="track-dur">3:04</span></li>
+            <li><span class="track-num">04</span><a class="track-titulo" href="canciones/tus-flores-fueron-entregadas.html">Tus Flores Fueron Entregadas</a><span class="track-dur">3:53</span></li>
+            <li><span class="track-num">05</span><a class="track-titulo" href="canciones/el-ultimo-soldado-en-pie.html">El Último Soldado En Pie</a><span class="track-dur">4:22</span></li>
+            <li><span class="track-num">06</span><a class="track-titulo" href="canciones/el-monstruo-de-gizmo.html">El Monstruo De Gizmo</a><span class="track-dur">3:41</span></li>
+            <li><span class="track-num">07</span><a class="track-titulo" href="canciones/la-paradoja-de-tennessee.html">La Paradoja De Tennessee</a><span class="track-dur">3:43</span></li>
+            <li><span class="track-num">08</span><a class="track-titulo" href="canciones/resiliencia.html">Resiliencia</a><span class="track-dur">3:50</span></li>
+            <li><span class="track-num">09</span><a class="track-titulo" href="canciones/donde-nada-puede-malir-sal.html">Donde Nada Puede Malir Sal</a><span class="track-dur">3:44</span></li>
+            <li><span class="track-num">10</span><a class="track-titulo" href="canciones/una-triste-manana-de-noviembre.html">Una Triste Mañana de Noviembre</a><span class="track-dur">3:02</span></li>
+          </ol>
+          <blockquote class="prensa-cita">
+            <p>“Detrás de INSANIA hay también un proceso largo e íntimo: un año entero de reunirse noche tras noche para componer el disco, puliendo cada idea hasta darle forma a este concepto tan ambicioso.”</p>
+            <footer>— Puro Rock Puro, 16 dic 2025 · <a href="https://purorockpuro.com/diezell-presenta-insania-su-segundo-album-de-estudio/" target="_blank" rel="noopener">Leer fuente ↗</a></footer>
+          </blockquote>
+          <div class="music-platform-link"><div><span>ESCUCHAR COMPLETO</span><strong>INSANIA está en Spotify.</strong></div><a href="https://open.spotify.com/album/3LGm9FVg9cswGMo5YneJ88" target="_blank" rel="noopener noreferrer">Abrir álbum oficial <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="album-screen album-screen--dark" aria-labelledby="album-caotico">
+      <div class="wrap album-grid">
+        <figure class="cover-col foto-wrap">
+          <img src="images/caotico.jpg" alt="Portada oficial de Caótico (2023): fondo negro con una figura fantasmal en grises y el título CAÓTICO en blanco" width="640" height="640" loading="lazy">
+          <button class="foto-info" type="button" aria-expanded="false" aria-controls="info-caotico" aria-label="Ver crédito de la portada">i</button>
+          <div class="foto-popover" id="info-caotico" role="dialog" aria-label="Crédito de la portada" hidden>
+            <button class="foto-popover-cerrar" type="button" aria-label="Cerrar crédito">×</button>
+            <p><strong>Caótico · 2023</strong><br>Portada oficial</p>
+          </div>
+        </figure>
+        <div>
+          <p class="kicker">Primer álbum · 02 / 02</p>
+          <h2 id="album-caotico" class="album-flag">Caótico <em>— 2023</em></h2>
+          <p class="album-meta">29 de septiembre de 2023 · 11 canciones · 37:56</p>
+          <p class="album-concepto">Punk rock. Sus influencias, según Puro Rock Puro (5 oct 2023), “nos pueden transportar a los dosmiles”, a una generación que no vivió el auge del “emo”.</p>
+          <p class="lyric-big">“Tuve cien / Cien maneras de explicarlo todo, y fallé / Soy experto en arruinarlo todo”&nbsp;<cite>— El Cuento De Aquel Imperfecto Ser · <a href="https://www.letras.com/diezell/el-cuento-de-aquel-imperfecto-ser/" target="_blank" rel="noopener">Letra completa ↗</a></cite></p>
+          <ol class="tracklist">
+            <li><span class="track-num">01</span><a class="track-titulo" href="canciones/el-cuento-de-aquel-imperfecto-ser.html">El Cuento De Aquel Imperfecto Ser</a><span class="track-dur">3:21</span></li>
+            <li><span class="track-num">02</span><a class="track-titulo" href="canciones/conmiseracion.html">Conmiseración</a><span class="track-dur">3:40</span></li>
+            <li><span class="track-num">03</span><a class="track-titulo" href="canciones/martes-con-aroma-a-domingo.html">Martes Con Aroma A Domingo</a><span class="track-dur">3:14</span></li>
+            <li><span class="track-num">04</span><a class="track-titulo" href="canciones/sin-destinatario.html">Sin Destinatario</a><span class="track-dur">3:09</span></li>
+            <li><span class="track-num">05</span><a class="track-titulo" href="canciones/al-parecer-eso-parece.html">Al Parecer Eso Parece</a><span class="track-dur">3:28</span></li>
+            <li><span class="track-num">06</span><a class="track-titulo" href="canciones/una-dos-o-tres-lagrimas-permitidas.html">Una, Dos O Tres Lágrimas Permitidas</a><span class="track-dur">4:03</span></li>
+            <li><span class="track-num">07</span><a class="track-titulo" href="canciones/a-golpe-de-mar-pecho-sereno.html">A Golpe de Mar, Pecho Sereno</a><span class="track-dur">3:31</span></li>
+            <li><span class="track-num">08</span><a class="track-titulo" href="canciones/de-espaldas.html">De Espaldas</a><span class="track-dur">3:40</span></li>
+            <li><span class="track-num">09</span><a class="track-titulo" href="canciones/mi-mas-sentido-pesame-murio-el-sentido-comun.html">Mi Más Sentido Pésame (Murió El Sentido Común)</a><span class="track-dur">3:06</span></li>
+            <li><span class="track-num">10</span><a class="track-titulo" href="canciones/demencia.html">Demencia</a><span class="track-dur">3:06</span></li>
+            <li><span class="track-num">11</span><a class="track-titulo" href="canciones/el-ultimo-recuerdo-de-la-noche.html">El Último Recuerdo De La Noche</a><span class="track-dur">3:31</span></li>
+          </ol>
+          <blockquote class="prensa-cita">
+            <p>“El álbum trae canciones que nos pueden llenar de despecho, desilusión, o una forma de sacar todo aquel dolor interno que llevamos en el alma.”</p>
+            <footer>— Puro Rock Puro, 5 oct 2023 · <a href="https://purorockpuro.com/diezell-nos-presentan-su-album-caotico/" target="_blank" rel="noopener">Leer fuente ↗</a></footer>
+          </blockquote>
+          <div class="music-platform-link"><div><span>ESCUCHAR COMPLETO</span><strong>Caótico está en Spotify.</strong></div><a href="https://open.spotify.com/album/738DN211pKelLzZTRzIC28" target="_blank" rel="noopener noreferrer">Abrir álbum oficial <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titulo-sencillos">
+      <div class="wrap">
+        <p class="kicker">Fuera de los discos</p>
+        <h2 id="titulo-sencillos">Sencillos</h2>
+        <p class="lead">Desliza para verlos todos.</p>
+        <div class="sencillos-row">
+          <a class="sencillo-card" href="canciones/insomnio.html"><strong>Insomnio</strong><span>Sencillo · 2021</span></a>
+          <a class="sencillo-card" href="canciones/sin-rencores.html"><strong>Sin Rencores</strong><span>Sencillo debut · 2021</span></a>
+          <a class="sencillo-card" href="canciones/el-mejor-de-mis-errores.html"><strong>El Mejor De Mis Errores</strong><span>Sencillo · 2021</span></a>
+          <a class="sencillo-card" href="canciones/tiempos-de-un-tiempo.html"><strong>Tiempos De Un Tiempo</strong><span>Sencillo · 2021</span></a>
+          <a class="sencillo-card" href="canciones/muerdago-marchito.html"><strong>Muérdago Marchito</strong><span>Tema navideño · 2021</span></a>
+          <a class="sencillo-card" href="canciones/hipocresia.html"><strong>Hipocresía</strong><span>Sencillo · 2022</span></a>
+          <a class="sencillo-card" href="canciones/suspension.html"><strong>Suspensión...</strong><span>Adelanto de INSANIA · 2024</span></a>
+          <a class="sencillo-card" href="canciones/el-monstruo-de-gizmo.html"><strong>El Monstruo De Gizmo</strong><span>Adelanto de INSANIA · 2025</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p class="footer-marca" aria-hidden="true">VINVSNI</p>
+      <p><strong>DIEZELL</strong> — Web de fans no oficial. No afiliada a la banda.</p>
+      <nav class="footer-links" aria-label="Enlaces oficiales de Diezell">
+        <a href="https://open.spotify.com/artist/2mEQCZzgLbG0mWCwaAEb3g" target="_blank" rel="noopener">Spotify</a>
+        <a href="https://www.youtube.com/@diezellmx" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.tiktok.com/@diezellmx" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.instagram.com/diezellmx" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/diezelloficial" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://linktr.ee/diezellmx" target="_blank" rel="noopener">Linktree</a>
+      </nav>
+    </div>
+  </footer>
+  <div class="player-bar" id="dz-dock" role="region" aria-label="Reproductor de Diezell">
+    <audio id="dz-audio" preload="metadata"></audio>
+    <button class="dock-cover" id="dock-ir" type="button" aria-label="Ir al reproductor completo">
+      <img id="dock-cover" src="images/insania.jpg" alt="" width="44" height="44">
+      <span class="dock-cover-dzl" id="dock-cover-dzl" hidden>DZL</span>
+    </button>
+    <span class="player-meta"><strong id="dock-titulo">Suspensión…</strong><span id="dock-album">Diezell · INSANIA · Adelanto 1:30</span></span>
+    <button class="dock-btn" id="dock-play" type="button" aria-label="Reproducir o pausar">▶</button>
+    <button class="dock-btn" id="dock-next" type="button" aria-label="Siguiente adelanto">⏭</button>
+    <div class="dock-progreso" id="dock-progreso" role="slider" aria-label="Progreso del adelanto" aria-valuemin="0" aria-valuemax="90" aria-valuenow="0" tabindex="0"><div class="dock-relleno" id="dock-relleno"></div></div>
+  </div>
+  <nav class="tabbar" aria-label="Navegación principal móvil">
+    <a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 3l9 8.5"/><path d="M5 10.5V21h14V10.5"/><path d="M9.5 21v-6h5v6"/></svg>Inicio</a>
+    <a href="escuchar.html" class="active" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a8 8 0 0 1 16 0"/><rect x="3" y="13" width="4" height="7" rx="1.5"/><rect x="17" y="13" width="4" height="7" rx="1.5"/></svg>Música</a>
+    <a href="en-vivo.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="13" height="12" rx="2"/><path d="M15.5 10.5 21 7v10l-5.5-3.5"/></svg>En vivo</a>
+    <a href="caoticos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.8 6.3.7-4.7 4.3 1.3 6.2-5.6-3.2L6.4 20l1.3-6.2L3 9.5l6.3-.7z"/></svg>Caóticos</a>
+    <a href="banda.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5.5a3.5 3.5 0 0 1 0 5.5"/><path d="M17.5 14.5a6.5 6.5 0 0 1 4 5.5"/></svg>Banda</a>
+  </nav>
+  <script src="app.js"></script>
+</body>
+</html>
