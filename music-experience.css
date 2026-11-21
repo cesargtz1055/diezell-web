@@ -67,3 +67,8 @@
 @media(max-width:850px){.music-hero-layout{grid-template-columns:1fr 36%;gap:25px}.music-hero h1{font-size:clamp(3rem,8.6vw,5rem)}.music-hero-photo{aspect-ratio:3/5;box-shadow:12px 12px 0 #8e1b1b}.music-catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.music-catalog-toolbar{grid-template-columns:1fr}.music-filters{grid-column:1;grid-row:3}.music-section-heading{grid-template-columns:1fr;gap:16px}}
 @media(max-width:600px){.music-page .music-hero{padding:48px 0 55px}.music-hero-layout{grid-template-columns:1fr}.music-hero h1{font-size:clamp(3.1rem,12.8vw,5.4rem)}.music-hero-photo{max-width:76%;margin:0 auto;aspect-ratio:1;box-shadow:12px 12px 0 #8e1b1b}.music-hero-facts{margin-top:25px}.music-paths{grid-template-columns:1fr}.music-paths a{padding:18px 12px}.music-paths a+a{border-left:0;border-top:1px solid #aaa69e}.music-catalog-grid{grid-template-columns:1fr}.music-song-art{aspect-ratio:16/7}.music-result-row>span{display:none}.music-hero-buttons a{width:100%;justify-content:space-between}.music-catalog-toolbar input{font-size:16px}.music-filters button{flex:1 1 auto}.music-page .reproductor .dz-now{flex-wrap:wrap}.music-page .reproductor .dz-cover{max-width:100px}.music-page .reproductor .dz-badge{margin:0}}
 @media(prefers-reduced-motion:reduce){.music-page *, .music-page *:before,.music-page *:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* La sección Música tiene un único reproductor visible; el dock global no se duplica aquí. */
+.music-page #dz-dock{display:none!important}
+.music-page #dz-lista[hidden]{display:none!important}
+.music-page{padding-bottom:0}
