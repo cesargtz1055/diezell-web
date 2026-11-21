@@ -116,6 +116,10 @@ jobs:
           git show "FETCH_HEAD:conceptos/editorial-material/pages/dz-song.css" > site/nuevo/dz-song.css
           git show "FETCH_HEAD:conceptos/editorial-material/pages/build-songs.py" > /tmp/diezell-build-songs.py
           python3 /tmp/diezell-build-songs.py
+          # Rebuild the four individual member pages and preserve their biographies.
+          git show "FETCH_HEAD:conceptos/editorial-material/pages/dz-member.css" > site/nuevo/dz-member.css
+          git show "FETCH_HEAD:conceptos/editorial-material/pages/build-members.py" > /tmp/diezell-build-members.py
+          python3 /tmp/diezell-build-members.py
           python3 - <<'PY'
           from pathlib import Path
           root=Path('site/nuevo')
@@ -131,10 +135,16 @@ jobs:
           assert live.count('class="dz3-tour-date')==10
           band=(root/'banda.html').read_text(encoding='utf-8')
           assert 'dz3-band' in band and 'dz-band.css' in band
+          for slug in ('rene','bernie','emmash','mau'):
+              assert 'miembro-'+slug+'.html' in band
           assert band.count('class="dz3-member"')==4
           assert band.count('<time>')>=7
           stats=(root/'crecimiento.html').read_text(encoding='utf-8')
           assert 'dz3-stats' in stats and 'dz-stats-engine.js' in stats
+          for slug in ('rene','bernie','emmash','mau'):
+              member=(root/('miembro-'+slug+'.html')).read_text(encoding='utf-8')
+              assert 'dz3-member-page' in member and 'dz-member.css' in member
+              assert member.count('<h1>')==1 and 'stripes' not in member
           assert (root/'dz-stats-engine.js').is_file()
           songpages=list((root/'canciones').glob('*.html'))
           assert len(songpages)==27
@@ -154,7 +164,7 @@ jobs:
           assert len(pages)>=35
           for page in pages:
               text=page.read_text(encoding='utf-8')
-              assert ('site-modern.css' in text or page in (root/'index.html',root/'escuchar.html',root/'en-vivo.html',root/'banda.html',root/'caoticos.html',root/'crecimiento.html') or page.parent.name=='canciones'), str(page)
+              assert ('site-modern.css' in text or page in (root/'index.html',root/'escuchar.html',root/'en-vivo.html',root/'banda.html',root/'caoticos.html',root/'crecimiento.html') or page.parent.name=='canciones' or page.name.startswith('miembro-')), str(page)
               assert '</html>' in text.lower(), str(page)
           print('PASS: editorial structure, player uniqueness, archive navigation,',len(pages),'HTML pages')
           PY
