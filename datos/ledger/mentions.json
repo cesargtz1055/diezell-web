@@ -1,0 +1,21 @@
+{
+  "mentions": [
+    {
+      "date": "2026-11-18",
+      "source": "Google News",
+      "kind": "noticia",
+      "title": "Diezell presenta su nuevo sencillo, “El Cuento De Aquel Imperfecto Ser” - Punkeando!",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQUGE4bkNRandBQU9tZUlRQlprNVFaeEUxV1QybzZVa0cwVGhsUGpCdkdxbXRCWG9mNVdEVURMb2p4djNydXdOMUhRdGdFbVd1WXR0emhMbHFodjFCdjBGUWdXWkZ1SzNYeDctV0l1Vkg4QjVvUmJUVjB0LWN0UzhLcFc2ZDR3bXJTYnY3Vkk2RWs0NzE2RGpITExxMldOSW03RWRWNEFCUF8?oc=5",
+      "seen_first": "2026-11-18T00:36:47-06:00"
+    },
+    {
+      "date": "2026-11-18",
+      "source": "Bing News",
+      "kind": "noticia",
+      "title": "Diezell Monterrey Tickets",
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6afd4782bd19454183e97c3621f8aa70&url=https%3a%2f%2fwww.jambase.com%2fshow%2fdiezell-foro-tims-20261113&c=8107906169573473865&mkt=es-us",
+      "seen_first": "2026-11-18T00:36:49-06:00"
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,87 @@
+{
+  "actualizado": "2026-11-15",
+  "artista": "Diezell",
+  "fuentes": [
+    "Spotify (página del artista, 15 nov 2026)",
+    "Viberate (rank global y países, 15 nov 2026)",
+    "Music Metrics Vault (ciudades y seguidores, 15 nov 2026)",
+    "YouTube / TikTok / Deezer vía Viberate (8 nov 2026)"
+  ],
+  "otras_redes": {
+    "deezer_fans": 883,
+    "facebook_seguidores": "~10K",
+    "fecha_redes": "2026-11-08",
+    "instagram_seguidores": "~6.9K",
+    "tiktok_seguidores": "11.3K",
+    "youtube_suscriptores": "12.2K"
+  },
+  "paises_porcentaje": [
+    {
+      "pais": "México",
+      "porcentaje": 69.47
+    },
+    {
+      "pais": "Perú",
+      "porcentaje": 8.51
+    },
+    {
+      "pais": "Ecuador",
+      "porcentaje": 4.25
+    }
+  ],
+  "spotify": {
+    "cambio_oyentes": -675,
+    "cambio_oyentes_porcentaje": -1.5,
+    "genero": "mexican pop punk",
+    "oyentes_mensuales": 44147,
+    "oyentes_mensuales_anterior": 44822,
+    "oyentes_mensuales_fecha_anterior": "2026-11-08",
+    "seguidores": 16534,
+    "viberate_rank_global": 112689
+  },
+  "spotify_artist_id": "2mEQCZzgLbG0mWCwaAEb3g",
+  "top_canciones_spotify": [
+    {
+      "reproducciones": 1678233,
+      "titulo": "El Cuento De Aquel Imperfecto Ser"
+    },
+    {
+      "reproducciones": 1048396,
+      "titulo": "Sin Rencores"
+    },
+    {
+      "reproducciones": 598427,
+      "titulo": "Martes Con Aroma A Domingo"
+    },
+    {
+      "reproducciones": 586078,
+      "titulo": "De Espaldas"
+    },
+    {
+      "reproducciones": 585675,
+      "titulo": "Suspensión..."
+    }
+  ],
+  "top_ciudades": [
+    {
+      "ciudad": "Ciudad de México",
+      "oyentes": 5768
+    },
+    {
+      "ciudad": "Lima",
+      "oyentes": 2641
+    },
+    {
+      "ciudad": "Monterrey",
+      "oyentes": 2018
+    },
+    {
+      "ciudad": "Guadalajara",
+      "oyentes": 1682
+    },
+    {
+      "ciudad": "Puebla",
+      "oyentes": 1586
+    }
+  ]
+}
