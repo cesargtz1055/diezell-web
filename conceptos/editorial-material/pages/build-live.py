@@ -26,7 +26,7 @@ for item in items:
     pending=('TBA' in date or 'anunciar' in date.lower())
     cls=' dz3-tour-date--pending' if pending else ''
     badge='Sin fecha confirmada' if pending else 'Concierto registrado'
-    cards.append('<article class="dz3-tour-date'+cls+'"'+(' id="ultimo-show"' if city=='Monterrey' and '13 NOV' in date else '')+'>');
+    cards.append('<article class="dz3-tour-date'+cls+'"'+(' id="ultimo-show"' if city=='Monterrey' and '13 NOV' in date else '')+'>'
                  +'<time>'+escape(date)+'</time><div><h3>'+escape(city)+'</h3>'
                  +'<p>'+escape(detail)+'</p><span class="dz3-tour-label">'+badge+'</span></div></article>')
 figures=re.findall(r'<figure class="foto-wrap"([^>]*)>([\s\S]*?)</figure>',source)
