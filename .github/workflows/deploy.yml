@@ -236,7 +236,26 @@ jobs:
           print("Original preserved; preview sources and song links checked")
           PY
 
-      - name: Upload original, music preview and complete redesign to Pages
+      - name: Promote reviewed redesign to the public root and archive the former root
+        run: |
+          set -e
+          # Preserve the complete original version for rollback and comparison.
+          mkdir -p site/anterior
+          find site -mindepth 1 -maxdepth 1 ! -name anterior ! -name nuevo ! -name preview -exec cp -a '{}' site/anterior/ \\;
+          # /nuevo/ remains a stable comparison URL; the root becomes the same design.
+          cp -a site/nuevo/. site/
+          python3 - <<'PY'
+          from pathlib import Path
+          root=Path('site')
+          assert (root/'index.html').read_bytes()==(root/'nuevo/index.html').read_bytes()
+          assert (root/'escuchar.html').read_bytes()==(root/'nuevo/escuchar.html').read_bytes()
+          assert (root/'anterior/index.html').is_file()
+          assert (root/'anterior/audio/playlist.json').is_file()
+          assert len(list((root/'canciones').glob('*.html')))==27
+          print('PASS: new root, original backup and 27 song detail pages')
+          PY
+
+      - name: Upload unified redesign, original archive and previews to Pages
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
@@ -266,5 +285,5 @@ jobs:
           echo "Pages artifact did not become available."
           exit 1
 
-      - name: Publish Pages (original at root, new design at /nuevo/)
+      - name: Publish Pages (unified design at root, backup at /anterior/)
         uses: actions/deploy-pages@v4
