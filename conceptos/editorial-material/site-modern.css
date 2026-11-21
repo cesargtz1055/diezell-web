@@ -40,3 +40,22 @@ input,select,textarea{background:#171d23;color:#f5f6f4;border:1px solid #59616a;
 .tabbar a.active,.tabbar a[aria-current="page"]{color:#c9ff12!important;box-shadow:none!important}.tabbar a.active svg{color:#c9ff12!important}
 @media(max-width:767px){body{padding-bottom:calc(136px + env(safe-area-inset-bottom,0px))!important}.player-bar{height:64px!important;bottom:calc(64px + env(safe-area-inset-bottom,0px))!important;padding:8px 12px!important;gap:9px!important;background:#11161cf7!important;border-top:1px solid #39434c!important}.player-bar .dock-btn{width:42px!important;height:42px!important;min-width:42px!important}.player-bar #dock-play{width:46px!important;height:46px!important;min-width:46px!important}.tabbar{height:calc(64px + env(safe-area-inset-bottom,0px))!important;background:#0c1015!important;border-top:1px solid #303941!important}.tabbar a{min-width:0!important;min-height:56px!important;padding:4px 1px!important;font-size:.65rem!important;gap:3px!important}.tabbar a svg{width:21px!important;height:21px!important}.dz-player{padding:16px!important}.dz-now{gap:12px!important}.dz-cover{width:84px!important;height:84px!important}.dz-now-info strong{font-size:1.1rem!important}}
 @media(max-width:380px){.player-bar{padding:8px!important;gap:7px!important}.player-bar #dock-next{width:36px!important;min-width:36px!important}.tabbar a{font-size:.6rem!important}}
+
+/* Music page: eliminate competing fixed mini-player. Audio node stays mounted
+   inside the hidden dock, and the primary full-player controls remain active. */
+@media(max-width:767px){
+ body.dz-music-page .player-bar{display:none!important}
+ body.dz-music-page{padding-bottom:calc(74px + env(safe-area-inset-bottom,0px))!important}
+ body.dz-music-page .dz-player{margin-top:18px!important;border:1px solid #444e59!important;border-radius:18px!important;background:#161c23!important}
+ body.dz-music-page .dz-now{display:grid!important;grid-template-columns:76px minmax(0,1fr)!important;align-items:center!important;gap:12px!important}
+ body.dz-music-page .dz-cover{width:76px!important;height:76px!important;grid-row:1 / span 2}
+ body.dz-music-page .dz-now-info{min-width:0!important}
+ body.dz-music-page .dz-now-info strong{font-size:1.15rem!important;line-height:1.25!important;overflow-wrap:anywhere}
+ body.dz-music-page .dz-badge{grid-column:2;justify-self:start}
+ body.dz-music-page .dz-controls{margin-top:14px!important;gap:28px!important}
+ body.dz-music-page .dz-btn{min-width:48px!important;min-height:48px!important}
+ body.dz-music-page .dz-btn--play{width:58px!important;height:58px!important}
+ body.dz-music-page .dz-progreso{min-width:0!important}
+ body.dz-music-page .page-head{padding-top:28px!important}
+ body.dz-music-page .reproductor{padding-top:8px!important}
+}
