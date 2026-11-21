@@ -106,6 +106,12 @@ jobs:
           # Rebuild Caóticos independently, without reusing legacy markup.
           git show "FETCH_HEAD:conceptos/editorial-material/pages/caoticos.html" > site/nuevo/caoticos.html
           git show "FETCH_HEAD:conceptos/editorial-material/pages/dz-community.css" > site/nuevo/dz-community.css
+          # Rebuild stats view, retaining its sourced ledger processing code.
+          git show "FETCH_HEAD:conceptos/editorial-material/pages/crecimiento.html" > site/nuevo/crecimiento.html
+          git show "FETCH_HEAD:conceptos/editorial-material/pages/dz-stats.css" > site/nuevo/dz-stats.css
+          git show "FETCH_HEAD:conceptos/editorial-material/pages/build-stats.py" > /tmp/diezell-build-stats.py
+          python3 /tmp/diezell-build-stats.py
+          node --check site/nuevo/dz-stats-engine.js
           python3 - <<'PY'
           from pathlib import Path
           root=Path('site/nuevo')
@@ -123,6 +129,9 @@ jobs:
           assert 'dz3-band' in band and 'dz-band.css' in band
           assert band.count('class="dz3-member"')==4
           assert band.count('<time>')>=7
+          stats=(root/'crecimiento.html').read_text(encoding='utf-8')
+          assert 'dz3-stats' in stats and 'dz-stats-engine.js' in stats
+          assert (root/'dz-stats-engine.js').is_file()
           home=(root/'index.html').read_text(encoding='utf-8')
           assert 'Prototipo visual.' not in home
           assert 'Diezell en cifras' in home
@@ -134,7 +143,7 @@ jobs:
           assert len(pages)>=35
           for page in pages:
               text=page.read_text(encoding='utf-8')
-              assert ('site-modern.css' in text or page in (root/'index.html',root/'escuchar.html',root/'en-vivo.html',root/'banda.html',root/'caoticos.html')), str(page)
+              assert ('site-modern.css' in text or page in (root/'index.html',root/'escuchar.html',root/'en-vivo.html',root/'banda.html',root/'caoticos.html',root/'crecimiento.html')), str(page)
               assert '</html>' in text.lower(), str(page)
           print('PASS: editorial structure, player uniqueness, archive navigation,',len(pages),'HTML pages')
           PY
