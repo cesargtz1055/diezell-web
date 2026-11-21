@@ -316,7 +316,7 @@
       var rel = $('dz-progreso-relleno'); if (rel) rel.style.width = (frac * 100) + '%';
       var bar = $('dz-progreso'); if (bar) bar.setAttribute('aria-valuenow', Math.round(t));
       var drel = $('dock-relleno'); if (drel) drel.style.width = (frac * 100) + '%';
-      var dbar = $('dock-progreso'); if (dbar) dbar.setAttribute('aria-valuenow', Math.round(frac * 100));
+      var dbar = $('dock-progreso'); if (dbar) dbar.setAttribute('aria-valuenow', Math.round(t));
     }
 
     dzAudio.addEventListener('error', function () {
