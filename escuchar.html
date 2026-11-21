@@ -11,7 +11,8 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="images/insania.jpg">
 </head>
-<body>
+
+<body class="music-page">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <header class="topbar">
     <div class="wrap topbar-inner">
@@ -28,17 +29,64 @@
   </header>
 
   <main id="contenido">
-    <div class="wrap page-head" style="padding-top:48px">
-      <div class="stripes" aria-hidden="true"><span></span><span></span><span></span></div>
-      <h1>Música</h1>
-      <p class="lead">Primero INSANIA, luego Caótico, luego los sencillos.</p>
-    </div>
+
+    <!-- Dirección de arte editorial: navegación primero, reproducción después. -->
+    <section class="music-hero" aria-labelledby="music-title">
+      <div class="wrap music-hero-layout">
+        <div class="music-hero-copy">
+          <p class="music-overline"><span aria-hidden="true">✳</span> DIEZELL / ARCHIVO SONORO</p>
+          <h1 id="music-title">LA MÚSICA<br>NO SE <em>EXPLICA.</em><br>SE ESCUCHA.</h1>
+          <p class="music-hero-lead">Dos discos, sencillos y un archivo para descubrir cada canción. Entra a su ficha, conoce los detalles o escucha un adelanto.</p>
+          <div class="music-hero-buttons">
+            <a class="music-hero-primary" href="#catalogo">Explorar las canciones <span aria-hidden="true">↗</span></a>
+            <a class="music-hero-secondary" href="#reproductor">Escuchar adelantos <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="music-hero-facts" aria-label="Contenido de la discografía">
+            <span><strong>02</strong> ÁLBUMES</span><span><strong>27</strong> FICHAS DE CANCIONES</span><span>DESDE 2021</span>
+          </div>
+        </div>
+        <figure class="music-hero-photo">
+          <img src="images/en-vivo-insania.jpg" alt="René de Diezell en concierto bajo luces azules" width="1280" height="1600" fetchpriority="high">
+          <figcaption><span>UN ARCHIVO PARA ESCUCHAR</span><strong>Y VOLVER A ENCONTRAR.</strong></figcaption>
+        </figure>
+      </div>
+      <span class="music-hero-index" aria-hidden="true">DZL / 27</span>
+    </section>
+
+    <nav class="wrap music-paths" aria-label="Ir a una sección de Música">
+      <a href="#catalogo"><span>01 / EXPLORA</span><strong>Las canciones</strong><span aria-hidden="true">↗</span></a>
+      <a href="#reproductor"><span>02 / ESCUCHA</span><strong>Un adelanto</strong><span aria-hidden="true">↗</span></a>
+      <a href="#album-insania"><span>03 / DESCUBRE</span><strong>Los álbumes</strong><span aria-hidden="true">↗</span></a>
+    </nav>
+
+    <section class="music-catalog-section" id="catalogo" aria-labelledby="music-catalog-title">
+      <div class="wrap">
+        <div class="music-section-heading">
+          <div><p class="music-label">ARCHIVO / 001—027</p><h2 id="music-catalog-title">CADA CANCIÓN.<br><em>SU PROPIA HISTORIA.</em></h2></div>
+          <p>No son solo pistas de audio: cada canción tiene una ficha individual con enlaces, álbum y datos disponibles. Selecciona una para conocerla.</p>
+        </div>
+        <div class="music-catalog-toolbar">
+          <label for="music-search">Buscar una canción</label>
+          <input id="music-search" type="search" placeholder="Ej. Suspensión, Sin Rencores…" autocomplete="off" aria-controls="music-catalog-grid">
+          <div class="music-filters" role="group" aria-label="Filtrar canciones por lanzamiento">
+            <button type="button" class="is-selected" data-music-filter="all" aria-pressed="true">Todas</button>
+            <button type="button" data-music-filter="insania" aria-pressed="false">INSANIA</button>
+            <button type="button" data-music-filter="caotico" aria-pressed="false">Caótico</button>
+            <button type="button" data-music-filter="sencillos" aria-pressed="false">Sencillos</button>
+          </div>
+        </div>
+        <div class="music-result-row"><output id="music-catalog-count" role="status" aria-live="polite">Preparando catálogo…</output><span>SELECCIONA UNA CANCIÓN PARA VER SU FICHA ↘</span></div>
+        <div class="music-catalog-grid" id="music-catalog-grid" aria-label="Fichas de canciones"></div>
+        <p class="music-empty" id="music-empty" hidden>No encontramos esa canción. Prueba con otro título o cambia el filtro.</p>
+        <noscript><p>Para explorar las canciones sin JavaScript, consulta las listas de INSANIA, Caótico y sencillos más abajo.</p></noscript>
+      </div>
+    </section>
 
     <section class="section reproductor" id="reproductor" aria-labelledby="titulo-reproductor">
       <div class="wrap">
-        <p class="kicker">Adelantos de 1:30 · con permiso de la banda</p>
-        <h2 id="titulo-reproductor">Reproductor</h2>
-        <p class="lead">Escucha un adelanto de 1:30 de cada canción, directo en la web. La canción completa está en Spotify y YouTube, para apoyar a la banda.</p>
+        <p class="music-label music-label--light">ESCUCHA / 90 SEGUNDOS</p>
+        <h2 id="titulo-reproductor">UN SOLO REPRODUCTOR.</h2>
+        <p class="lead">Prueba una canción aquí o elige «Escuchar adelanto» desde su ficha en el catálogo. Para escucharla completa, ve a los canales oficiales de la banda.</p>
         <div class="dz-player" id="dz-player">
           <div class="dz-now">
             <div class="dz-cover" id="dz-cover-wrap">
@@ -80,10 +128,7 @@
             </div>
           </div>
         </div>
-        <div class="dz-lista" id="dz-lista" aria-label="Lista de canciones">
-          <p class="dz-lista-cargando">Cargando las 27 canciones…</p>
-        </div>
-        <p class="rep-nota">Adelantos de 90 segundos con permiso de Diezell. El catálogo completo sigue abajo en Spotify.</p>
+<p class="rep-nota">Adelantos de 90 segundos con permiso de Diezell. La reproducción completa está disponible mediante los enlaces oficiales.</p>
       </div>
     </section>
 
@@ -119,9 +164,7 @@
             <p>“Detrás de INSANIA hay también un proceso largo e íntimo: un año entero de reunirse noche tras noche para componer el disco, puliendo cada idea hasta darle forma a este concepto tan ambicioso.”</p>
             <footer>— Puro Rock Puro, 16 dic 2025 · <a href="https://purorockpuro.com/diezell-presenta-insania-su-segundo-album-de-estudio/" target="_blank" rel="noopener">Leer fuente ↗</a></footer>
           </blockquote>
-          <div class="embed-block">
-            <iframe title="Escuchar INSANIA en Spotify" src="https://open.spotify.com/embed/album/3LGm9FVg9cswGMo5YneJ88?utm_source=generator&amp;theme=0" width="100%" height="352" style="border:0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          </div>
+          <div class="music-platform-link"><div><span>ESCUCHAR COMPLETO</span><strong>INSANIA está en Spotify.</strong></div><a href="https://open.spotify.com/album/3LGm9FVg9cswGMo5YneJ88" target="_blank" rel="noopener noreferrer">Abrir álbum oficial <span aria-hidden="true">↗</span></a></div>
         </div>
       </div>
     </section>
@@ -159,9 +202,7 @@
             <p>“El álbum trae canciones que nos pueden llenar de despecho, desilusión, o una forma de sacar todo aquel dolor interno que llevamos en el alma.”</p>
             <footer>— Puro Rock Puro, 5 oct 2023 · <a href="https://purorockpuro.com/diezell-nos-presentan-su-album-caotico/" target="_blank" rel="noopener">Leer fuente ↗</a></footer>
           </blockquote>
-          <div class="embed-block">
-            <iframe title="Escuchar Caótico en Spotify" src="https://open.spotify.com/embed/album/738DN211pKelLzZTRzIC28?utm_source=generator&amp;theme=0" width="100%" height="352" style="border:0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          </div>
+          <div class="music-platform-link"><div><span>ESCUCHAR COMPLETO</span><strong>Caótico está en Spotify.</strong></div><a href="https://open.spotify.com/album/738DN211pKelLzZTRzIC28" target="_blank" rel="noopener noreferrer">Abrir álbum oficial <span aria-hidden="true">↗</span></a></div>
         </div>
       </div>
     </section>
