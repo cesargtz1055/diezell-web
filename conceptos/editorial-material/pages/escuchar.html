@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0c1015"><meta name="robots" content="noindex,follow">
+<meta name="description" content="Explora las canciones, álbumes y sencillos de Diezell. Escucha adelantos y descubre sus fichas de canción.">
+<title>Música y discografía de Diezell | Archivo de fans</title>
+<link rel="icon" href="images/insania.jpg">
+<link rel="stylesheet" href="dz-rebuild.css">
+</head>
+<body class="dz3 dz3-music">
+<a class="dz3-skip" href="#contenido">Saltar al contenido</a>
+<header class="dz3-header">
+  <nav class="dz3-nav dz3-wrap" aria-label="Navegación principal">
+    <a class="dz3-logo" href="index.html" aria-label="Diezell, inicio">DIEZELL<span>.</span></a>
+    <button class="dz3-menu-toggle" type="button" aria-expanded="false" aria-controls="dz3-menu" aria-label="Abrir menú">Menú <span aria-hidden="true">☰</span></button>
+    <div class="dz3-menu" id="dz3-menu">
+      <a href="index.html">Inicio</a><a class="is-current" aria-current="page" href="escuchar.html">Música</a>
+      <a href="en-vivo.html">En vivo</a><a href="banda.html">La banda</a><a href="caoticos.html">Caóticos</a>
+    </div>
+  </nav>
+</header>
+<main id="contenido">
+<section class="dz3-music-hero" aria-labelledby="music-title">
+  <div class="dz3-wrap dz3-hero-grid">
+    <div class="dz3-hero-copy"><p class="dz3-eyebrow">Archivo musical · Diezell</p><h1 id="music-title">Música<span>.</span></h1><p class="dz3-lead">Dos discos, sencillos y 27 historias que merecen escucharse. Encuentra una canción, explora su ficha y decide qué suena después.</p>
+      <nav class="dz3-jumps" aria-label="Ir a sección"><a href="#discografia">Explorar discos</a><a href="#catalogo">Buscar canciones</a><a href="#reproductor">Abrir reproductor</a></nav>
+    </div>
+    <div class="dz3-hero-art" aria-hidden="true"><img src="images/insania.jpg" alt="" width="640" height="640"><img src="images/caotico.jpg" alt="" width="640" height="640"></div>
+  </div>
+</section>
+<section id="discografia" class="dz3-section dz3-wrap" aria-labelledby="discografia-title">
+  <div class="dz3-section-heading"><p class="dz3-eyebrow">Discografía</p><h2 id="discografia-title">Los discos.</h2><p>Dos momentos del sonido de Diezell. Entra al álbum y explora las canciones en su orden original.</p></div>
+  <div class="dz3-albums">
+    <article class="dz3-album" id="album-insania"><img src="images/insania.jpg" alt="Portada del álbum INSANIA" width="640" height="640" loading="lazy"><div><p class="dz3-eyebrow">Álbum · 2025</p><h3>INSANIA</h3><p>Diez canciones sobre vulnerabilidad, culpa, nostalgia y duelo.</p><p class="dz3-album-meta">28 nov 2025 · 10 canciones</p><a href="#lista-insania">Ver las canciones de INSANIA ↗</a></div></article>
+    <article class="dz3-album" id="album-caotico"><img src="images/caotico.jpg" alt="Portada del álbum Caótico" width="640" height="640" loading="lazy"><div><p class="dz3-eyebrow">Álbum · 2023</p><h3>Caótico</h3><p>El primer álbum de la banda. Guitarras, desamor y una identidad que empieza a tomar forma.</p><p class="dz3-album-meta">29 sep 2023 · 11 canciones</p><a href="#lista-caotico">Ver las canciones de Caótico ↗</a></div></article>
+  </div>
+</section>
+<section id="catalogo" class="dz3-section dz3-wrap" aria-labelledby="catalogo-title">
+  <div class="dz3-section-heading"><p class="dz3-eyebrow">Explorar</p><h2 id="catalogo-title">Todas las canciones.</h2><p>Busca por título, filtra por disco o escucha un adelanto. Cada canción también tiene su propia ficha.</p></div>
+  <div class="dz3-catalog-tools"><label class="dz3-search-label" for="dz3-search">Buscar canción</label><input id="dz3-search" type="search" placeholder="Título de la canción…" autocomplete="off"><div class="dz3-filters" role="group" aria-label="Filtrar canciones"><button type="button" data-filter="all" aria-pressed="true">Todas</button><button type="button" data-filter="insania" aria-pressed="false">INSANIA</button><button type="button" data-filter="caotico" aria-pressed="false">Caótico</button><button type="button" data-filter="sencillos" aria-pressed="false">Sencillos</button></div></div>
+  <div class="dz3-catalog-layout"><div id="dz-lista" class="dz-lista" aria-label="Catálogo de canciones"><p class="dz-lista-cargando">Preparando canciones…</p></div>
+    <aside class="dz3-catalog-notes" aria-labelledby="fichas-title"><h3 id="fichas-title">Detrás de cada canción.</h3><p>Consulta la ficha de cada canción: su lugar en el catálogo y las referencias documentadas.</p><div id="dz3-ficha-links"><p class="dz3-muted">Cargando fichas…</p></div></aside>
+  </div>
+  <p class="dz3-zero" id="dz3-zero" hidden>No encontramos canciones con ese término. Prueba otra búsqueda.</p>
+</section><section id="reproductor" class="dz3-wrap dz3-player-section" aria-labelledby="titulo-reproductor">
+  <div class="dz3-section-heading"><p class="dz3-eyebrow">Escucha aquí</p><h2 id="titulo-reproductor">Ahora sí, dale play.</h2><p>Elige una canción del catálogo para escuchar su adelanto de hasta 90 segundos. Para escucharla completa, visita los canales oficiales.</p></div>
+  <div class="dz3-player" id="dz-player">
+    <div class="dz3-now">
+      <div class="dz-cover" id="dz-cover-wrap"><img id="dz-cover" src="images/insania.jpg" alt="Portada del álbum" width="110" height="110"><span id="dz-cover-dzl" class="dz-cover-dzl" hidden>DZL</span></div>
+      <div class="dz3-now-text"><span class="dz3-playing-label">Adelanto seleccionado</span><strong id="dz-titulo">Suspensión…</strong><span id="dz-album">Diezell · INSANIA</span></div>
+      <span class="dz-badge">90 s</span>
+    </div>
+    <div class="dz3-player-bottom">
+      <div class="dz-controls" aria-label="Controles de reproducción">
+        <button class="dz-btn" id="dz-anterior" type="button" aria-label="Canción anterior">⏮</button>
+        <button class="dz-btn dz-btn--play" id="dz-play" type="button" aria-label="Reproducir o pausar">▶</button>
+        <button class="dz-btn" id="dz-siguiente" type="button" aria-label="Canción siguiente">⏭</button>
+      </div>
+      <div class="dz-progreso-row">
+        <span class="dz-tiempo" id="dz-actual">0:00</span>
+        <div class="dz-progreso" id="dz-progreso" role="slider" aria-label="Progreso del adelanto" aria-valuemin="0" aria-valuemax="90" aria-valuenow="0" tabindex="0"><div class="dz-progreso-relleno" id="dz-progreso-relleno"></div></div>
+        <span class="dz-tiempo">1:30</span>
+      </div>
+      <div class="dz3-player-links dz-completa"><a class="dz-link" id="dz-spotify" href="https://open.spotify.com/album/3LGm9FVg9cswGMo5YneJ88" target="_blank" rel="noopener">Spotify ↗</a><a class="dz-link" id="dz-youtube" href="https://www.youtube.com/watch?v=xAJttFYLxO8" target="_blank" rel="noopener">YouTube ↗</a></div>
+      <div class="dz-volumen"><label for="dz-vol">Volumen</label><input type="range" id="dz-vol" min="0" max="100" value="90"></div>
+    </div>
+    <div class="dz-cta" id="dz-cta" hidden><p>Terminó el adelanto de <strong id="dz-cta-titulo">Suspensión…</strong>.</p>
+      <div class="dz-cta-botones"><a class="dz-btn-cta" id="dz-cta-spotify" href="https://open.spotify.com/album/3LGm9FVg9cswGMo5YneJ88" target="_blank" rel="noopener">Escuchar en Spotify ↗</a><a class="dz-btn-cta" id="dz-cta-youtube" href="https://www.youtube.com/watch?v=xAJttFYLxO8" target="_blank" rel="noopener">Ver en YouTube ↗</a><button class="dz-btn-cta" id="dz-cta-siguiente" type="button">Siguiente adelanto →</button></div>
+    </div>
+    <p class="dz3-player-feedback" id="dz3-player-feedback" role="status" aria-live="polite" hidden></p>
+  </div>
+</section>
+
+</main>
+<footer class="dz3-footer"><div class="dz3-wrap"><strong>DIEZELL.</strong><p>Archivo independiente creado por fans. No afiliado a la banda.</p><nav aria-label="Sitios externos"><a href="https://open.spotify.com/artist/2mEQCZzgLbG0mWCwaAEb3g" target="_blank" rel="noopener">Spotify ↗</a><a href="https://www.youtube.com/@diezellmx" target="_blank" rel="noopener">YouTube ↗</a><a href="https://www.instagram.com/diezellmx" target="_blank" rel="noopener">Instagram ↗</a></nav></div></footer>
+<div id="dz-dock" hidden><audio id="dz-audio" preload="metadata"></audio></div>
+<script src="dz3-links.js" defer></script><script src="app.js" defer></script><script src="dz-rebuild.js" defer></script>
+</body></html>

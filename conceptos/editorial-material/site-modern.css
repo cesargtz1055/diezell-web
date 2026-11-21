@@ -1,0 +1,101 @@
+/* Diezell — visual modernization layer for existing 37-page site.
+   Additive: original structure, IDs, links, player and scripts remain intact. */
+:root{--bone:#0b0e12;--bone-2:#14181e;--paper:#20262d;--ink:#f5f6f4;--ink-soft:#e2e4e8;--ink-mute:#bec3cc;--line:#424952;--line-soft:#424952;--red:#f18a64;--red-deep:#f18a64;--on-dark:#f5f6f4;--on-dark-mute:#bec3cc;--link-dark:#ffb59a;--dark:#080a0d;--dark-2:#14181e;--font-display:Inter,Arial,system-ui,sans-serif;--font-body:Inter,Arial,system-ui,sans-serif;--radius:16px;--wrap:1280px;--gutter:16px;--section:64px;--space-l:48px}
+html{scroll-behavior:smooth}body{background:#0b0e12!important;background-image:none!important;color:#f5f6f4!important;font-family:var(--font-body);line-height:1.55}
+a{color:#ffb59a}a:hover{color:#ffe0d4}a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid #f18a64!important;outline-offset:3px}
+h1,h2,h3{font-family:var(--font-display);font-weight:900;letter-spacing:-.055em;line-height:1.02;text-transform:none}
+h1{font-size:clamp(3rem,11vw,7rem)}h2{font-size:clamp(2.1rem,8vw,4.8rem)}h3{font-size:clamp(1.4rem,5vw,2.4rem)}
+.topbar{background:#0c1015f2!important;border-bottom:1px solid #343941!important;backdrop-filter:blur(14px)}.topbar-inner{min-height:68px}.brand{font-family:var(--font-display);font-weight:1000;font-style:italic;font-size:clamp(1.6rem,5vw,2.2rem);letter-spacing:-.07em;color:#fff}.dzl-badge{background:#f18a64!important;color:#0c1015!important;border-radius:6px}
+.nav a{color:#f5f6f4!important;font-weight:700}.nav a:hover,.nav a.active,.nav a[aria-current]{color:#f18a64!important}.menu-btn{min-width:48px;min-height:48px;border:1px solid #434951;border-radius:12px;background:#1c2229;color:#fff}
+.btn,.btn-filled,.btn-outlined{border-radius:999px!important;min-height:48px;display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;font-family:var(--font-body);font-weight:800;letter-spacing:0}.btn-filled{background:#f18a64!important;color:#0c1015!important;border:1px solid #f18a64!important}.btn-outlined{background:#10151ac9!important;border:1px solid #f18a64!important;color:#f5f6f4!important}
+.hero{background:#0c1015!important;color:#fff;isolation:isolate}.hero-foto{position:relative}.hero-foto img{filter:brightness(.75) saturate(.88)}.hero-panel{background:#0c0f13!important;color:#f5f6f4!important}.hero-title{font-weight:1000;font-style:italic;letter-spacing:-.09em;line-height:.92}.hero-sub,.lead,.album-meta,.album-concepto,.fuente-nota{color:#c9cdd3!important}
+.section,.album-grid,.historias,.quote-band,.footer,.dark{color:#f5f6f4}.section{background:transparent}.album-grid{gap:clamp(22px,5vw,60px)}.cover-col img,.foto-wrap img{border-radius:12px}.historias{background:#101419!important;border-block:1px solid #323941}.historia-circulo{border:2px solid #3b444d!important}.historia-circulo--nuevo{border-color:#f18a64!important}.historia-etiqueta{color:#f5f6f4!important}.stripes{display:none!important}.kicker{color:#f18a64!important;font-family:var(--font-body);font-size:.8rem;font-weight:850;letter-spacing:.16em}.quote-band{background:#14181e}.footer{background:#080a0d!important;border-top:1px solid #3a424a}
+article,.card,.song-card,.track-card,.album-card,.info-card{border-radius:16px}.foto-popover{background:#1a2026!important;color:#fff!important;border:1px solid #4b535c;border-radius:12px}.foto-popover a{color:#ffb59a!important}
+input,select,textarea{background:#171d23;color:#f5f6f4;border:1px solid #59616a;border-radius:10px;min-height:44px}input::placeholder{color:#bfc4cb}button{font-family:inherit}::selection{background:#f18a64;color:#0c1015}
+@media(max-width:700px){:root{--gutter:16px;--section:48px}.topbar-inner{min-height:64px}.nav{background:#0e1217!important}.hero-title{font-size:clamp(3.7rem,16vw,6rem)}.hero-panel{padding:24px 16px 42px!important}.hero-cta{display:flex;flex-wrap:wrap;gap:10px}.hero-cta .btn{flex:1 1 145px}.section{padding-block:48px}.album-grid{grid-template-columns:1fr}.historias-row{overflow-x:auto;scroll-snap-type:x proximity}.historia{scroll-snap-align:start}.footer{padding-bottom:80px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* Editorial IA and section discovery: designed for narrow touch screens first. */
+.dz-editorial-intro{margin:18px 0 30px;padding:20px 18px;background:#151b22;border:1px solid #3c454f;border-left:4px solid #f18a64;border-radius:14px;color:#f5f6f4;max-width:920px}
+.dz-editorial-intro p{font-size:clamp(1rem,2vw,1.15rem);line-height:1.65;margin:0;max-width:72ch;color:#e2e5ea}
+.dz-section-nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.dz-section-nav a{min-height:48px;display:inline-flex;align-items:center;padding:10px 16px;background:#252d36;border:1px solid #596471;border-radius:999px;color:#f5f6f4!important;font-weight:750}
+.dz-section-nav a:hover{border-color:#f18a64;color:#f18a64!important}
+.dz-page-slogan{font-size:clamp(1.2rem,4vw,2rem);font-weight:800;color:#f18a64;line-height:1.3;margin:10px 0 18px}
+.dz-song-context{font-size:.95rem;color:#d1d5db;line-height:1.5;margin:8px 0 20px}
+@media(max-width:700px){.dz-editorial-intro{padding:18px 16px;margin:16px 0 26px}.dz-section-nav a{flex:1 1 130px;justify-content:center}.dz-page-slogan{margin-bottom:16px}}
+
+/* P0: screenshot-derived mobile defects and real component repairs */
+[hidden]{display:none!important}
+.dock-cover-dzl[hidden],.dz-cover-dzl[hidden],.foto-popover[hidden]{display:none!important}
+.dz-editorial-intro{border-left:0!important;background:transparent!important;border-top:1px solid #333b44!important;border-right:0!important;border-bottom:0!important;border-radius:0!important;padding:18px 0!important;margin:12px 0 26px!important}
+.dz-editorial-intro p{font-size:1rem!important;line-height:1.6!important;color:#d6dae0!important}
+.dz-section-nav{margin-top:14px!important}.dz-section-nav a{background:#1a2026!important;border:1px solid #505862!important;color:#f5f6f4!important;text-decoration:none!important;font-size:.88rem!important;min-height:44px}
+.player-bar .dock-cover{width:42px;height:42px;min-width:42px;min-height:42px;overflow:hidden;border-radius:8px!important;display:flex;align-items:center;justify-content:center}
+.player-bar .dock-cover img{width:42px!important;height:42px!important;object-fit:cover!important;border-radius:8px!important}
+.player-bar .dock-cover-dzl{position:absolute!important;inset:0;width:42px!important;height:42px!important}
+.player-bar .player-meta{min-width:0!important;overflow:hidden}.player-bar .player-meta strong,.player-bar .player-meta span{display:block!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;max-width:100%}
+.player-bar #dock-play{background:#f18a64!important;color:#1b100c!important;font-size:1.1rem!important;box-shadow:none!important;flex-shrink:0}
+.player-bar #dock-next{color:#f6f7f5!important;flex-shrink:0}
+.dz-btn--play{background:#f18a64!important;color:#1b100c!important;box-shadow:none!important}.dz-btn--play:hover{color:#1b100c!important}
+.tabbar a.active,.tabbar a[aria-current="page"]{color:#f18a64!important;box-shadow:none!important}.tabbar a.active svg{color:#f18a64!important}
+@media(max-width:767px){body{padding-bottom:calc(136px + env(safe-area-inset-bottom,0px))!important}.player-bar{height:64px!important;bottom:calc(64px + env(safe-area-inset-bottom,0px))!important;padding:8px 12px!important;gap:9px!important;background:#11161cf7!important;border-top:1px solid #39434c!important}.player-bar .dock-btn{width:42px!important;height:42px!important;min-width:42px!important}.player-bar #dock-play{width:46px!important;height:46px!important;min-width:46px!important}.tabbar{height:calc(64px + env(safe-area-inset-bottom,0px))!important;background:#0c1015!important;border-top:1px solid #303941!important}.tabbar a{min-width:0!important;min-height:56px!important;padding:4px 1px!important;font-size:.65rem!important;gap:3px!important}.tabbar a svg{width:21px!important;height:21px!important}.dz-player{padding:16px!important}.dz-now{gap:12px!important}.dz-cover{width:84px!important;height:84px!important}.dz-now-info strong{font-size:1.1rem!important}}
+@media(max-width:380px){.player-bar{padding:8px!important;gap:7px!important}.player-bar #dock-next{width:36px!important;min-width:36px!important}.tabbar a{font-size:.6rem!important}}
+
+/* Music page: eliminate competing fixed mini-player. Audio node stays mounted
+   inside the hidden dock, and the primary full-player controls remain active. */
+@media(max-width:767px){
+ body.dz-music-page .player-bar{display:none!important}
+ body.dz-music-page{padding-bottom:calc(74px + env(safe-area-inset-bottom,0px))!important}
+ body.dz-music-page .dz-player{margin-top:18px!important;border:1px solid #444e59!important;border-radius:18px!important;background:#161c23!important}
+ body.dz-music-page .dz-now{display:grid!important;grid-template-columns:76px minmax(0,1fr)!important;align-items:center!important;gap:12px!important}
+ body.dz-music-page .dz-cover{width:76px!important;height:76px!important;grid-row:1 / span 2}
+ body.dz-music-page .dz-now-info{min-width:0!important}
+ body.dz-music-page .dz-now-info strong{font-size:1.15rem!important;line-height:1.25!important;overflow-wrap:anywhere}
+ body.dz-music-page .dz-badge{grid-column:2;justify-self:start}
+ body.dz-music-page .dz-controls{margin-top:14px!important;gap:28px!important}
+ body.dz-music-page .dz-btn{min-width:48px!important;min-height:48px!important}
+ body.dz-music-page .dz-btn--play{width:58px!important;height:58px!important}
+ body.dz-music-page .dz-progreso{min-width:0!important}
+ body.dz-music-page .page-head{padding-top:28px!important}
+ body.dz-music-page .reproductor{padding-top:8px!important}
+}
+
+/* Content architecture: visual hierarchy follows actual fan tasks. */
+.dz-data-secondary{border-top:1px solid #333b44!important;background:#10151b!important}.dz-data-secondary .dato-num{font-size:clamp(1.5rem,5vw,2.5rem)!important;color:#f5f6f4!important}.dz-data-secondary .dato-label{font-size:.88rem!important;color:#d4d8df!important}
+.page-head .lead{max-width:72ch!important;line-height:1.65!important}
+.section .fuente-nota,.album-screen .fuente-nota{font-size:.8rem!important;color:#bdc3cc!important}
+.reproductor .dz-link{min-height:42px;display:inline-flex;align-items:center;color:#f5f6f4!important;border-color:#69717b!important}
+.dz-player .dz-badge{border-color:#f18a64!important;color:#f18a64!important}
+.dz-player .dz-tiempo{color:#d9dce2!important}
+.dz-player .dz-progreso{background:#515a63!important}
+.dz-player .dz-progreso-relleno{background:#f18a64!important}
+.dz-song-context{display:none!important}
+.slogan-band .circulo-rojo{display:none!important}
+.slogan-band .brutal-head{display:block!important}
+.slogan-band h1{font-size:clamp(3.5rem,12vw,8rem)!important;line-height:.96!important;letter-spacing:-.07em!important;color:#f5f6f4!important}
+.slogan-band .dz-page-slogan{color:#f18a64!important;font-size:clamp(1.35rem,4vw,2.5rem)!important}
+@media(max-width:767px){
+ .album-screen,.section{overflow-wrap:break-word}
+ .datos-grid{display:grid!important;grid-template-columns:1fr!important;gap:12px!important}
+ .dz-data-secondary .dato{margin:0!important;padding:16px!important;border:1px solid #39434c!important;border-radius:14px!important}
+ .slogan-band{padding-block:40px!important}
+ .slogan-band h1{font-size:clamp(3.2rem,15vw,5rem)!important}
+ .reproductor .dz-volumen{display:none!important}
+ .dz-section-nav{gap:8px!important}
+}
+
+/* Final mobile overlap safeguards: only the primary cover is shown. */
+.dock-cover{position:relative!important;overflow:hidden!important;isolation:isolate!important}
+.dock-cover>img{position:relative!important;z-index:1!important}
+.dock-cover>.dock-cover-dzl{z-index:2!important;display:grid;place-items:center;font-size:11px!important;font-weight:900!important;background:#222b33!important;color:#fff!important}
+.dock-cover>.dock-cover-dzl[hidden]{display:none!important}
+.dz-cover{position:relative!important;overflow:hidden!important;isolation:isolate!important}
+.dz-cover>img{max-width:100%!important;max-height:100%!important;object-fit:cover!important}
+.dz-cover-dzl[hidden]{display:none!important}
+@media(max-width:767px){
+ .page-head .stripes,.stripes,.stripes--light{display:none!important}
+ body.dz-music-page #reproductor{scroll-margin-top:82px}
+ body.dz-music-page .dz-player{position:relative;z-index:1}
+ body.dz-music-page .dz-controls{display:flex!important;align-items:center!important;justify-content:center!important}
+ body.dz-music-page .dz-btn--play{background:#f18a64!important;color:#1b100c!important}
+}
