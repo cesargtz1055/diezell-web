@@ -87,17 +87,12 @@ if home.exists():
     # Preserve factual figures and links but reduce the visual dominance of stale metrics.
     source=source.replace('section datos-strip dark','section datos-strip dark dz-data-secondary')
     home.write_text(source,encoding='utf-8')
-# On Music, listening is a contextual tool, not the first thing in the reading order.
+# Music keeps its full player near the top: a player hidden below the entire
+# catalog makes the play action appear broken on phones. The floating dock is
+# hidden on Music only; on other pages it links here.
 music=root/'escuchar.html'
 if music.exists():
     source=music.read_text(encoding='utf-8')
-    match=re.search(r'<section\b[^>]*\bid="reproductor"[^>]*>[\s\S]*?</section>',source,re.I)
-    if match:
-        player=match.group(0)
-        source=source[:match.start()]+source[match.end():]
-        close=source.lower().find('</main>')
-        if close!=-1:
-            source=source[:close]+player+chr(10)+source[close:]
     source=source.replace('Escucha y explora','Reproductor de adelantos')
     music.write_text(source,encoding='utf-8')
 # Do not show internal production messages on the new editorial homepage.
