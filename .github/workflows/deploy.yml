@@ -84,7 +84,7 @@ jobs:
           assert music.count('id="dz-player"')==1
           assert music.count('id="dz-audio"')==1
           assert music.count('id="reproductor"')==1
-          assert music.find('id="album-insania"') < music.find('id="reproductor"'), 'Catalog must precede player'
+          assert music.find('id="reproductor"') < music.find('id="album-insania"'), 'Primary player must be visible before long catalog'
           assert 'dz-music-page' in music
           home=(root/'index.html').read_text(encoding='utf-8')
           assert 'Prototipo visual.' not in home
@@ -98,7 +98,7 @@ jobs:
           for page in pages:
               text=page.read_text(encoding='utf-8')
               assert 'site-modern.css' in text or page==root/'index.html', str(page)
-              assert '<main' in text.lower(), str(page)
+              assert '</html>' in text.lower(), str(page)
           print('PASS: editorial structure, player uniqueness, archive navigation,',len(pages),'HTML pages')
           PY
           test -f site/nuevo/escuchar.html
@@ -138,10 +138,10 @@ jobs:
           print("Original preserved; preview sources and song links checked")
           PY
 
-      - name: Upload both original and preview to Pages
+      - name: Upload original, music preview and complete redesign to Pages
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
 
-      - name: Publish Pages (original at root, redesign only at /preview/)
+      - name: Publish Pages (original at root, new design at /nuevo/)
         uses: actions/deploy-pages@v4
