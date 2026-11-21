@@ -60,6 +60,7 @@ for file in files:
     footer_section=cap(r'<section class="section" aria-label="Canción anterior y siguiente">([\s\S]*?)</section>',source)
     related=[]
     for href,label in re.findall(r'<a[^>]*href="([^"]+)"[^>]*>([\s\S]*?)</a>',footer_section):
+        if href=='../escuchar.html#titulo-sencillos': href='../escuchar.html#catalogo'
         related.append('<a href="'+safe_url(href)+'">'+escape(plain(label))+'</a>')
     if not related: related=['<a href="../escuchar.html">Volver a Música ↗</a>']
     desc=f'{title}, de Diezell. Escucha un adelanto y consulta su álbum, referencias y registros históricos.'
