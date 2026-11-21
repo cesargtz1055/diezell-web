@@ -42,7 +42,8 @@
       h.id='lista-'+group;
     });
     if(empty)empty.hidden=shown!==0;
-    if(detail)detail.textContent=shown+' canciones en la selección · Abre una ficha junto a cada pista.';
+    if(detail)detail.textContent=shown===1?'1 canción encontrada. Abre su ficha junto a la pista.':shown+' canciones encontradas. Abre una ficha junto a cada pista.';
+    if(search)search.setAttribute('aria-describedby','dz3-ficha-links');
   }
   function decorate(){
     if(!list)return;
@@ -67,7 +68,12 @@
     filters.forEach(x=>x.setAttribute('aria-pressed',String(x===btn)));
     filterList();
   }));
-  if(search)search.addEventListener('input',filterList);
+  if(search){
+    search.addEventListener('input',filterList);
+    search.addEventListener('keydown',event=>{
+      if(event.key==='Escape'&&search.value){search.value='';filterList();event.stopPropagation()}
+    });
+  }
   if(list){
     const observer=new MutationObserver(()=>decorate());
     observer.observe(list,{childList:true,subtree:false});
