@@ -51,7 +51,7 @@ jobs:
           # Copy original files without recursively copying existing previews.
           mkdir -p site/nuevo
           find site -mindepth 1 -maxdepth 1 ! -name preview ! -name nuevo -exec cp -a '{}' site/nuevo/ \;
-          git fetch --depth=1 origin chatgpt/direccion-visual-material-editorial
+          git fetch --depth=1 origin chatgpt/music-single-player-redesign
           git show "FETCH_HEAD:conceptos/editorial-material/index.html" > site/nuevo/index.html
           git show "FETCH_HEAD:conceptos/editorial-material/site-modern.css" > site/nuevo/site-modern.css
           python3 - <<'PY'
@@ -135,9 +135,9 @@ jobs:
           music=(root/'escuchar.html').read_text(encoding='utf-8')
           assert music.count('id="dz-player"')==1
           assert music.count('id="dz-audio"')==1
-          assert music.count('id="dz3-player-sheet"')==1 and music.count('class="dz3-album-embed"')==2
+          assert music.count('id="dz3-player-sheet"')==1 and music.count('class="dz3-album-embed"')==0
           assert music.count('id="reproductor"')==1
-          assert music.find('id="reproductor"') < music.find('id="album-insania"'), 'Primary player must be visible before long catalog'
+          assert music.find('id="catalogo"') < music.find('id="album-insania"'), 'Song catalog must appear above discography'
           assert 'dz3-music' in music and 'dz-rebuild.css' in music
           live=(root/'en-vivo.html').read_text(encoding='utf-8')
           assert 'dz3-live' in live and 'dz-live.css' in live
