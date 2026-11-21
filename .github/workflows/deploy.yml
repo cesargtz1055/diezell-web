@@ -177,6 +177,8 @@ jobs:
           test -s site/nuevo/dz3-links.js
           node --check site/nuevo/dz-rebuild.js
           node --check site/nuevo/dz3-links.js
+          git show "FETCH_HEAD:conceptos/editorial-material/pages/qa-site.py" > /tmp/diezell-qa-site.py
+          python3 /tmp/diezell-qa-site.py
           grep -q 'dz-rebuild.css' site/nuevo/escuchar.html
           grep -q 'class="quick"' site/nuevo/index.html
 
