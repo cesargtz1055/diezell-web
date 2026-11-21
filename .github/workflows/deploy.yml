@@ -77,6 +77,22 @@ jobs:
           PY
           git show "FETCH_HEAD:conceptos/editorial-material/editorial-pass.py" > /tmp/diezell-editorial-pass.py
           python3 /tmp/diezell-editorial-pass.py
+          # Rebuild Music from an independent document, not a legacy CSS overlay.
+          git show "FETCH_HEAD:conceptos/editorial-material/pages/escuchar.html" > site/nuevo/escuchar.html
+          git show "FETCH_HEAD:conceptos/editorial-material/pages/dz-rebuild.css" > site/nuevo/dz-rebuild.css
+          git show "FETCH_HEAD:conceptos/editorial-material/pages/dz-rebuild.js" > site/nuevo/dz-rebuild.js
+          python3 - <<'PY'
+          from pathlib import Path
+          import re, json
+          original=Path('site/escuchar.html').read_text(encoding='utf-8')
+          albums=re.findall(r'<a class="track-titulo" href="([^"]+)"',original)
+          singles=re.findall(r'<a class="sencillo-card" href="([^"]+)"',original)
+          links=list(dict.fromkeys(albums+singles))
+          assert len(albums)==21 and len(links)==27, f'Unexpected catalog: {len(albums)} album tracks, {len(links)} unique songs'
+          assert all((Path('site/nuevo')/path).is_file() for path in links), 'Song detail page missing'
+          Path('site/nuevo/dz3-links.js').write_text('window.DZ3_LINKS='+json.dumps(links,ensure_ascii=False)+';\\n',encoding='utf-8')
+          print('Rebuilt Music with',len(links),'linked song pages')
+          PY
           python3 - <<'PY'
           from pathlib import Path
           root=Path('site/nuevo')
@@ -85,7 +101,7 @@ jobs:
           assert music.count('id="dz-audio"')==1
           assert music.count('id="reproductor"')==1
           assert music.find('id="reproductor"') < music.find('id="album-insania"'), 'Primary player must be visible before long catalog'
-          assert 'dz-music-page' in music
+          assert 'dz3-music' in music and 'dz-rebuild.css' in music
           home=(root/'index.html').read_text(encoding='utf-8')
           assert 'Prototipo visual.' not in home
           assert 'Diezell en cifras' in home
@@ -97,7 +113,7 @@ jobs:
           assert len(pages)>=35
           for page in pages:
               text=page.read_text(encoding='utf-8')
-              assert 'site-modern.css' in text or page==root/'index.html', str(page)
+              assert ('site-modern.css' in text or page in (root/'index.html',root/'escuchar.html')), str(page)
               assert '</html>' in text.lower(), str(page)
           print('PASS: editorial structure, player uniqueness, archive navigation,',len(pages),'HTML pages')
           PY
@@ -107,6 +123,9 @@ jobs:
           test -f site/nuevo/caoticos.html
           test -f site/nuevo/images/en-vivo-insania.jpg
           test -f site/nuevo/audio/playlist.json
+          test -s site/nuevo/dz3-links.js
+          node --check site/nuevo/dz-rebuild.js
+          node --check site/nuevo/dz3-links.js
           grep -q 'site-modern.css' site/nuevo/escuchar.html
           grep -q 'class="quick"' site/nuevo/index.html
 
