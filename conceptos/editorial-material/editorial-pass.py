@@ -8,7 +8,7 @@ import html
 root=Path('site/nuevo')
 pages={
  'escuchar.html':{
-  'intro':'Explora los álbumes, encuentra una canción y escucha los adelantos disponibles. Las fichas conservan sus enlaces y créditos.',
+  'intro':'Explora álbumes y sencillos, escucha adelantos y conoce la historia de cada canción.',
   'nav':[('Álbumes','album-insania'),('Caótico','album-caotico')],
   'labels':{'Reproductor':'Escucha y explora','Sencillos':'Canciones y sencillos'}},
  'en-vivo.html':{
@@ -24,7 +24,7 @@ pages={
   'nav':[],
   'labels':{'El ritual de las luces azules':'El ritual de las luces azules','Cuentas de fans':'Cuentas de la comunidad'}},
  'crecimiento.html':{
-  'intro':'Consulta los registros históricos de crecimiento de Diezell. Las cifras deben interpretarse según la fecha y fuente de cada registro; no representan datos en tiempo real.',
+  'intro':'Consulta los registros históricos de crecimiento de Diezell. Cada gráfica permite comparar registros históricos; revisa la fecha y la fuente antes de sacar conclusiones.',
   'nav':[],
   'labels':{'Los que más comentan':'Actividad registrada en comentarios'}},
 }
@@ -61,6 +61,34 @@ for name,config in pages.items():
         # Keep the historic slogan visible while making the H1 intelligible.
         source=re.sub(r'(<h1\b[^>]*>)[\s\S]*?(</h1>)',r'\g<1>Caóticos\g<2><p class="dz-page-slogan">Unidos, jamás serán vencidos.</p>',source,count=1,flags=re.I)
     path.write_text(source,encoding='utf-8')
+# The homepage is an editorial gateway, not a live analytics dashboard.
+home=root/'index.html'
+if home.exists():
+    source=home.read_text(encoding='utf-8')
+    source=source.replace('Unirme a los Caóticos','Conocer a los Caóticos')
+    source=source.replace('VINVSNI','DIEZELL')
+    source=source.replace('Portadas oficiales de Spotify · Datos de Spotify del 15 nov 2026.','Archivo independiente de fans · Consulta las fuentes en cada sección.')
+    source=source.replace('La banda sigue creciendo','Diezell en cifras')
+    source=source.replace('Datos · 15 nov 2026','Archivo de estadísticas · Último registro identificado: noviembre de 2026')
+    source=source.replace('Diezell en números →','Consultar gráficas y fuentes →')
+    # Preserve factual figures and links but reduce the visual dominance of stale metrics.
+    source=source.replace('section datos-strip dark','section datos-strip dark dz-data-secondary')
+    home.write_text(source,encoding='utf-8')
+# On Music, listening is a contextual tool, not the first thing in the reading order.
+music=root/'escuchar.html'
+if music.exists():
+    source=music.read_text(encoding='utf-8')
+    match=re.search(r'<section\\b[^>]*\\bid="reproductor"[^>]*>[\\s\\S]*?</section>',source,re.I)
+    if match:
+        player=match.group(0)
+        source=source[:match.start()]+source[match.end():]
+        close=source.lower().find('</main>')
+        if close!=-1:
+            source=source[:close]+player+'\\n'+source[close:]
+    source=source.replace('Escucha y explora','Reproductor de adelantos')
+    music.write_text(source,encoding='utf-8')
+# Do not show internal production messages on the new editorial homepage.
+# The root index is purpose-built, so remove the prototype-only warning.
 # Enhance song pages with a consistent context cue without rewriting lyrics or credits.
 songs=list((root/'canciones').glob('*.html'))
 for path in songs:
