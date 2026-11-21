@@ -93,6 +93,11 @@ jobs:
           Path('site/nuevo/dz3-links.js').write_text('window.DZ3_LINKS='+json.dumps(links,ensure_ascii=False)+';',encoding='utf-8')
           print('Rebuilt Music with',len(links),'linked song pages')
           PY
+          # Rebuild En vivo as a real page: chronology, gallery and contextual video.
+          git show "FETCH_HEAD:conceptos/editorial-material/pages/en-vivo.html" > site/nuevo/en-vivo.html
+          git show "FETCH_HEAD:conceptos/editorial-material/pages/dz-live.css" > site/nuevo/dz-live.css
+          git show "FETCH_HEAD:conceptos/editorial-material/pages/build-live.py" > /tmp/diezell-build-live.py
+          python3 /tmp/diezell-build-live.py
           python3 - <<'PY'
           from pathlib import Path
           root=Path('site/nuevo')
@@ -102,6 +107,10 @@ jobs:
           assert music.count('id="reproductor"')==1
           assert music.find('id="reproductor"') < music.find('id="album-insania"'), 'Primary player must be visible before long catalog'
           assert 'dz3-music' in music and 'dz-rebuild.css' in music
+          live=(root/'en-vivo.html').read_text(encoding='utf-8')
+          assert 'dz3-live' in live and 'dz-live.css' in live
+          assert live.count('class="dz3-photo"')>=8
+          assert live.count('class="dz3-tour-date')==10
           home=(root/'index.html').read_text(encoding='utf-8')
           assert 'Prototipo visual.' not in home
           assert 'Diezell en cifras' in home
@@ -113,7 +122,7 @@ jobs:
           assert len(pages)>=35
           for page in pages:
               text=page.read_text(encoding='utf-8')
-              assert ('site-modern.css' in text or page in (root/'index.html',root/'escuchar.html')), str(page)
+              assert ('site-modern.css' in text or page in (root/'index.html',root/'escuchar.html',root/'en-vivo.html')), str(page)
               assert '</html>' in text.lower(), str(page)
           print('PASS: editorial structure, player uniqueness, archive navigation,',len(pages),'HTML pages')
           PY
