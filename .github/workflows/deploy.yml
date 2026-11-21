@@ -69,7 +69,7 @@ jobs:
               rel='../'*len(page.relative_to(root).parts[:-1])
               tag=f'<link rel="stylesheet" href="{rel}site-modern.css">'
               import re
-              text=re.sub(r'</head>',lambda _:tag+'\\n</head>',text,count=1,flags=re.I)
+              text=re.sub(r'</head>',lambda _:tag+chr(10)+'</head>',text,count=1,flags=re.I)
               page.write_text(text,encoding='utf-8')
               count+=1
           print('Modernized existing HTML pages:',count)
