@@ -20,7 +20,10 @@ for li in re.findall(r'<li>([\s\S]*?)</li>',roster):
     initials=plain(inner(r'<span class="badge-iniciales">([^<]+)</span>',li))
     description=inner(r'<p>([\s\S]*?)</p>',li) or ''
     if name:
-        members.append('<article class="dz3-member"><span class="dz3-member-initials" aria-hidden="true">'+escape(initials)+'</span><div><h3>'+escape(name)+'</h3><p class="dz3-member-role">'+escape(role)+'</p><p>'+description+'</p></div></article>')
+        slug={'RG':'rene','JB':'bernie','EB':'emmash','MB':'mau'}.get(initials)
+        assert slug, 'Unrecognized band member: '+initials
+        profile='miembro-'+slug+'.html'
+        members.append('<article class="dz3-member"><span class="dz3-member-initials" aria-hidden="true">'+escape(initials)+'</span><div><h3><a href="'+profile+'">'+escape(name)+' ↗</a></h3><p class="dz3-member-role">'+escape(role)+'</p><p>'+description+'</p></div></article>')
 assert len(members)==4, f'Expected 4 sourced members: {len(members)}'
 timeline=inner(r'<ol class="timeline">([\s\S]*?)</ol>',source)
 assert timeline
