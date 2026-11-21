@@ -35,7 +35,7 @@ def check(root: Path) -> list[str]:
         if not page.is_file():
             continue
         html = page.read_text(encoding="utf-8")
-        require(len(re.findall(r'<audio\\b', html)) == 1,
+        require(len(re.findall(r'<audio\b', html)) == 1,
                 f"{page.relative_to(root)}: expected exactly one audio engine")
         require("open.spotify.com/embed/" not in html,
                 f"{page.relative_to(root)}: embedded Spotify duplicates audio")
