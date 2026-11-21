@@ -35,6 +35,7 @@ for file in files:
     cover_tag=cap(r'(<img[^>]*id="dz-cover"[^>]*>)',source)
     cover_hidden=bool(re.search(r'\shidden(?:\s|>)',cover_tag))
     album_href=cap(r'<a href="(\.\./escuchar\.html#[^"]+)"',source,'../escuchar.html')
+    album_href=album_href.replace('#titulo-sencillos','#catalogo')
     assert title and number and spotify and youtube, str(file)
     assert number.isdigit() and 1<=int(number)<=27
     media='''<section class="dz3-song-player" id="reproductor" aria-labelledby="song-listen"><div class="dz3-wrap">
