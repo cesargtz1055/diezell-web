@@ -1,0 +1,79 @@
+# HASHES — contenido exacto del ZIP a desplegar
+
+ZIP: parte-1.zip (nuevo, con audio/playlist.json)
+- SHA-256 del ZIP: `937386379744e6b7363c21d417eb5a6174e8c5e46dad7422ab40af408d021ea5`
+- Tamaño del ZIP: 2694055 bytes
+- ZIP desplegado actualmente en main (daf6b50): SHA-256 `ad8d328f61aa95680a02d2d5d54ea8d980673fa645ce39a372bac0c65aa2e7ca` (NO incluye audio/playlist.json; el reproductor falla en vivo con 404)
+
+## Archivos de texto en esta rama (SHA-256)
+- `8747da8344a4d8a7711950ab563017b1ab414ffc6f631e8061c5ca995578984c`  app.js
+- `d26a9e39f6f1d5ad4aca3ee62e674be24dcaae4ff4f6b059b8939a42109f5615`  audio/playlist.json
+- `037836004df9aa7987fcf6ed3248b8505cdad6d8a83a859609b16f78b2f68c95`  banda.html
+- `e5be181b78f914c730fd393c4db7bdac0d42a164d2dd2204bb6a804e59101306`  canciones/a-golpe-de-mar-pecho-sereno.html
+- `de7a7f8a2c1e76bce8809608ff5cc78814895cdfc842c28a13a2d0c201dcf8ff`  canciones/al-parecer-eso-parece.html
+- `05ee3a97e036017017eea98e5033cc4925247c3660f4227e01c2c4cd1fdc43cd`  canciones/conmiseracion.html
+- `bf1a951b96b2417a57ce29b695a7126b322309a58e04cc31b1e893a9292a06e8`  canciones/de-espaldas.html
+- `11fce275ea3e27a84fe85fcc19eca2e35f54fd6dc6e5d53a8e5ee4676562de51`  canciones/demencia.html
+- `1a7e20db98cd993cd87c0f6dbd43e0d024a0ef4b02b74c8f04d71a38af8b9f88`  canciones/dias-felices-los-lunes.html
+- `f8bcc94060bff5122489150f084f33f83c5b9fff3e5e84e345f6f5ce8062407d`  canciones/donde-nada-puede-malir-sal.html
+- `23a1c6c15015fe63078e9a85d035af75c7b933dc7ca24a906ea6f9ee382ae86a`  canciones/el-cuento-de-aquel-imperfecto-ser.html
+- `c1e65e81ac2d881b37e59b7eb09a16e83a695c79fd47cba94d82fade59234c56`  canciones/el-mejor-de-mis-errores.html
+- `1f45b30a13fee0c2400e4d124e4373e6a616b442558967cd69327a33ee3763c2`  canciones/el-monstruo-de-gizmo.html
+- `5a557d6ebc3be6ea2e19eaf4fb83011d95a779e31ab76e7a8329806110438953`  canciones/el-ultimo-recuerdo-de-la-noche.html
+- `9df17830a03c1009dfdbe1ca4946dc509431359cfe6f358f55eff93d67aa3f79`  canciones/el-ultimo-soldado-en-pie.html
+- `db039f43c88a7f7f222fad110155587a66190e9e89e574b696561fd2031c6de6`  canciones/hipocresia.html
+- `71fe1243ffa90bf74515bc7f91fb9036bdf0857c060c54569ba508c8b67c891f`  canciones/insomnio.html
+- `d8efaec755274b1088bf2fa758d809d1ac3c01142b0b7150afd6f5795bc0ee18`  canciones/la-paradoja-de-tennessee.html
+- `c698b8db80d37b2b237da6f3539e944657e25d362f0f0b1fe4eb77e6dbe26530`  canciones/martes-con-aroma-a-domingo.html
+- `a4019013154a7acfbfeeac980b1368430ed5e9fd366c16e5a6e39936676e864e`  canciones/mas-que-ayer-menos-que-manana.html
+- `1228f755dff9db29c8ba01f76f0f51c6e67f3c4853a40ffd9fb63c8354b5db00`  canciones/mi-mas-sentido-pesame-murio-el-sentido-comun.html
+- `34181c203a78025dd68e894dd220012a8f1c839d1b4fed8175198739b5808a6d`  canciones/muerdago-marchito.html
+- `18fb76414275c785009c237eda4e45e40dcce5491e8450e448fbd1a604f05bb8`  canciones/resiliencia.html
+- `93bc9e339130c5d03884d6a0e4edda56c165724e54193a81c9b4eba69c93132f`  canciones/sin-destinatario.html
+- `a76df6bc50afe6090da36f318aba37a7d0ef1af4e6e8196f4a40eb0252b1920d`  canciones/sin-rencores.html
+- `8d8d4c46b5953fa80eb56cfc1dee4ca2c17429cddfd2927fc62949661ecae51f`  canciones/suspension.html
+- `2621682c701a356243abb1bf7131772bbed1acbc5bfeeae65bdfdeba32d5e701`  canciones/tiempos-de-un-tiempo.html
+- `44e432199079edbb0f154f2361532ea83198875d6976b3e41dc7aa5a9cc96325`  canciones/tus-flores-fueron-entregadas.html
+- `b085679eb17e5df394521e6d34f44c3d0e3c18c9e83faa5a0f27a1123b42c761`  canciones/una-dos-o-tres-lagrimas-permitidas.html
+- `35fdc0d0cbc5963f0d3427439cd7097c1076f189a4b9b15d83c5e28b94874755`  canciones/una-triste-manana-de-noviembre.html
+- `7eac710ca80229c93a51e7596f484227fae56de7b9debc0ade952bc1e1e109a5`  caoticos.html
+- `af6a7b467730f7a0cfa26dc3575fc866c7b3ae7310e37f82c94ff90d4604942c`  crecimiento.html
+- `dd13c6fb4ab2627ae571e108ba84e71dd49b71eab1607391dfcbfb117f97feb2`  datos.json
+- `e27c6d04e9d93cc5f45be1a65aa492983e18ca54ed1ed40930373b3fce646adf`  datos/canciones.json
+- `c7071de6745d815573685b0b04239e94ca48a340793f74a2be7991d24ab63312`  datos/ledger/commenters.json
+- `13f66cfebc16261bfeeb0e340ab9fd3bdbfe97684010b59280411762192027e5`  datos/ledger/comments.json
+- `06a852ae1569357d870436f52b99ebcca7b4d081825750694f0e89151c461fce`  datos/ledger/ledger.json
+- `1e410711737e599a506fbb20693e86b90e95207170eeb422ce0cd34fe20e923d`  datos/ledger/mentions.json
+- `4180a81299af5c91a341a5100a70084034a8694f222b2effff9713aafe7793b2`  datos/ledger/runs/2026-11-18-063607.log
+- `03e60e379f470630713b38ea71d35e85bb0e119ec945e2e0b6dffbdd70681eb4`  datos/ledger/runs/2026-11-18-064106.log
+- `4ae67a46a5d73d753fcab8bfc964fcb9940fe20afbf211b3bb1a69ef942f9e5a`  datos/ledger/runs/2026-11-18-064200.log
+- `3e5745672f8738ec5cb57d4d2d91fe97b0ad1d8150e6f1e0e2b46d7cf16cf973`  datos/ledger/runs/2026-11-18-065237.log
+- `9b0cf9bf47b85b40f5764efdca6318d3d4016134c7be9e879bd6188c8bd66b58`  datos/ledger/runs/2026-11-18-072426.log
+- `2ec0284b4e7b306dab1b0ad7ecaeb4e7db237ef01a8d8cde4fb72983e99738fe`  datos/ledger/runs/2026-11-18-073013.log
+- `f3fa258578d77d3f7624212cb26138963d3530161d1487eef3f55beff8e4974d`  datos/ledger/runs/2026-11-18-fix-g3.log
+- `1078c1207cce5fd14638c59d2b085543e5709bb2834cc5be145dad6ca5c4d576`  datos/ledger/runs/2026-11-19-012828.log
+- `33d4c5c5eb0d2abc95558451614482bbe0554a09211ffc47390e07230cd21dda`  datos/ledger/runs/2026-11-19-140040.log
+- `c45dbf082a57e0d2623933b5eeeadac5cbe5ec1b55442613b73ab9f1ceba4c42`  datos/ledger/runs/2026-11-20-140937.log
+- `e74df6f47cb144415be19ebdb4e4c12fd44b5dd8ca5fe76f8668eae8569a448c`  datos/ledger/runs/2026-11-21-005545.log
+- `fbe2a31fd0f670f93bceb5988319470d175ad7b4438e5844af71fdcdf11aae41`  en-vivo.html
+- `bf9228f02b50a88d94c9de29eda7bd7aa38c9d81052d914d08200fa019f2f120`  escuchar.html
+- `b5b6dd64d116b62dc109802ba07cfc801a51f3c063d18deff796c609f37f09ed`  index.html
+- `9007f25b261d7f1b3b40bfc6bfe7627f3955d383bb9e3b00f0feb2dd801e8f2b`  miembro-bernie.html
+- `7e1a7e49ffebc7f87b07ccc4dbc082f652d8aad8b7ba6efc2b8c1de6836c2500`  miembro-emmash.html
+- `f2070b48e75e8b74ab1efe14fc184e3ccfcf8b684e1f64a7cd87bee551ca699d`  miembro-mau.html
+- `ea75923f94453615a1afb1520965ffcf539a5779c15d4d63613cab8b57b8fd4b`  miembro-rene.html
+- `4ddd041f140f05c000790fe6384f141c001c66e7592c1e4893ac7e32d58169ec`  styles.css
+
+## Binarios (NO incluidos en esta rama; están en el ZIP)
+- `eb19cf31b8c826a87eb444c7f38e370b24499916fb2ccb7b8fc5f7aad289dcf2`  images/caotico.jpg  (125833 bytes)
+- `11086f9e45a04e8943472e559e94883b2541d010563d3f9cadbbe2c827a39675`  images/en-vivo-bajo-bn.jpg  (258495 bytes)
+- `a50a541986a39aa3af6fb252003bd0c2c9fe442f79987963fd1ef7621f32014a`  images/en-vivo-bajo-bn2.jpg  (147861 bytes)
+- `34110cc7dfc2ef9d174e67b4aaf91b30edb10c517b8619b60966fec55993fc3e`  images/en-vivo-cantando.jpg  (128653 bytes)
+- `e74d52665d8b498e7618a4074244fb8972869ca498b834d77d5246bcc3d7a51d`  images/en-vivo-foro-tims.jpg  (94299 bytes)
+- `5f8c9c48d73e157c6525d7d362bd914eb698eaed94d12b925ebe24b91da6e329`  images/en-vivo-guitarra-rosa.jpg  (139315 bytes)
+- `a930ea973811e8d639ec60f2846ff2dfd3bba8e428c4d31a64418f71c24660f7`  images/en-vivo-guitarra-tie.jpg  (86983 bytes)
+- `9c007651b3fa66891442f9661fb3d1eac62ad3b144422318e96a54825244cb9a`  images/en-vivo-insania.jpg  (204771 bytes)
+- `30ce9b719ec741b1efffd1f524bacbbe8cc78ef30196e50cb54bbd9d09ad820a`  images/en-vivo-monterrey.jpg  (828567 bytes)
+- `008e43451cb71209a0753d94ef969757abc13a291c3ea2fd77c3c7fe601f6857`  images/en-vivo-pose.jpg  (162116 bytes)
+- `0c7661fb4df4330ecca105ec34bcfbb284691a63330b6b9819976fad582e3c65`  images/en-vivo-tims-talvez.jpg  (135545 bytes)
+- `170e849ed12a574ec5250212e5fc226926df7b0e1b13d5cff63643de3172cbc6`  images/insania.jpg  (141154 bytes)
