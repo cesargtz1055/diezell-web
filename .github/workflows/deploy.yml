@@ -97,6 +97,7 @@ jobs:
           git show "FETCH_HEAD:conceptos/editorial-material/pages/en-vivo.html" > site/nuevo/en-vivo.html
           git show "FETCH_HEAD:conceptos/editorial-material/pages/dz-live.css" > site/nuevo/dz-live.css
           git show "FETCH_HEAD:conceptos/editorial-material/pages/build-live.py" > /tmp/diezell-build-live.py
+          python3 -m py_compile /tmp/diezell-build-live.py
           python3 /tmp/diezell-build-live.py
           # Rebuild Banda from complete source data, preserving primary references.
           git show "FETCH_HEAD:conceptos/editorial-material/pages/banda.html" > site/nuevo/banda.html
