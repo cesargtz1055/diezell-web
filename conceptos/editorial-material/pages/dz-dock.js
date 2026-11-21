@@ -55,8 +55,10 @@
     progress.setAttribute('aria-valuetext',formatSeconds(t)+' de 1:30');
     const item=track();
     if(item){
-      byId('dz3-sheet-spotify').href=item.spotify;
-      byId('dz3-sheet-youtube').href=item.youtube;
+      if(item.spotify) byId('dz3-sheet-spotify').href=item.spotify;
+      else byId('dz3-sheet-spotify').removeAttribute('href');
+      if(item.youtube) byId('dz3-sheet-youtube').href=item.youtube;
+      else byId('dz3-sheet-youtube').removeAttribute('href');
       byId('dz3-sheet-spotify').hidden=!item.spotify;
       byId('dz3-sheet-youtube').hidden=!item.youtube;
     }
@@ -133,25 +135,10 @@
   if(title){
     new MutationObserver(sync).observe(title,{childList:true,characterData:true,subtree:true});
   }
-  // Spotify album embeds existed in the older catalog. Load only when
-  // explicitly expanded, pausing the local preview to avoid overlapping audio.
+  // One listening engine only: external platforms are links, never embedded players.
+  // This prevents a Spotify iframe from playing alongside the local 90 s preview.
   document.querySelectorAll('.dz3-album-embed').forEach(details=>{
-    details.addEventListener('toggle',()=>{
-      if(!details.open)return;
-      const target=details.querySelector('.dz3-embed-target');
-      if(!target||target.querySelector('iframe'))return;
-      const src=details.getAttribute('data-embed-src');
-      if(!src)return;
-      audio.pause();
-      const frame=document.createElement('iframe');
-      frame.title='Escuchar álbum de Diezell en Spotify';
-      frame.src=src;
-      frame.width='100%';
-      frame.height='352';
-      frame.loading='lazy';
-      frame.setAttribute('allow','encrypted-media; clipboard-write; picture-in-picture');
-      target.appendChild(frame);
-    });
+    details.hidden=true;
   });
   if(!audio.src)setStatus('');
   sync();
