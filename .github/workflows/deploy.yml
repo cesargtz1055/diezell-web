@@ -139,9 +139,10 @@ jobs:
           assert 'dz3-music' in music and 'dz-rebuild.css' in music
           live=(root/'en-vivo.html').read_text(encoding='utf-8')
           assert 'dz3-live' in live and 'dz-live.css' in live
-          assert live.count('class="dz3-photo"')>=8
+          assert live.count('class="dz3-photo"')==10, 'All ten photographs from the archive must survive'
           assert live.count('class="dz3-tour-date')==10
-          assert live.count('class="dz3-photo-credit"')>=8, 'Photographer credit panels must survive redesign'
+          assert live.count('class="dz3-photo-credit"')>=10, 'All archived photographs need credit details'
+          assert all('id="'+anchor+'"' in live for anchor in ('foto-monterrey','foto-tims','ultimo-show'))
           band=(root/'banda.html').read_text(encoding='utf-8')
           assert 'dz3-band' in band and 'dz-band.css' in band
           for slug in ('rene','bernie','emmash','mau'):
@@ -150,6 +151,7 @@ jobs:
           assert band.count('<time>')>=7
           stats=(root/'crecimiento.html').read_text(encoding='utf-8')
           assert 'dz3-stats' in stats and 'dz-stats-engine.js' in stats
+          assert 'id="archivo-spotify"' in stats, 'Preserve useful v2 city and song rankings'
           for slug in ('rene','bernie','emmash','mau'):
               member=(root/('miembro-'+slug+'.html')).read_text(encoding='utf-8')
               assert 'dz3-member-page' in member and 'dz-member.css' in member
@@ -172,6 +174,7 @@ jobs:
           home=(root/'index.html').read_text(encoding='utf-8')
           assert 'Prototipo visual.' not in home
           assert 'Diezell en cifras' in home
+          assert 'id="momentos"' in home and 'en-vivo.html#foto-tims' in home
           assert 'Unirme a los Caóticos' not in home
           caoticos=(root/'caoticos.html').read_text(encoding='utf-8')
           assert 'Unirme en Instagram' not in caoticos
