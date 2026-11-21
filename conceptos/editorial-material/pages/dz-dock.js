@@ -133,6 +133,26 @@
   if(title){
     new MutationObserver(sync).observe(title,{childList:true,characterData:true,subtree:true});
   }
+  // Spotify album embeds existed in the older catalog. Load only when
+  // explicitly expanded, pausing the local preview to avoid overlapping audio.
+  document.querySelectorAll('.dz3-album-embed').forEach(details=>{
+    details.addEventListener('toggle',()=>{
+      if(!details.open)return;
+      const target=details.querySelector('.dz3-embed-target');
+      if(!target||target.querySelector('iframe'))return;
+      const src=details.getAttribute('data-embed-src');
+      if(!src)return;
+      audio.pause();
+      const frame=document.createElement('iframe');
+      frame.title='Escuchar álbum de Diezell en Spotify';
+      frame.src=src;
+      frame.width='100%';
+      frame.height='352';
+      frame.loading='lazy';
+      frame.setAttribute('allow','encrypted-media; clipboard-write; picture-in-picture');
+      target.appendChild(frame);
+    });
+  });
   if(!audio.src)setStatus('');
   sync();
 })();
