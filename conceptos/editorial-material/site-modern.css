@@ -14,3 +14,12 @@ article,.card,.song-card,.track-card,.album-card,.info-card{border-radius:16px}.
 input,select,textarea{background:#171d23;color:#f5f6f4;border:1px solid #59616a;border-radius:10px;min-height:44px}input::placeholder{color:#bfc4cb}button{font-family:inherit}::selection{background:#c9ff12;color:#090b0e}
 @media(max-width:700px){:root{--gutter:16px;--section:48px}.topbar-inner{min-height:64px}.nav{background:#0e1217!important}.hero-title{font-size:clamp(3.7rem,16vw,6rem)}.hero-panel{padding:24px 16px 42px!important}.hero-cta{display:flex;flex-wrap:wrap;gap:10px}.hero-cta .btn{flex:1 1 145px}.section{padding-block:48px}.album-grid{grid-template-columns:1fr}.historias-row{overflow-x:auto;scroll-snap-type:x proximity}.historia{scroll-snap-align:start}.footer{padding-bottom:80px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* Editorial IA and section discovery: designed for narrow touch screens first. */
+.dz-editorial-intro{margin:18px 0 30px;padding:20px 18px;background:#151b22;border:1px solid #3c454f;border-left:4px solid #c9ff12;border-radius:14px;color:#f5f6f4;max-width:920px}
+.dz-editorial-intro p{font-size:clamp(1rem,2vw,1.15rem);line-height:1.65;margin:0;max-width:72ch;color:#e2e5ea}
+.dz-section-nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.dz-section-nav a{min-height:48px;display:inline-flex;align-items:center;padding:10px 16px;background:#252d36;border:1px solid #596471;border-radius:999px;color:#f5f6f4!important;font-weight:750}
+.dz-section-nav a:hover{border-color:#c9ff12;color:#c9ff12!important}
+.dz-page-slogan{font-size:clamp(1.2rem,4vw,2rem);font-weight:800;color:#c9ff12;line-height:1.3;margin:10px 0 18px}
+.dz-song-context{font-size:.95rem;color:#d1d5db;line-height:1.5;margin:8px 0 20px}
+@media(max-width:700px){.dz-editorial-intro{padding:18px 16px;margin:16px 0 26px}.dz-section-nav a{flex:1 1 130px;justify-content:center}.dz-page-slogan{margin-bottom:16px}}
