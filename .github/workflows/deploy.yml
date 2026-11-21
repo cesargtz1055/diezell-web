@@ -1,0 +1,23 @@
+name: Deploy Diezell a Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir -p site
+          unzip -o -q parte-1.zip -d site
+          unzip -o -q parte-2.zip -d site
+          unzip -o -q parte-3.zip -d site
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - uses: actions/deploy-pages@v4
