@@ -1,5 +1,9 @@
 # Recursos Diezell — todo el material, aunque no se muestre
 
+> **Empieza aquí: [`GUIA-COMPLETA.md`](GUIA-COMPLETA.md)** — todo lo que ya existe
+> (investigación, automatización, mejoras, ideas, lo que se quitó y por qué,
+> reglas y estado actual), para no duplicar ni quitar trabajo ya desarrollado.
+
 Rama `muse/recursos-diezell`: el sitio completo descomprimido de la rama `actual`
 (37 páginas, CSS, JS, playlist, datos) **más** todo el material de investigación,
 datos y auditoría que existe fuera del sitio publicado. Nada aquí se publica
