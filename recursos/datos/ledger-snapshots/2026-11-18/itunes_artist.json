@@ -1,0 +1,30 @@
+{
+  "resultCount": 3,
+  "results": [
+    {
+      "wrapperType": "artist",
+      "artistType": "Artist",
+      "artistName": "Diezell",
+      "artistLinkUrl": "https://music.apple.com/us/artist/diezell/1569495760?uo=4",
+      "artistId": 1569495760,
+      "primaryGenreName": "Punk",
+      "primaryGenreId": 1006
+    },
+    {
+      "wrapperType": "artist",
+      "artistType": "Artist",
+      "artistName": "MacDiezell",
+      "artistLinkUrl": "https://music.apple.com/us/artist/macdiezell/1623622197?uo=4",
+      "artistId": 1623622197,
+      "primaryGenreName": "Hip-Hop/Rap",
+      "primaryGenreId": 18
+    },
+    {
+      "wrapperType": "artist",
+      "artistType": "Artist",
+      "artistName": "Moe Diezell",
+      "artistLinkUrl": "https://music.apple.com/us/artist/moe-diezell/1454147700?uo=4",
+      "artistId": 1454147700
+    }
+  ]
+}

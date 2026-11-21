@@ -1,0 +1,55 @@
+---
+import { BAJO_CONFLICTO, LINKS, MIEMBROS } from "../data/diezell";
+---
+
+<section id="banda" class="m3-container py-24 md:py-36" aria-labelledby="titulo-banda">
+  <div class="reveal">
+    <p class="m3-label-large text-primary">05 — La banda</p>
+    <h2 id="titulo-banda" class="m3-display-medium mt-4 text-on-surface">De Monterrey.<br />Desde 2018.</h2>
+    <p class="m3-body-large mt-4 max-w-xl text-on-surface-variant">
+      Banda de Monterrey, formada en 2018. Caótico (2023). INSANIA (2025).
+      Rock en español: punk rock / pop punk / rock alternativo.
+    </p>
+    <blockquote class="mt-6 max-w-2xl border-l-2 border-primary pl-5">
+      <p class="m3-title-medium text-on-surface">
+        “Diezell es una banda formada en 2018 en Monterrey, influenciada por el pop punk y punk rock. El proyecto comenzó como una onda oscura, con guitarras que recuerdan a bandas de la década de los 90 al 2000 como Panda y División Minúscula.”
+      </p>
+      <footer class="m3-body-small mt-3 text-on-surface-variant">
+        — Follow Control, ene 2024 ·
+        <a href="https://followcontrol.com/2024/01/diezell-presento-su-primera-noche-caotica-en-foro-tims-de-monterrey/" target="_blank" rel="noopener" class="text-primary underline underline-offset-4">Leer fuente ↗</a>
+      </footer>
+    </blockquote>
+    <p class="m3-body-medium mt-4 max-w-xl text-on-surface-variant">
+      C3 Stage señala que crecieron con el rock alternativo regio de principios de los 2000 y lo mezclan con su propio estilo emo-pop-punk.
+      <a href="https://www.instagram.com/p/DaLWmfsgY7K/" target="_blank" rel="noopener" class="text-primary underline underline-offset-4">C3 Stage ↗</a>
+    </p>
+  </div>
+
+  <ul class="mt-12 grid gap-4 md:grid-cols-3">
+    {MIEMBROS.map((m, i) => (
+      <li class="card card--filled elevation-1 reveal rounded-lg p-8 md:p-10">
+        <p class="m3-display-small text-outline">0{i + 1}</p>
+        <p class="m3-headline-medium mt-6 text-on-surface">{m.nombre}</p>
+        <p class="mt-3"><span class="chip chip--primary">{m.rol}</span></p>
+        {m.nota && <p class="m3-body-medium mt-3 text-on-surface-variant">{m.nota}</p>}
+      </li>
+    ))}
+  </ul>
+
+  <div class="card card--outlined reveal mt-4 rounded-lg p-8 md:p-10">
+    <p class="m3-label-large text-primary">{BAJO_CONFLICTO.titulo}</p>
+    <p class="m3-body-large mt-4 max-w-3xl text-on-surface-variant">{BAJO_CONFLICTO.texto}</p>
+    <p class="mt-4 flex flex-wrap gap-2">
+      {BAJO_CONFLICTO.fuentes.map((f) => (
+        <a href={f.url} target="_blank" rel="noopener" class="state-layer m3-label-large inline-flex min-h-12 items-center rounded-full px-4 text-primary">{f.etiqueta} ↗</a>
+      ))}
+    </p>
+  </div>
+
+  <div class="reveal mt-12 flex flex-wrap gap-4">
+    <a href={LINKS.instagram} target="_blank" rel="noopener" class="btn btn-outlined state-layer">Instagram ↗</a>
+    <a href={LINKS.tiktok} target="_blank" rel="noopener" class="btn btn-outlined state-layer">TikTok ↗</a>
+    <a href={LINKS.facebook} target="_blank" rel="noopener" class="btn btn-outlined state-layer">Facebook ↗</a>
+    <a href={LINKS.linktree} target="_blank" rel="noopener" class="btn btn-filled state-layer">Linktree ↗</a>
+  </div>
+</section>

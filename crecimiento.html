@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diezell en números — DIEZELL</title>
+  <meta name="description" content="Diezell en números: oyentes, seguidores y menciones guardados con fecha y fuente. Nada se borra.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/insania.jpg">
+  <style>
+    .grafica { width: 100%; height: auto; display: block; margin: 16px 0 8px; }
+    .grafica text { font-family: var(--font-body); font-size: 12px; fill: var(--ink-mute); }
+    .dark .grafica text { fill: var(--on-dark-mute); }
+    .grafica .eje { stroke: var(--line-soft); stroke-width: 1; }
+    .dark .grafica .eje { stroke: rgba(242,240,235,.25); }
+    .grafica .linea { fill: none; stroke: var(--red); stroke-width: 3; }
+    .grafica .punto { fill: var(--red); stroke: var(--paper); stroke-width: 2; }
+    .grafica .barra { fill: var(--red); }
+    .grafica .barra-2 { fill: var(--ink); }
+    .dark .grafica .barra-2 { fill: var(--on-dark); }
+    .grafica .valor { font-weight: 700; fill: var(--ink); }
+    .dark .grafica .valor { fill: var(--on-dark); }
+    .ultimo-banner { border: 2px solid var(--ink); background: var(--paper); padding: 20px; margin-bottom: 32px; }
+    .ultimo-banner strong { font-family: var(--font-display); font-size: 1.4rem; text-transform: uppercase; font-weight: 400; }
+    .tabla-archivo { width: 100%; border-collapse: collapse; font-size: .92rem; }
+    .tabla-archivo th, .tabla-archivo td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line-soft); vertical-align: top; }
+    .tabla-archivo th { font-family: var(--font-display); text-transform: uppercase; letter-spacing: .06em; font-weight: 400; }
+    .tabla-archivo td.num { font-variant-numeric: tabular-nums; font-weight: 700; white-space: nowrap; }
+    .tabla-scroll { overflow-x: auto; }
+    .menciones-list { list-style: none; margin: 0 0 32px; padding: 0; }
+    .menciones-list li { border-top: 1px solid var(--line-soft); padding: 12px 0; }
+    .menciones-list a { font-weight: 600; color: var(--ink); }
+    .menciones-list span { display: block; color: var(--ink-mute); font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="index.html" aria-label="Diezell — ir al inicio"><span class="dzl-badge" aria-hidden="true">DZL</span>DIEZELL</a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-principal" aria-label="Abrir menú">☰</button>
+      <nav class="nav" id="nav-principal" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="escuchar.html">Música</a>
+        <a href="en-vivo.html">En vivo</a>
+        <a href="caoticos.html">Caóticos</a>
+        <a href="banda.html">Banda</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <div class="wrap page-head" style="padding-top:48px">
+      <div class="stripes" aria-hidden="true"><span></span><span></span><span></span></div>
+      <p class="kicker">El archivo</p>
+      <h1>Diezell en números</h1>
+      <p class="lead">Cada cifra que ves aquí se guardó con su fecha y su fuente. Nada se borra: cuando un número cambia, el viejo queda y el nuevo se suma. Así se ve crecer a una banda.</p>
+      <p><a class="btn btn-on-bone" href="banda.html">← Volver a Banda</a> <a class="btn btn-on-bone" href="escuchar.html">Ver Música →</a></p>
+    </div>
+
+
+    <section class="section" aria-labelledby="t-conclusiones">
+      <div class="wrap">
+        <p class="kicker">Conclusiones</p>
+        <h2 id="t-conclusiones">Lo que dicen los números</h2>
+        <ul class="lista">
+          <li>Solo <strong>2 de las 27 canciones</strong> pasan del millón de reproducciones en Spotify: «El Cuento De Aquel Imperfecto Ser» (<strong>1,678,233</strong>) y «Sin Rencores» (<strong>1,048,396</strong>). La tercera, «Martes Con Aroma A Domingo», va por 598,427.&nbsp;<span class="fuente-nota">Spotify · 15 nov 2026.</span></li>
+          <li><strong>Ciudad de México es su ciudad nº 1</strong>, con <strong>5,768</strong> oyentes mensuales, por delante de Lima (2,641) y Monterrey (2,018). México concentra el <strong>69.47%</strong> de sus oyentes en Spotify.&nbsp;<span class="fuente-nota">Spotify · 15 nov 2026.</span></li>
+          <li>TikTok crece despacio pero sin parar: <strong>13,755</strong> seguidores el 19 nov y <strong>13,756</strong> el 20 nov 2026 (+1 en un día).&nbsp;<span class="fuente-nota">TikTok directo, cifras exactas. El 18 nov la cifra del perfil era redondeada (13,800), por eso no se compara con el 19.</span></li>
+          <li>En YouTube, el video más visto es también «El Cuento De Aquel Imperfecto Ser»: <strong>576,090</strong> reproducciones el 20 nov 2026.</li>
+          <li>Los oyentes mensuales de Spotify llevan <strong>sin actualizarse desde el 16 nov 2026</strong> (<strong>44,147</strong>): la fuente, Music Metrics Vault, no ha publicado un dato nuevo desde entonces. El número no se ha movido porque la fuente no se actualiza, no porque la banda esté parada.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Último registro">
+      <div class="wrap">
+        <div class="ultimo-banner" id="ultimo-banner">
+          <p class="kicker">Último registro</p>
+          <p><strong id="ultimo-fecha">Cargando…</strong></p>
+          <p id="ultimo-detalle" class="fuente-nota">Leyendo el archivo de datos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="t-oyentes">
+      <div class="wrap">
+        <p class="kicker">Spotify · oyentes mensuales</p>
+        <h2 id="t-oyentes">Oyentes en Spotify</h2>
+        <div id="grafica-oyentes"></div>
+        <p class="fuente-nota" id="nota-oyentes">Fuente: Spotify vía Music Metrics Vault. Último dato: 44,147 oyentes, 16 nov 2026; la página no se ha actualizado desde entonces.</p>
+      </div>
+    </section>
+
+    <section class="section dark" aria-labelledby="t-seguidores">
+      <div class="wrap">
+        <p class="kicker">Todas las redes · último dato</p>
+        <h2 id="t-seguidores">Seguidores por red</h2>
+        <div id="grafica-seguidores"></div>
+        <p class="fuente-nota">Cada barra trae su fuente y su fecha: las cifras de redes distintas nunca se mezclan.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="t-actividad">
+      <div class="wrap">
+        <p class="kicker">Actividad · día a día</p>
+        <h2 id="t-actividad">Qué se movió, día a día</h2>
+        <div id="grafica-actividad"></div>
+        <p class="fuente-nota">Videos nuevos en YouTube y noticias que mencionan a Diezell, por fecha.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="t-menciones">
+      <div class="wrap">
+        <p class="kicker">Se habla de Diezell</p>
+        <h2 id="t-menciones">Menciones recientes</h2>
+        <ul class="menciones-list" id="lista-menciones">
+          <li><span>Cargando…</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section dark" aria-labelledby="t-comentaristas">
+      <div class="wrap">
+        <p class="kicker">Caóticos · quién más comenta</p>
+        <h2 id="t-comentaristas">Los que más comentan</h2>
+        <div id="lista-comentaristas">
+          <p class="fuente-nota">Cargando…</p>
+        </div>
+        <p class="fuente-nota">Solo nombres públicos, con enlace al comentario original. Comentarios guardados de YouTube, con su fecha; Reddit sigue bloqueado desde el servidor.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="t-tabla">
+      <div class="wrap">
+        <p class="kicker">El archivo completo</p>
+        <h2 id="t-tabla">El archivo completo</h2>
+        <p class="fuente-nota">Cada fila es un dato guardado con su fecha, su fuente y su métrica. <a href="datos/ledger/ledger.json">Ver el archivo en crudo (JSON) ↗</a></p>
+        <div class="tabla-scroll">
+          <table class="tabla-archivo">
+            <thead><tr><th>Fecha</th><th>Fuente</th><th>Dato</th><th>Valor</th></tr></thead>
+            <tbody id="tabla-archivo"><tr><td colspan="4">Cargando…</td></tr></tbody>
+          </table>
+        </div>
+        <p class="fuente-nota" style="margin-top:24px">Cada cifra se guardó con su fecha y su fuente; nada se borra. El archivo completo está al final de esta página.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p class="footer-marca" aria-hidden="true">VINVSNI</p>
+      <p><strong>DIEZELL</strong> — Web de fans no oficial. No afiliada a la banda.</p>
+      <nav class="footer-links" aria-label="Enlaces oficiales de Diezell">
+        <a href="https://open.spotify.com/artist/2mEQCZzgLbG0mWCwaAEb3g" target="_blank" rel="noopener">Spotify</a>
+        <a href="https://www.youtube.com/@diezellmx" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.tiktok.com/@diezellmx" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.instagram.com/diezellmx" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/diezelloficial" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://linktr.ee/diezellmx" target="_blank" rel="noopener">Linktree</a>
+      </nav>
+    </div>
+  </footer>
+  <div class="player-bar" id="dz-dock" role="region" aria-label="Reproductor de Diezell">
+    <audio id="dz-audio" preload="metadata"></audio>
+    <button class="dock-cover" id="dock-ir" type="button" aria-label="Ir al reproductor completo">
+      <img id="dock-cover" src="images/insania.jpg" alt="" width="44" height="44">
+      <span class="dock-cover-dzl" id="dock-cover-dzl" hidden>DZL</span>
+    </button>
+    <span class="player-meta"><strong id="dock-titulo">Suspensión…</strong><span id="dock-album">Diezell · INSANIA · Adelanto 1:30</span></span>
+    <button class="dock-btn" id="dock-play" type="button" aria-label="Reproducir o pausar">▶</button>
+    <button class="dock-btn" id="dock-next" type="button" aria-label="Siguiente adelanto">⏭</button>
+    <div class="dock-progreso" id="dock-progreso" role="slider" aria-label="Progreso del adelanto" aria-valuemin="0" aria-valuemax="90" aria-valuenow="0" tabindex="0"><div class="dock-relleno" id="dock-relleno"></div></div>
+  </div>
+  <nav class="tabbar" aria-label="Navegación principal móvil">
+    <a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 3l9 8.5"/><path d="M5 10.5V21h14V10.5"/><path d="M9.5 21v-6h5v6"/></svg>Inicio</a>
+    <a href="escuchar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a8 8 0 0 1 16 0"/><rect x="3" y="13" width="4" height="7" rx="1.5"/><rect x="17" y="13" width="4" height="7" rx="1.5"/></svg>Música</a>
+    <a href="en-vivo.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="13" height="12" rx="2"/><path d="M15.5 10.5 21 7v10l-5.5-3.5"/></svg>En vivo</a>
+    <a href="caoticos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.8 6.3.7-4.7 4.3 1.3 6.2-5.6-3.2L6.4 20l1.3-6.2L3 9.5l6.3-.7z"/></svg>Caóticos</a>
+    <a href="banda.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5.5a3.5 3.5 0 0 1 0 5.5"/><path d="M17.5 14.5a6.5 6.5 0 0 1 4 5.5"/></svg>Banda</a>
+  </nav>
+  <script src="app.js"></script>
+  <script>
+  (function () {
+    "use strict";
+    var fmt = new Intl.NumberFormat("es-MX");
+    function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+    function fechaCorta(iso) { var p = iso.split("-"); return p[2] + "/" + p[1] + "/" + p[0].slice(2); }
+
+    function lineaSVG(puntos, ancho, alto) {
+      if (!puntos.length) return '<p class="fuente-nota">Aún no hay datos para esta gráfica.</p>';
+      var padL = 64, padR = 16, padT = 24, padB = 28;
+      var vals = puntos.map(function (p) { return p.y; });
+      var min = Math.min.apply(null, vals), max = Math.max.apply(null, vals);
+      if (min === max) { min -= 1; max += 1; }
+      var rango = max - min;
+      min -= rango * 0.15; max += rango * 0.15;
+      var X = function (i) { return padL + (ancho - padL - padR) * (puntos.length === 1 ? 0.5 : i / (puntos.length - 1)); };
+      var Y = function (v) { return padT + (alto - padT - padB) * (1 - (v - min) / (max - min)); };
+      var d = puntos.map(function (p, i) { return (i ? "L" : "M") + X(i).toFixed(1) + "," + Y(p.y).toFixed(1); }).join(" ");
+      var s = '<svg class="grafica" viewBox="0 0 ' + ancho + ' ' + alto + '" role="img" aria-label="Gráfica de línea">';
+      s += '<line class="eje" x1="' + padL + '" y1="' + (alto - padB) + '" x2="' + (ancho - padR) + '" y2="' + (alto - padB) + '"/>';
+      s += '<text x="8" y="' + (Y(max) + 4) + '">' + fmt.format(Math.round(max)) + '</text>';
+      s += '<text x="8" y="' + (Y(min) + 4) + '">' + fmt.format(Math.round(min)) + '</text>';
+      s += '<path class="linea" d="' + d + '"/>';
+      puntos.forEach(function (p, i) {
+        s += '<circle class="punto" cx="' + X(i).toFixed(1) + '" cy="' + Y(p.y).toFixed(1) + '" r="6"/>';
+        s += '<text class="valor" x="' + X(i).toFixed(1) + '" y="' + (Y(p.y) - 12) + '" text-anchor="middle">' + fmt.format(p.y) + '</text>';
+        s += '<text x="' + X(i).toFixed(1) + '" y="' + (alto - 8) + '" text-anchor="middle">' + fechaCorta(p.x) + '</text>';
+      });
+      return s + "</svg>";
+    }
+
+    function barrasSVG(items, ancho, alto) {
+      if (!items.length) return '<p class="fuente-nota">Aún no hay datos para esta gráfica.</p>';
+      var padL = 8, padB = 44, padT = 28;
+      var max = Math.max.apply(null, items.map(function (i) { return i.y; })) || 1;
+      var bw = (ancho - padL * 2) / items.length;
+      var s = '<svg class="grafica" viewBox="0 0 ' + ancho + ' ' + alto + '" role="img" aria-label="Gráfica de barras">';
+      items.forEach(function (it, i) {
+        var h = Math.max(4, (alto - padT - padB) * (it.y / max));
+        var x = padL + i * bw + bw * 0.18;
+        var w = bw * 0.64;
+        var y = alto - padB - h;
+        s += '<rect class="barra" x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" width="' + w.toFixed(1) + '" height="' + h.toFixed(1) + '" rx="2"/>';
+        s += '<text class="valor" x="' + (x + w / 2).toFixed(1) + '" y="' + (y - 8) + '" text-anchor="middle">' + fmt.format(it.y) + '</text>';
+        var label = it.label.length > 14 ? it.label.slice(0, 13) + "…" : it.label;
+        s += '<text x="' + (x + w / 2).toFixed(1) + '" y="' + (alto - 26) + '" text-anchor="middle">' + esc(label) + '</text>';
+        s += '<text x="' + (x + w / 2).toFixed(1) + '" y="' + (alto - 10) + '" text-anchor="middle">' + esc(it.sub || "") + '</text>';
+      });
+      return s + "</svg>";
+    }
+
+    function etiqueta(r) {
+      var d = r.detail || {};
+      if (d.title) return d.title;
+      if (d.city) return "Oyentes en " + d.city;
+      if (d.country) return "Oyentes en " + d.country;
+      return r.metric.replace(/_/g, " ");
+    }
+
+    function cargar(url) {
+      return fetch(url).then(function (res) {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        return res.json();
+      });
+    }
+
+    Promise.all([
+      cargar("datos/ledger/ledger.json"),
+      cargar("datos/ledger/mentions.json").catch(function () { return { mentions: [] }; }),
+      cargar("datos/ledger/commenters.json").catch(function () { return { by_month: null }; })
+    ]).then(function (res) {
+      var ledger = res[0], mentions = res[1], commenters = res[2];
+      var recs = ledger.records.slice().sort(function (a, b) { return a.date < b.date ? -1 : 1; });
+      var ultimo = recs.length ? recs[recs.length - 1].date : "—";
+      document.getElementById("ultimo-fecha").textContent = "Última actualización: " + ultimo;
+      document.getElementById("ultimo-detalle").textContent =
+        recs.length + " datos guardados desde el 8 nov 2026. Cada día se añaden los nuevos sin borrar los viejos.";
+
+      // 1. Oyentes mensuales de Spotify (un punto por fecha; si hay dos
+      // registros el mismo día, se queda el primero para no duplicar)
+      var oyentes = recs.filter(function (r) { return r.metric === "spotify_monthly_listeners"; })
+        .map(function (r) { return { x: r.date, y: r.value }; })
+        .filter(function (p, i, arr) { return arr.findIndex(function (q) { return q.x === p.x; }) === i; });
+      document.getElementById("grafica-oyentes").innerHTML = lineaSVG(oyentes, 720, 300);
+      if (oyentes.length >= 2) {
+        var dif = oyentes[oyentes.length - 1].y - oyentes[0].y;
+        document.getElementById("nota-oyentes").textContent =
+          "Fuente: Spotify vía Music Metrics Vault. Último dato: 44,147 oyentes, 16 nov 2026; la página no se ha actualizado desde entonces. Cambio desde el primer registro: " +
+          (dif >= 0 ? "+" : "") + fmt.format(dif) + " oyentes.";
+      }
+
+      // 2. Seguidores por red (último valor de cada métrica)
+      var redes = [
+        ["spotify_followers", "Spotify", "seguidores"],
+        ["youtube_subscribers", "YouTube", "suscriptores"],
+        ["tiktok_followers", "TikTok", "seguidores"],
+        ["deezer_fans", "Deezer", "fans"],
+        ["songkick_tracked_fans", "Songkick", "fans"],
+        ["lastfm_listeners_total", "Last.fm", "oyentes"]
+      ];
+      var barras = [];
+      redes.forEach(function (cfg) {
+        var serie = recs.filter(function (r) { return r.metric === cfg[0]; });
+        if (serie.length) {
+          var u = serie[serie.length - 1];
+          barras.push({ label: cfg[1], y: u.value, sub: fechaCorta(u.date) + " · " + u.source });
+        }
+      });
+      document.getElementById("grafica-seguidores").innerHTML = barrasSVG(barras, 720, 300);
+
+      // 3. Actividad por fecha
+      var porFecha = {};
+      recs.forEach(function (r) {
+        if (r.metric === "news_mentions" || r.metric === "youtube_video_new" || r.metric === "press_mentions") {
+          porFecha[r.date] = porFecha[r.date] || { noticias: 0, videos: 0 };
+          if (r.metric === "news_mentions") porFecha[r.date].noticias += r.value;
+          if (r.metric === "press_mentions") porFecha[r.date].noticias += r.value;
+          // Un video solo cuenta como nuevo si se publicó ese día (campo
+          // published del registro), no por aparecer en el feed de ese día.
+          if (r.metric === "youtube_video_new" && r.detail && r.detail.published && r.detail.published.slice(0, 10) === r.date) porFecha[r.date].videos += 1;
+        }
+      });
+      var act = Object.keys(porFecha).sort().map(function (f) {
+        return { label: fechaCorta(f), y: porFecha[f].noticias + porFecha[f].videos,
+                 sub: porFecha[f].videos + " videos · " + porFecha[f].noticias + " noticias" };
+      });
+      document.getElementById("grafica-actividad").innerHTML = barrasSVG(act, 720, 300);
+
+      // Menciones
+      var ml = document.getElementById("lista-menciones");
+      var ms = (mentions.mentions || []).slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; }).slice(0, 10);
+      ml.innerHTML = ms.length ? ms.map(function (m) {
+        return '<li><a href="' + esc(m.url) + '" target="_blank" rel="noopener">' + esc(m.title) + ' ↗</a>' +
+          '<span>' + esc(m.source) + ' · ' + esc(m.date) + ' · ' + esc(m.kind) + '</span></li>';
+      }).join("") : '<li><span>Aún no hay menciones guardadas.</span></li>';
+
+      // Comentaristas
+      var cl = document.getElementById("lista-comentaristas");
+      var meses = commenters.by_month === null ? null : Object.keys(commenters.by_month || {}).sort().reverse();
+      if (meses === null) {
+        cl.innerHTML = '<p class="fuente-nota">No se pudo cargar el ranking de comentaristas en esta vista. Los comentarios guardados siguen en el archivo (datos/ledger/comments.json).</p>';
+      } else if (!meses.length) {
+        cl.innerHTML = '<p class="fuente-nota">Aún no hay comentarios guardados en el archivo.</p>';
+      } else {
+        var html = "";
+        meses.slice(0, 3).forEach(function (mes) {
+          var top = Object.keys(commenters.by_month[mes])
+            .map(function (a) { return { a: a, c: commenters.by_month[mes][a].count }; })
+            .sort(function (x, y) { return y.c - x.c; }).slice(0, 5);
+          html += '<h3>' + esc(mes) + '</h3><ol class="datos-tabla">' +
+            top.map(function (t, i) {
+              return '<li><span class="rank">' + String(i + 1).padStart(2, "0") + '</span><span class="nombre">' + esc(t.a) + '</span><span class="valor">' + t.c + ' comentarios</span></li>';
+            }).join("") + "</ol>";
+        });
+        cl.innerHTML = html;
+      }
+
+      // Tabla completa
+      var tb = document.getElementById("tabla-archivo");
+      tb.innerHTML = recs.slice().reverse().map(function (r) {
+        return "<tr><td>" + esc(r.date) + "</td><td>" + esc(r.source) + "</td><td>" +
+          esc(etiqueta(r)) + "</td><td class=\"num\">" + fmt.format(r.value) + " " + esc(r.unit || "") + "</td></tr>";
+      }).join("");
+    }).catch(function (err) {
+      document.getElementById("ultimo-fecha").textContent = "No se pudo cargar el archivo";
+      document.getElementById("ultimo-detalle").textContent =
+        "El archivo datos/ledger/ledger.json no se pudo leer desde esta página (" + err.message + "). " +
+        "La página necesita servirse por HTTP, como el resto del sitio.";
+      document.getElementById("lista-menciones").innerHTML = "<li><span>No se pudo cargar.</span></li>";
+      document.getElementById("lista-comentaristas").innerHTML = "<p class=\"fuente-nota\">No se pudo cargar el ranking.</p>";
+      document.getElementById("tabla-archivo").innerHTML = "<tr><td colspan=\"4\">No se pudo cargar el archivo.</td></tr>";
+    });
+  })();
+  </script>
+</body>
+</html>

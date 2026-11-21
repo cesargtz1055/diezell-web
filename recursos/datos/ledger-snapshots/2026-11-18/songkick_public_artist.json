@@ -1,0 +1,29 @@
+{
+  "events_found": 3,
+  "events": [
+    {
+      "name": "Diezell @ Foro Corona",
+      "startDate": "2026-11-13T21:00:00",
+      "venue": "Foro Corona",
+      "city": "Monterrey",
+      "address": "Av. Constitución, Col. Centro",
+      "url": "https://www.songkick.com/concerts/43303322-diezell-at-foro-corona?utm_medium=organic&utm_source=microformat"
+    },
+    {
+      "name": "Diezell @ FÜCK OFF ROOM",
+      "startDate": "2026-10-24T19:00:00",
+      "venue": "FÜCK OFF ROOM",
+      "city": "Mexico City",
+      "address": "Diagonal Patriotismo #6 Col. Hipódromo Condesa (Entre Tamaulipas Y Benjamin Hil]",
+      "url": "https://www.songkick.com/concerts/43304576-diezell-at-fuck-off-room?utm_medium=organic&utm_source=microformat"
+    },
+    {
+      "name": "Diezell @ Madre Santa Pulqueria",
+      "startDate": "2026-10-23T19:00:00",
+      "venue": "Madre Santa Pulqueria",
+      "city": "Puebla",
+      "address": "Av 2 Ote 208-Interior 10, Colonia Centro",
+      "url": "https://www.songkick.com/concerts/43318935-diezell-at-madre-santa-pulqueria?utm_medium=organic&utm_source=microformat"
+    }
+  ]
+}

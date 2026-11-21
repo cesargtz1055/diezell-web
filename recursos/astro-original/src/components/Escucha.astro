@@ -1,0 +1,93 @@
+---
+import { ALBUMS, LINKS, TOP_SONGS } from "../data/diezell";
+
+const insania = ALBUMS[0];
+---
+
+<section id="musica" class="m3-container py-24 md:py-36" aria-labelledby="titulo-musica">
+  <div class="reveal">
+    <p class="m3-label-large text-primary">01 — Escuchar</p>
+    <h2 id="titulo-musica" class="m3-display-medium mt-4 text-on-surface">Escucha.</h2>
+    <p class="m3-body-large mt-4 max-w-xl text-on-surface-variant">
+      Las diez canciones de INSANIA, el segundo álbum.
+    </p>
+    <p class="m3-body-small mt-3 max-w-xl text-on-surface-variant">
+      La cita de prensa sobre cómo se hizo el disco está en
+      <a href="#discografia" class="text-primary underline underline-offset-4">Discografía ↓</a>
+    </p>
+  </div>
+
+  <div class="mt-12 grid gap-6 lg:grid-cols-5">
+    <div class="reveal lg:col-span-3">
+      <p class="m3-label-medium mb-4 text-on-surface-variant">Spotify · INSANIA — álbum completo</p>
+      <div class="card card--elevated card--large relative overflow-hidden" data-embed-wrap>
+        <div class="skeleton absolute inset-0" data-skeleton aria-hidden="true"></div>
+        <iframe
+          title="INSANIA de Diezell en Spotify"
+          src={insania.spotifyEmbed}
+          width="100%"
+          height="420"
+          class="relative block w-full"
+          style="border:0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+          data-embed
+        ></iframe>
+      </div>
+      <p class="mt-4">
+        <a href={insania.spotify} target="_blank" rel="noopener" class="state-layer m3-label-large inline-flex min-h-12 items-center rounded-full px-4 text-primary">
+          Abrir INSANIA en Spotify ↗
+        </a>
+      </p>
+      <p class="m3-body-small mt-1 text-on-surface-variant">Si el reproductor no carga, usa el enlace de arriba.</p>
+    </div>
+
+    <div class="reveal lg:col-span-2">
+      <p class="m3-label-medium mb-4 text-on-surface-variant">YouTube · Video oficial</p>
+      <div class="card card--elevated card--large relative aspect-video overflow-hidden" data-embed-wrap>
+        <div class="skeleton absolute inset-0" data-skeleton aria-hidden="true"></div>
+        <iframe
+          title="El Cuento De Aquel Imperfecto Ser — Diezell (video oficial)"
+          src="https://www.youtube-nocookie.com/embed/MuvgZpXqsY8"
+          width="100%"
+          height="100%"
+          class="absolute inset-0 block h-full w-full"
+          style="border:0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          loading="lazy"
+          data-embed
+        ></iframe>
+      </div>
+      <p class="m3-body-medium mt-4 text-on-surface-variant">
+        “El Cuento De Aquel Imperfecto Ser” — 571K views en YouTube.
+        <a href={LINKS.youtube} target="_blank" rel="noopener" class="text-primary underline underline-offset-4"> Canal @diezellmx ↗</a>
+      </p>
+
+      <h3 class="m3-label-medium mt-10 mb-2 text-on-surface-variant">Lo más escuchado · Spotify</h3>
+      <ol class="card card--outlined divide-y divide-outline-variant">
+        {
+          TOP_SONGS.map((c, i) => (
+            <li class="flex min-h-12 items-baseline justify-between gap-4 px-4 py-3">
+              <span class="m3-body-medium text-on-surface">
+                <span class="mr-3 font-display text-on-surface-variant">0{i + 1}</span>
+                {c.titulo}
+              </span>
+              <span class="m3-body-small shrink-0 tabular-nums text-on-surface-variant">{c.reproducciones}</span>
+            </li>
+          ))
+        }
+      </ol>
+      <p class="m3-body-small mt-3 text-on-surface-variant">Reproducciones en Spotify al 8 nov 2026.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Estado de carga M3: el skeleton se retira cuando el embed carga
+  document.querySelectorAll<HTMLElement>("[data-embed-wrap]").forEach((wrap) => {
+    const frame = wrap.querySelector<HTMLIFrameElement>("[data-embed]");
+    const skeleton = wrap.querySelector<HTMLElement>("[data-skeleton]");
+    frame?.addEventListener("load", () => skeleton?.remove());
+  });
+</script>

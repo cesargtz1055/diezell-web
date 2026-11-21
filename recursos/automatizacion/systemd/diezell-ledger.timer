@@ -1,0 +1,13 @@
+[Unit]
+Description=Diezell — corte diario a las 08:00 America/Mexico_City
+
+[Timer]
+# 14:00 UTC = 08:00 America/Mexico_City (CDMX es UTC-6 fijo, sin horario
+# de verano desde 2022). Se usa UTC porque este systemd ignora
+# Timezone= en el timer (verificado: programaba 08:00 UTC).
+OnCalendar=*-*-* 14:00:00
+Persistent=true
+Unit=diezell-ledger.service
+
+[Install]
+WantedBy=timers.target

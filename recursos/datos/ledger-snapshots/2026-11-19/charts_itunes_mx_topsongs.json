@@ -1,0 +1,3063 @@
+{
+  "feed": {
+    "author": {
+      "name": {
+        "label": "iTunes Store"
+      },
+      "uri": {
+        "label": "http://www.apple.com/mx/itunes/"
+      }
+    },
+    "entry": [
+      {
+        "im:name": {
+          "label": "BbY WOW"
+        },
+        "im:image": [
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2b/66/b2/2b66b26c-ab23-faa1-c4ee-06fa2cce8f76/26UM1IM00558.rgb.jpg/55x55bb.png",
+            "attributes": {
+              "height": "55"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2b/66/b2/2b66b26c-ab23-faa1-c4ee-06fa2cce8f76/26UM1IM00558.rgb.jpg/60x60bb.png",
+            "attributes": {
+              "height": "60"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2b/66/b2/2b66b26c-ab23-faa1-c4ee-06fa2cce8f76/26UM1IM00558.rgb.jpg/170x170bb.png",
+            "attributes": {
+              "height": "170"
+            }
+          }
+        ],
+        "im:collection": {
+          "im:name": {
+            "label": "NO ME ARREPIENTO DE SENTIR TANTO"
+          },
+          "link": {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/no-me-arrepiento-de-sentir-tanto/6796864741?uo=2"
+            }
+          },
+          "im:contentType": {
+            "im:contentType": {
+              "attributes": {
+                "term": "Album",
+                "label": "Álbum"
+              }
+            },
+            "attributes": {
+              "term": "Music",
+              "label": "Música"
+            }
+          }
+        },
+        "im:price": {
+          "label": "$15.00",
+          "attributes": {
+            "amount": "15.00",
+            "currency": "MXN"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Track",
+              "label": "Canción"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Música"
+          }
+        },
+        "rights": {
+          "label": "℗ 2026 Bichota Records LLC, under exclusive license to Interscope Records"
+        },
+        "title": {
+          "label": "BbY WOW - KAROL G, Judeline & rusowsky"
+        },
+        "link": [
+          {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/bby-wow/6796864741?i=6796864754&uo=2"
+            }
+          },
+          {
+            "im:duration": {
+              "label": "30000"
+            },
+            "attributes": {
+              "title": "Vista previa",
+              "rel": "enclosure",
+              "type": "audio/x-m4a",
+              "href": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f3/08/da/f308da3d-00cc-7682-7be9-87cb882f4ea5/mzaf_129115212197250565.plus.aac.p.m4a",
+              "im:assetType": "preview"
+            }
+          }
+        ],
+        "id": {
+          "label": "https://music.apple.com/mx/album/bby-wow/6796864741?i=6796864754&uo=2",
+          "attributes": {
+            "im:id": "6796864754"
+          }
+        },
+        "im:artist": {
+          "label": "KAROL G, Judeline & rusowsky",
+          "attributes": {
+            "href": "https://music.apple.com/mx/artist/karol-g/290814601?uo=2"
+          }
+        },
+        "category": {
+          "attributes": {
+            "im:id": "1119",
+            "term": "Latin Urban",
+            "scheme": "https://music.apple.com/mx/genre/m%C3%BAsica-m%C3%BAsica-latina-urbano-latino/id1119?uo=2",
+            "label": "Urbano latino"
+          }
+        },
+        "im:releaseDate": {
+          "label": "2026-08-05T05:00:00-07:00",
+          "attributes": {
+            "label": "05/08/2026"
+          }
+        }
+      },
+      {
+        "im:name": {
+          "label": "Flower In A Hurricane [From GTAVI: Original Score]"
+        },
+        "im:image": [
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a0/6d/08/a06d082b-9322-3ede-f6aa-fe3e7b9b386f/5056556188568_cover.jpg/55x55bb.png",
+            "attributes": {
+              "height": "55"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a0/6d/08/a06d082b-9322-3ede-f6aa-fe3e7b9b386f/5056556188568_cover.jpg/60x60bb.png",
+            "attributes": {
+              "height": "60"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a0/6d/08/a06d082b-9322-3ede-f6aa-fe3e7b9b386f/5056556188568_cover.jpg/170x170bb.png",
+            "attributes": {
+              "height": "170"
+            }
+          }
+        ],
+        "im:collection": {
+          "im:name": {
+            "label": "Grand Theft Auto VI: Original Score"
+          },
+          "link": {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/grand-theft-auto-vi-original-score/6827656134?uo=2"
+            }
+          },
+          "im:contentType": {
+            "im:contentType": {
+              "attributes": {
+                "term": "Album",
+                "label": "Álbum"
+              }
+            },
+            "attributes": {
+              "term": "Music",
+              "label": "Música"
+            }
+          }
+        },
+        "im:price": {
+          "label": "$15.00",
+          "attributes": {
+            "amount": "15.00",
+            "currency": "MXN"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Track",
+              "label": "Canción"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Música"
+          }
+        },
+        "rights": {
+          "label": "℗ 2026 Take-Two Interactive Software, Inc. under exclusive license to Ed Banger Records / Because Music. Grand Theft Auto VI, R*, and related logos are trademarks of Take-Two Interactive Software, Inc."
+        },
+        "title": {
+          "label": "Flower In A Hurricane [From GTAVI: Original Score] - Justice, Tame Impala, SZA & King Gizzard & The Lizard Wizard"
+        },
+        "link": [
+          {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/flower-in-a-hurricane-from-gtavi-original-score/6827656134?i=6827658231&uo=2"
+            }
+          },
+          {
+            "im:duration": {
+              "label": "30000"
+            },
+            "attributes": {
+              "title": "Vista previa",
+              "rel": "enclosure",
+              "type": "audio/x-m4a",
+              "href": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/eb/1e/6c/eb1e6cdf-4939-2484-3636-94d7677b10fd/mzaf_7329080650980000211.plus.aac.p.m4a",
+              "im:assetType": "preview"
+            }
+          }
+        ],
+        "id": {
+          "label": "https://music.apple.com/mx/album/flower-in-a-hurricane-from-gtavi-original-score/6827656134?i=6827658231&uo=2",
+          "attributes": {
+            "im:id": "6827658231"
+          }
+        },
+        "im:artist": {
+          "label": "Justice, Tame Impala, SZA & King Gizzard & The Lizard Wizard",
+          "attributes": {
+            "href": "https://music.apple.com/mx/artist/justice/145072812?uo=2"
+          }
+        },
+        "category": {
+          "attributes": {
+            "im:id": "7",
+            "term": "Electronic",
+            "scheme": "https://music.apple.com/mx/genre/m%C3%BAsica-electr%C3%B3nica/id7?uo=2",
+            "label": "Electrónica"
+          }
+        },
+        "im:releaseDate": {
+          "label": "2026-10-15T00:00:00-07:00",
+          "attributes": {
+            "label": "15/10/2026"
+          }
+        }
+      },
+      {
+        "im:name": {
+          "label": "Bonito, Bonito"
+        },
+        "im:image": [
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/77/47/fc/7747fc1e-8167-5de6-b8e7-cf9b1038aea3/882436183713_cover.jpg/55x55bb.png",
+            "attributes": {
+              "height": "55"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/77/47/fc/7747fc1e-8167-5de6-b8e7-cf9b1038aea3/882436183713_cover.jpg/60x60bb.png",
+            "attributes": {
+              "height": "60"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/77/47/fc/7747fc1e-8167-5de6-b8e7-cf9b1038aea3/882436183713_cover.jpg/170x170bb.png",
+            "attributes": {
+              "height": "170"
+            }
+          }
+        ],
+        "im:collection": {
+          "im:name": {
+            "label": "Bonito, Bonito - EP"
+          },
+          "link": {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/bonito-bonito-ep/6810810194?uo=2"
+            }
+          },
+          "im:contentType": {
+            "im:contentType": {
+              "attributes": {
+                "term": "Album",
+                "label": "Álbum"
+              }
+            },
+            "attributes": {
+              "term": "Music",
+              "label": "Música"
+            }
+          }
+        },
+        "im:price": {
+          "label": "$15.00",
+          "attributes": {
+            "amount": "15.00",
+            "currency": "MXN"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Track",
+              "label": "Canción"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Música"
+          }
+        },
+        "rights": {
+          "label": "℗ 2026 Thiago Navarro Music"
+        },
+        "title": {
+          "label": "Bonito, Bonito - Thiago Navarro Music"
+        },
+        "link": [
+          {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/bonito-bonito/6810810194?i=6810810195&uo=2"
+            }
+          },
+          {
+            "im:duration": {
+              "label": "30000"
+            },
+            "attributes": {
+              "title": "Vista previa",
+              "rel": "enclosure",
+              "type": "audio/x-m4a",
+              "href": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3c/20/d8/3c20d86e-b6ed-5ccf-0e51-23965f57d281/mzaf_16567794836623302846.plus.aac.p.m4a",
+              "im:assetType": "preview"
+            }
+          }
+        ],
+        "id": {
+          "label": "https://music.apple.com/mx/album/bonito-bonito/6810810194?i=6810810195&uo=2",
+          "attributes": {
+            "im:id": "6810810195"
+          }
+        },
+        "im:artist": {
+          "label": "Thiago Navarro Music",
+          "attributes": {
+            "href": "https://music.apple.com/mx/artist/thiago-navarro-music/6827110601?uo=2"
+          }
+        },
+        "category": {
+          "attributes": {
+            "im:id": "1117",
+            "term": "Pop in Spanish",
+            "scheme": "https://music.apple.com/mx/genre/m%C3%BAsica-m%C3%BAsica-latina-pop-en-espa%C3%B1ol/id1117?uo=2",
+            "label": "Pop en español"
+          }
+        },
+        "im:releaseDate": {
+          "label": "2026-08-03T05:00:00-07:00",
+          "attributes": {
+            "label": "03/08/2026"
+          }
+        }
+      },
+      {
+        "im:name": {
+          "label": "Ni una Sola Palabra"
+        },
+        "im:image": [
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/eb/61/cd/eb61cd80-8caa-9ae7-3a2d-527f71620d0b/00600753472392.rgb.jpg/55x55bb.png",
+            "attributes": {
+              "height": "55"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/eb/61/cd/eb61cd80-8caa-9ae7-3a2d-527f71620d0b/00600753472392.rgb.jpg/60x60bb.png",
+            "attributes": {
+              "height": "60"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/eb/61/cd/eb61cd80-8caa-9ae7-3a2d-527f71620d0b/00600753472392.rgb.jpg/170x170bb.png",
+            "attributes": {
+              "height": "170"
+            }
+          }
+        ],
+        "im:collection": {
+          "im:name": {
+            "label": "Pau Factor"
+          },
+          "link": {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/pau-factor/1444115427?uo=2"
+            }
+          },
+          "im:contentType": {
+            "im:contentType": {
+              "attributes": {
+                "term": "Album",
+                "label": "Álbum"
+              }
+            },
+            "attributes": {
+              "term": "Music",
+              "label": "Música"
+            }
+          }
+        },
+        "im:price": {
+          "label": "$15.00",
+          "attributes": {
+            "amount": "15.00",
+            "currency": "MXN"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Track",
+              "label": "Canción"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Música"
+          }
+        },
+        "rights": {
+          "label": "This Compilation ℗ 2013 Universal Music Latino"
+        },
+        "title": {
+          "label": "Ni una Sola Palabra - Paulina Rubio"
+        },
+        "link": [
+          {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/ni-una-sola-palabra/1444115427?i=1444115570&uo=2"
+            }
+          },
+          {
+            "im:duration": {
+              "label": "30000"
+            },
+            "attributes": {
+              "title": "Vista previa",
+              "rel": "enclosure",
+              "type": "audio/x-m4a",
+              "href": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/25/09/56/25095648-e9d9-3de7-7788-6d4a5cc30597/mzaf_3736073623902710551.plus.aac.p.m4a",
+              "im:assetType": "preview"
+            }
+          }
+        ],
+        "id": {
+          "label": "https://music.apple.com/mx/album/ni-una-sola-palabra/1444115427?i=1444115570&uo=2",
+          "attributes": {
+            "im:id": "1444115570"
+          }
+        },
+        "im:artist": {
+          "label": "Paulina Rubio",
+          "attributes": {
+            "href": "https://music.apple.com/mx/artist/paulina-rubio/264450?uo=2"
+          }
+        },
+        "category": {
+          "attributes": {
+            "im:id": "1117",
+            "term": "Pop in Spanish",
+            "scheme": "https://music.apple.com/mx/genre/m%C3%BAsica-m%C3%BAsica-latina-pop-en-espa%C3%B1ol/id1117?uo=2",
+            "label": "Pop en español"
+          }
+        },
+        "im:releaseDate": {
+          "label": "2006-07-24T05:00:00-07:00",
+          "attributes": {
+            "label": "24/07/2006"
+          }
+        }
+      },
+      {
+        "im:name": {
+          "label": "Arrasando"
+        },
+        "im:image": [
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ed/7e/bb/ed7ebbfe-0771-06b2-5420-2f607beebd35/00724359304359.jpg/55x55bb.png",
+            "attributes": {
+              "height": "55"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ed/7e/bb/ed7ebbfe-0771-06b2-5420-2f607beebd35/00724359304359.jpg/60x60bb.png",
+            "attributes": {
+              "height": "60"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ed/7e/bb/ed7ebbfe-0771-06b2-5420-2f607beebd35/00724359304359.jpg/170x170bb.png",
+            "attributes": {
+              "height": "170"
+            }
+          }
+        ],
+        "im:collection": {
+          "im:name": {
+            "label": "Greatest Hits"
+          },
+          "link": {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/greatest-hits/714833142?uo=2"
+            }
+          },
+          "im:contentType": {
+            "im:contentType": {
+              "attributes": {
+                "term": "Album",
+                "label": "Álbum"
+              }
+            },
+            "attributes": {
+              "term": "Music",
+              "label": "Música"
+            }
+          }
+        },
+        "im:price": {
+          "label": "$15.00",
+          "attributes": {
+            "amount": "15.00",
+            "currency": "MXN"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Track",
+              "label": "Canción"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Música"
+          }
+        },
+        "rights": {
+          "label": "This Compilation ℗ 2004 EMI Televisa Music"
+        },
+        "title": {
+          "label": "Arrasando - Thalía"
+        },
+        "link": [
+          {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/arrasando/714833142?i=714833150&uo=2"
+            }
+          },
+          {
+            "im:duration": {
+              "label": "30000"
+            },
+            "attributes": {
+              "title": "Vista previa",
+              "rel": "enclosure",
+              "type": "audio/x-m4a",
+              "href": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a8/a4/00/a8a40085-8335-58b9-8d10-7a45e24d7d4c/mzaf_8522985772425799537.plus.aac.p.m4a",
+              "im:assetType": "preview"
+            }
+          }
+        ],
+        "id": {
+          "label": "https://music.apple.com/mx/album/arrasando/714833142?i=714833150&uo=2",
+          "attributes": {
+            "im:id": "714833150"
+          }
+        },
+        "im:artist": {
+          "label": "Thalía",
+          "attributes": {
+            "href": "https://music.apple.com/mx/artist/thal%C3%ADa/88612122?uo=2"
+          }
+        },
+        "category": {
+          "attributes": {
+            "im:id": "1117",
+            "term": "Pop in Spanish",
+            "scheme": "https://music.apple.com/mx/genre/m%C3%BAsica-m%C3%BAsica-latina-pop-en-espa%C3%B1ol/id1117?uo=2",
+            "label": "Pop en español"
+          }
+        },
+        "im:releaseDate": {
+          "label": "2000-01-01T04:00:00-07:00",
+          "attributes": {
+            "label": "01/01/2000"
+          }
+        }
+      },
+      {
+        "im:name": {
+          "label": "BbY WOW (John Summit Remix) [feat. Judeline & rusowsky]"
+        },
+        "im:image": [
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b4/8d/be/b48dbe2e-7668-eeaa-a5b2-257a9c8e33b9/823375587323_Cover.jpg/55x55bb.png",
+            "attributes": {
+              "height": "55"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b4/8d/be/b48dbe2e-7668-eeaa-a5b2-257a9c8e33b9/823375587323_Cover.jpg/60x60bb.png",
+            "attributes": {
+              "height": "60"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b4/8d/be/b48dbe2e-7668-eeaa-a5b2-257a9c8e33b9/823375587323_Cover.jpg/170x170bb.png",
+            "attributes": {
+              "height": "170"
+            }
+          }
+        ],
+        "im:collection": {
+          "im:name": {
+            "label": "BbY WOW (John Summit Remix) [feat. Judeline & rusowsky] - Single"
+          },
+          "link": {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/bby-wow-john-summit-remix-feat-judeline-rusowsky-single/6831822973?uo=2"
+            }
+          },
+          "im:contentType": {
+            "im:contentType": {
+              "attributes": {
+                "term": "Album",
+                "label": "Álbum"
+              }
+            },
+            "attributes": {
+              "term": "Music",
+              "label": "Música"
+            }
+          }
+        },
+        "im:price": {
+          "label": "$12.00",
+          "attributes": {
+            "amount": "12.00",
+            "currency": "MXN"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Track",
+              "label": "Canción"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Música"
+          }
+        },
+        "rights": {
+          "label": "℗ 2026 Experts Only/Bichota Records"
+        },
+        "title": {
+          "label": "BbY WOW (John Summit Remix) [feat. Judeline & rusowsky] - KAROL G & John Summit"
+        },
+        "link": [
+          {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/bby-wow-john-summit-remix-feat-judeline-rusowsky/6831822973?i=6831823102&uo=2"
+            }
+          },
+          {
+            "im:duration": {
+              "label": "30000"
+            },
+            "attributes": {
+              "title": "Vista previa",
+              "rel": "enclosure",
+              "type": "audio/x-m4a",
+              "href": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/52/04/9d/52049da4-3386-1eee-d93e-387a0596c187/mzaf_15858479033241292562.plus.aac.p.m4a",
+              "im:assetType": "preview"
+            }
+          }
+        ],
+        "id": {
+          "label": "https://music.apple.com/mx/album/bby-wow-john-summit-remix-feat-judeline-rusowsky/6831822973?i=6831823102&uo=2",
+          "attributes": {
+            "im:id": "6831823102"
+          }
+        },
+        "im:artist": {
+          "label": "KAROL G & John Summit",
+          "attributes": {
+            "href": "https://music.apple.com/mx/artist/karol-g/290814601?uo=2"
+          }
+        },
+        "category": {
+          "attributes": {
+            "im:id": "17",
+            "term": "Dance",
+            "scheme": "https://music.apple.com/mx/genre/m%C3%BAsica-dance/id17?uo=2",
+            "label": "Dance"
+          }
+        },
+        "im:releaseDate": {
+          "label": "2026-11-13T04:00:00-07:00",
+          "attributes": {
+            "label": "13/11/2026"
+          }
+        }
+      },
+      {
+        "im:name": {
+          "label": "UP (YUNHO&WOOYOUNG Ver.)"
+        },
+        "im:image": [
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/45/92/20/459220c9-b8c8-3059-9af2-f481be140167/196874950777.jpg/55x55bb.png",
+            "attributes": {
+              "height": "55"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/45/92/20/459220c9-b8c8-3059-9af2-f481be140167/196874950777.jpg/60x60bb.png",
+            "attributes": {
+              "height": "60"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/45/92/20/459220c9-b8c8-3059-9af2-f481be140167/196874950777.jpg/170x170bb.png",
+            "attributes": {
+              "height": "170"
+            }
+          }
+        ],
+        "im:collection": {
+          "im:name": {
+            "label": "UP (YUNHO&WOOYOUNG Ver.) - Single"
+          },
+          "link": {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/up-yunho-wooyoung-ver-single/6831438212?uo=2"
+            }
+          },
+          "im:contentType": {
+            "im:contentType": {
+              "attributes": {
+                "term": "Album",
+                "label": "Álbum"
+              }
+            },
+            "attributes": {
+              "term": "Music",
+              "label": "Música"
+            }
+          }
+        },
+        "im:price": {
+          "label": "$15.00",
+          "attributes": {
+            "amount": "15.00",
+            "currency": "MXN"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Track",
+              "label": "Canción"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Música"
+          }
+        },
+        "rights": {
+          "label": "℗ 2026 KQ Entertainment under license to Sony Music Entertainment Korea Inc."
+        },
+        "title": {
+          "label": "UP (YUNHO&WOOYOUNG Ver.) - ATEEZ"
+        },
+        "link": [
+          {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/up-yunho-wooyoung-ver/6831438212?i=6831438423&uo=2"
+            }
+          },
+          {
+            "im:duration": {
+              "label": "30000"
+            },
+            "attributes": {
+              "title": "Vista previa",
+              "rel": "enclosure",
+              "type": "audio/x-m4a",
+              "href": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e3/d1/84/e3d184a1-0026-6519-7e89-f6a8f28eea32/mzaf_14791964923510532948.plus.aac.p.m4a",
+              "im:assetType": "preview"
+            }
+          }
+        ],
+        "id": {
+          "label": "https://music.apple.com/mx/album/up-yunho-wooyoung-ver/6831438212?i=6831438423&uo=2",
+          "attributes": {
+            "im:id": "6831438423"
+          }
+        },
+        "im:artist": {
+          "label": "ATEEZ",
+          "attributes": {
+            "href": "https://music.apple.com/mx/artist/ateez/1439301205?uo=2"
+          }
+        },
+        "category": {
+          "attributes": {
+            "im:id": "51",
+            "term": "K-Pop",
+            "scheme": "https://music.apple.com/mx/genre/m%C3%BAsica-pop-k-pop/id51?uo=2",
+            "label": "K-pop"
+          }
+        },
+        "im:releaseDate": {
+          "label": "2026-11-13T04:00:00-07:00",
+          "attributes": {
+            "label": "13/11/2026"
+          }
+        }
+      },
+      {
+        "im:name": {
+          "label": "Olimpo"
+        },
+        "im:image": [
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/fa/91/0e/fa910ef9-5a70-973e-1b2c-27f34dd4e536/1963625111737_cover.jpg/55x55bb.png",
+            "attributes": {
+              "height": "55"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/fa/91/0e/fa910ef9-5a70-973e-1b2c-27f34dd4e536/1963625111737_cover.jpg/60x60bb.png",
+            "attributes": {
+              "height": "60"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/fa/91/0e/fa910ef9-5a70-973e-1b2c-27f34dd4e536/1963625111737_cover.jpg/170x170bb.png",
+            "attributes": {
+              "height": "170"
+            }
+          }
+        ],
+        "im:collection": {
+          "im:name": {
+            "label": "Olimpo - Single"
+          },
+          "link": {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/olimpo-single/6825004152?uo=2"
+            }
+          },
+          "im:contentType": {
+            "im:contentType": {
+              "attributes": {
+                "term": "Album",
+                "label": "Álbum"
+              }
+            },
+            "attributes": {
+              "term": "Music",
+              "label": "Música"
+            }
+          }
+        },
+        "im:price": {
+          "label": "$15.00",
+          "attributes": {
+            "amount": "15.00",
+            "currency": "MXN"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Track",
+              "label": "Canción"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Música"
+          }
+        },
+        "rights": {
+          "label": "℗ 2026 Josa Records"
+        },
+        "title": {
+          "label": "Olimpo - Neton Vega & Fuerza Regida"
+        },
+        "link": [
+          {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/olimpo/6825004152?i=6825004153&uo=2"
+            }
+          },
+          {
+            "im:duration": {
+              "label": "30000"
+            },
+            "attributes": {
+              "title": "Vista previa",
+              "rel": "enclosure",
+              "type": "audio/x-m4a",
+              "href": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1c/73/b1/1c73b1f7-6209-bd13-a27b-70ebf5559583/mzaf_5541725137508406561.plus.aac.p.m4a",
+              "im:assetType": "preview"
+            }
+          }
+        ],
+        "id": {
+          "label": "https://music.apple.com/mx/album/olimpo/6825004152?i=6825004153&uo=2",
+          "attributes": {
+            "im:id": "6825004153"
+          }
+        },
+        "im:artist": {
+          "label": "Neton Vega & Fuerza Regida",
+          "attributes": {
+            "href": "https://music.apple.com/mx/artist/neton-vega/1686896695?uo=2"
+          }
+        },
+        "category": {
+          "attributes": {
+            "im:id": "12",
+            "term": "Latin",
+            "scheme": "https://music.apple.com/mx/genre/m%C3%BAsica-m%C3%BAsica-latina/id12?uo=2",
+            "label": "Música latina"
+          }
+        },
+        "im:releaseDate": {
+          "label": "2026-10-23T05:00:00-07:00",
+          "attributes": {
+            "label": "23/10/2026"
+          }
+        }
+      },
+      {
+        "im:name": {
+          "label": "Rise Slow"
+        },
+        "im:image": [
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/23/27/8a/23278a46-aa21-30f3-9e68-213772c53ea7/825181567094.jpg/55x55bb.png",
+            "attributes": {
+              "height": "55"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/23/27/8a/23278a46-aa21-30f3-9e68-213772c53ea7/825181567094.jpg/60x60bb.png",
+            "attributes": {
+              "height": "60"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/23/27/8a/23278a46-aa21-30f3-9e68-213772c53ea7/825181567094.jpg/170x170bb.png",
+            "attributes": {
+              "height": "170"
+            }
+          }
+        ],
+        "im:collection": {
+          "im:name": {
+            "label": "Rise Slow - Single"
+          },
+          "link": {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/rise-slow-single/6789752111?uo=2"
+            }
+          },
+          "im:contentType": {
+            "im:contentType": {
+              "attributes": {
+                "term": "Album",
+                "label": "Álbum"
+              }
+            },
+            "attributes": {
+              "term": "Music",
+              "label": "Música"
+            }
+          }
+        },
+        "im:price": {
+          "label": "$15.00",
+          "attributes": {
+            "amount": "15.00",
+            "currency": "MXN"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Track",
+              "label": "Canción"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Música"
+          }
+        },
+        "rights": {
+          "label": "℗ 2026 Kimo Sounds"
+        },
+        "title": {
+          "label": "Rise Slow - Kimo Sounds"
+        },
+        "link": [
+          {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/rise-slow/6789752111?i=6789752112&uo=2"
+            }
+          },
+          {
+            "im:duration": {
+              "label": "30000"
+            },
+            "attributes": {
+              "title": "Vista previa",
+              "rel": "enclosure",
+              "type": "audio/x-m4a",
+              "href": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/57/8e/48/578e4876-2078-c1fd-d059-545e35825e95/mzaf_12624640908717768465.plus.aac.p.m4a",
+              "im:assetType": "preview"
+            }
+          }
+        ],
+        "id": {
+          "label": "https://music.apple.com/mx/album/rise-slow/6789752111?i=6789752112&uo=2",
+          "attributes": {
+            "im:id": "6789752112"
+          }
+        },
+        "im:artist": {
+          "label": "Kimo Sounds",
+          "attributes": {
+            "href": "https://music.apple.com/mx/artist/kimo-sounds/6771058528?uo=2"
+          }
+        },
+        "category": {
+          "attributes": {
+            "im:id": "7",
+            "term": "Electronic",
+            "scheme": "https://music.apple.com/mx/genre/m%C3%BAsica-electr%C3%B3nica/id7?uo=2",
+            "label": "Electrónica"
+          }
+        },
+        "im:releaseDate": {
+          "label": "2026-05-19T05:00:00-07:00",
+          "attributes": {
+            "label": "19/05/2026"
+          }
+        }
+      },
+      {
+        "im:name": {
+          "label": "Te Estoy Correteando"
+        },
+        "im:image": [
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/90/52/6e/90526e94-89c7-8387-458f-1972f7995d48/1200214495824.jpg/55x55bb.png",
+            "attributes": {
+              "height": "55"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/90/52/6e/90526e94-89c7-8387-458f-1972f7995d48/1200214495824.jpg/60x60bb.png",
+            "attributes": {
+              "height": "60"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/90/52/6e/90526e94-89c7-8387-458f-1972f7995d48/1200214495824.jpg/170x170bb.png",
+            "attributes": {
+              "height": "170"
+            }
+          }
+        ],
+        "im:collection": {
+          "im:name": {
+            "label": "9 months & 50 hours"
+          },
+          "link": {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/9-months-50-hours/6796842304?uo=2"
+            }
+          },
+          "im:contentType": {
+            "im:contentType": {
+              "attributes": {
+                "term": "Album",
+                "label": "Álbum"
+              }
+            },
+            "attributes": {
+              "term": "Music",
+              "label": "Música"
+            }
+          }
+        },
+        "im:price": {
+          "label": "$15.00",
+          "attributes": {
+            "amount": "15.00",
+            "currency": "MXN"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Track",
+              "label": "Canción"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Música"
+          }
+        },
+        "rights": {
+          "label": "Under exclusive licence to Warner Music UK Limited. An Atlantic Records UK release in association with Rimas Entertainment, ℗ 2026, Fred Gibson, with the exception of Track 9 (p) 2026 Domino Recording Co. Ltd."
+        },
+        "title": {
+          "label": "Te Estoy Correteando - LATIN MAFIA & Fred again.."
+        },
+        "link": [
+          {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/te-estoy-correteando/6796842304?i=6796842545&uo=2"
+            }
+          },
+          {
+            "im:duration": {
+              "label": "30000"
+            },
+            "attributes": {
+              "title": "Vista previa",
+              "rel": "enclosure",
+              "type": "audio/x-m4a",
+              "href": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/12/39/23/123923ad-4698-50ca-fa17-e511a06c75f2/mzaf_8412193140445378375.plus.aac.p.m4a",
+              "im:assetType": "preview"
+            }
+          }
+        ],
+        "id": {
+          "label": "https://music.apple.com/mx/album/te-estoy-correteando/6796842304?i=6796842545&uo=2",
+          "attributes": {
+            "im:id": "6796842545"
+          }
+        },
+        "im:artist": {
+          "label": "LATIN MAFIA & Fred again..",
+          "attributes": {
+            "href": "https://music.apple.com/mx/artist/latin-mafia/1566074159?uo=2"
+          }
+        },
+        "category": {
+          "attributes": {
+            "im:id": "7",
+            "term": "Electronic",
+            "scheme": "https://music.apple.com/mx/genre/m%C3%BAsica-electr%C3%B3nica/id7?uo=2",
+            "label": "Electrónica"
+          }
+        },
+        "im:releaseDate": {
+          "label": "2026-07-31T00:00:00-07:00",
+          "attributes": {
+            "label": "31/07/2026"
+          }
+        }
+      },
+      {
+        "im:name": {
+          "label": "Pusher [From GTAVI: Original Score]"
+        },
+        "im:image": [
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a0/6d/08/a06d082b-9322-3ede-f6aa-fe3e7b9b386f/5056556188568_cover.jpg/55x55bb.png",
+            "attributes": {
+              "height": "55"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a0/6d/08/a06d082b-9322-3ede-f6aa-fe3e7b9b386f/5056556188568_cover.jpg/60x60bb.png",
+            "attributes": {
+              "height": "60"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a0/6d/08/a06d082b-9322-3ede-f6aa-fe3e7b9b386f/5056556188568_cover.jpg/170x170bb.png",
+            "attributes": {
+              "height": "170"
+            }
+          }
+        ],
+        "im:collection": {
+          "im:name": {
+            "label": "Grand Theft Auto VI: Original Score"
+          },
+          "link": {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/grand-theft-auto-vi-original-score/6827656134?uo=2"
+            }
+          },
+          "im:contentType": {
+            "im:contentType": {
+              "attributes": {
+                "term": "Album",
+                "label": "Álbum"
+              }
+            },
+            "attributes": {
+              "term": "Music",
+              "label": "Música"
+            }
+          }
+        },
+        "im:price": {
+          "label": "$15.00",
+          "attributes": {
+            "amount": "15.00",
+            "currency": "MXN"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Track",
+              "label": "Canción"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Música"
+          }
+        },
+        "rights": {
+          "label": "℗ 2026 Take-Two Interactive Software, Inc. under exclusive license to Ed Banger Records / Because Music. Grand Theft Auto VI, R*, and related logos are trademarks of Take-Two Interactive Software, Inc."
+        },
+        "title": {
+          "label": "Pusher [From GTAVI: Original Score] - Justice & Gesaffelstein"
+        },
+        "link": [
+          {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/pusher-from-gtavi-original-score/6827656134?i=6827657351&uo=2"
+            }
+          },
+          {
+            "im:duration": {
+              "label": "30000"
+            },
+            "attributes": {
+              "title": "Vista previa",
+              "rel": "enclosure",
+              "type": "audio/x-m4a",
+              "href": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b9/9b/b6/b99bb6d5-ac66-d698-466e-736671544cbd/mzaf_14281368624421183453.plus.aac.p.m4a",
+              "im:assetType": "preview"
+            }
+          }
+        ],
+        "id": {
+          "label": "https://music.apple.com/mx/album/pusher-from-gtavi-original-score/6827656134?i=6827657351&uo=2",
+          "attributes": {
+            "im:id": "6827657351"
+          }
+        },
+        "im:artist": {
+          "label": "Justice & Gesaffelstein",
+          "attributes": {
+            "href": "https://music.apple.com/mx/artist/justice/145072812?uo=2"
+          }
+        },
+        "category": {
+          "attributes": {
+            "im:id": "7",
+            "term": "Electronic",
+            "scheme": "https://music.apple.com/mx/genre/m%C3%BAsica-electr%C3%B3nica/id7?uo=2",
+            "label": "Electrónica"
+          }
+        },
+        "im:releaseDate": {
+          "label": "2026-10-29T00:00:00-07:00",
+          "attributes": {
+            "label": "29/10/2026"
+          }
+        }
+      },
+      {
+        "im:name": {
+          "label": "Alguien que te amaba"
+        },
+        "im:image": [
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2b/66/b2/2b66b26c-ab23-faa1-c4ee-06fa2cce8f76/26UM1IM00558.rgb.jpg/55x55bb.png",
+            "attributes": {
+              "height": "55"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2b/66/b2/2b66b26c-ab23-faa1-c4ee-06fa2cce8f76/26UM1IM00558.rgb.jpg/60x60bb.png",
+            "attributes": {
+              "height": "60"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2b/66/b2/2b66b26c-ab23-faa1-c4ee-06fa2cce8f76/26UM1IM00558.rgb.jpg/170x170bb.png",
+            "attributes": {
+              "height": "170"
+            }
+          }
+        ],
+        "im:collection": {
+          "im:name": {
+            "label": "NO ME ARREPIENTO DE SENTIR TANTO"
+          },
+          "link": {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/no-me-arrepiento-de-sentir-tanto/6796864741?uo=2"
+            }
+          },
+          "im:contentType": {
+            "im:contentType": {
+              "attributes": {
+                "term": "Album",
+                "label": "Álbum"
+              }
+            },
+            "attributes": {
+              "term": "Music",
+              "label": "Música"
+            }
+          }
+        },
+        "im:price": {
+          "label": "$15.00",
+          "attributes": {
+            "amount": "15.00",
+            "currency": "MXN"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Track",
+              "label": "Canción"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Música"
+          }
+        },
+        "rights": {
+          "label": "℗ 2026 Bichota Records LLC, under exclusive license to Interscope Records"
+        },
+        "title": {
+          "label": "Alguien que te amaba - KAROL G"
+        },
+        "link": [
+          {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/alguien-que-te-amaba/6796864741?i=6796864749&uo=2"
+            }
+          },
+          {
+            "im:duration": {
+              "label": "30000"
+            },
+            "attributes": {
+              "title": "Vista previa",
+              "rel": "enclosure",
+              "type": "audio/x-m4a",
+              "href": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/59/54/0f/59540f4d-338b-d752-7f03-8a9ed3947874/mzaf_15005249266867167792.plus.aac.p.m4a",
+              "im:assetType": "preview"
+            }
+          }
+        ],
+        "id": {
+          "label": "https://music.apple.com/mx/album/alguien-que-te-amaba/6796864741?i=6796864749&uo=2",
+          "attributes": {
+            "im:id": "6796864749"
+          }
+        },
+        "im:artist": {
+          "label": "KAROL G",
+          "attributes": {
+            "href": "https://music.apple.com/mx/artist/karol-g/290814601?uo=2"
+          }
+        },
+        "category": {
+          "attributes": {
+            "im:id": "1124",
+            "term": "Salsa y Tropical",
+            "scheme": "https://music.apple.com/mx/genre/m%C3%BAsica-m%C3%BAsica-latina-salsa-y-tropical/id1124?uo=2",
+            "label": "Salsa y tropical"
+          }
+        },
+        "im:releaseDate": {
+          "label": "2026-08-07T05:00:00-07:00",
+          "attributes": {
+            "label": "07/08/2026"
+          }
+        }
+      },
+      {
+        "im:name": {
+          "label": "Leave With Me"
+        },
+        "im:image": [
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/af/31/6daf31bd-9076-b4f3-c746-fd67cf5395ae/196874953983.jpg/55x55bb.png",
+            "attributes": {
+              "height": "55"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/af/31/6daf31bd-9076-b4f3-c746-fd67cf5395ae/196874953983.jpg/60x60bb.png",
+            "attributes": {
+              "height": "60"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6d/af/31/6daf31bd-9076-b4f3-c746-fd67cf5395ae/196874953983.jpg/170x170bb.png",
+            "attributes": {
+              "height": "170"
+            }
+          }
+        ],
+        "im:collection": {
+          "im:name": {
+            "label": "Leave With Me (Featured in Always Lalisa) - Single"
+          },
+          "link": {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/leave-with-me-featured-in-always-lalisa-single/6835541230?uo=2"
+            }
+          },
+          "im:contentType": {
+            "im:contentType": {
+              "attributes": {
+                "term": "Album",
+                "label": "Álbum"
+              }
+            },
+            "attributes": {
+              "term": "Music",
+              "label": "Música"
+            }
+          }
+        },
+        "im:price": {
+          "label": "$15.00",
+          "attributes": {
+            "amount": "15.00",
+            "currency": "MXN"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Track",
+              "label": "Canción"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Música"
+          }
+        },
+        "rights": {
+          "label": "℗ 2026 RCA Records, under exclusive license from Lloud Co."
+        },
+        "title": {
+          "label": "Leave With Me - LISA"
+        },
+        "link": [
+          {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/leave-with-me/6835541230?i=6835541245&uo=2"
+            }
+          },
+          {
+            "im:duration": {
+              "label": "30000"
+            },
+            "attributes": {
+              "title": "Vista previa",
+              "rel": "enclosure",
+              "type": "audio/x-m4a",
+              "href": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/50/de/28/50de2872-ad98-dede-2a73-5654b5d2990b/mzaf_11523680098216992939.plus.aac.p.m4a",
+              "im:assetType": "preview"
+            }
+          }
+        ],
+        "id": {
+          "label": "https://music.apple.com/mx/album/leave-with-me/6835541230?i=6835541245&uo=2",
+          "attributes": {
+            "im:id": "6835541245"
+          }
+        },
+        "im:artist": {
+          "label": "LISA",
+          "attributes": {
+            "href": "https://music.apple.com/mx/artist/lisa/1583908668?uo=2"
+          }
+        },
+        "category": {
+          "attributes": {
+            "im:id": "14",
+            "term": "Pop",
+            "scheme": "https://music.apple.com/mx/genre/m%C3%BAsica-pop/id14?uo=2",
+            "label": "Pop"
+          }
+        },
+        "im:releaseDate": {
+          "label": "2026-11-18T04:00:00-07:00",
+          "attributes": {
+            "label": "18/11/2026"
+          }
+        }
+      },
+      {
+        "im:name": {
+          "label": "Choosin' Texas"
+        },
+        "im:image": [
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e2/91/4d/e2914d0a-7f1d-f04c-fbf4-c50b38548838/196873638690.jpg/55x55bb.png",
+            "attributes": {
+              "height": "55"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e2/91/4d/e2914d0a-7f1d-f04c-fbf4-c50b38548838/196873638690.jpg/60x60bb.png",
+            "attributes": {
+              "height": "60"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e2/91/4d/e2914d0a-7f1d-f04c-fbf4-c50b38548838/196873638690.jpg/170x170bb.png",
+            "attributes": {
+              "height": "170"
+            }
+          }
+        ],
+        "im:collection": {
+          "im:name": {
+            "label": "Choosin' Texas - Single"
+          },
+          "link": {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/choosin-texas-single/1844932149?uo=2"
+            }
+          },
+          "im:contentType": {
+            "im:contentType": {
+              "attributes": {
+                "term": "Album",
+                "label": "Álbum"
+              }
+            },
+            "attributes": {
+              "term": "Music",
+              "label": "Música"
+            }
+          }
+        },
+        "im:price": {
+          "label": "$15.00",
+          "attributes": {
+            "amount": "15.00",
+            "currency": "MXN"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Track",
+              "label": "Canción"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Música"
+          }
+        },
+        "rights": {
+          "label": "℗ 2025 SAWGOD Records/Columbia"
+        },
+        "title": {
+          "label": "Choosin' Texas - Ella Langley"
+        },
+        "link": [
+          {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/choosin-texas/1844932149?i=1844932150&uo=2"
+            }
+          },
+          {
+            "im:duration": {
+              "label": "30000"
+            },
+            "attributes": {
+              "title": "Vista previa",
+              "rel": "enclosure",
+              "type": "audio/x-m4a",
+              "href": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/38/49/4c/38494cb4-f9e0-1db4-0b84-8c478cb55390/mzaf_4251933786704889664.plus.aac.p.m4a",
+              "im:assetType": "preview"
+            }
+          }
+        ],
+        "id": {
+          "label": "https://music.apple.com/mx/album/choosin-texas/1844932149?i=1844932150&uo=2",
+          "attributes": {
+            "im:id": "1844932150"
+          }
+        },
+        "im:artist": {
+          "label": "Ella Langley",
+          "attributes": {
+            "href": "https://music.apple.com/mx/artist/ella-langley/1384373733?uo=2"
+          }
+        },
+        "category": {
+          "attributes": {
+            "im:id": "6",
+            "term": "Country",
+            "scheme": "https://music.apple.com/mx/genre/m%C3%BAsica-country/id6?uo=2",
+            "label": "Country"
+          }
+        },
+        "im:releaseDate": {
+          "label": "2025-10-17T05:00:00-07:00",
+          "attributes": {
+            "label": "17/10/2025"
+          }
+        }
+      },
+      {
+        "im:name": {
+          "label": "Ese Hombre Es Malo"
+        },
+        "im:image": [
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1e/39/f5/1e39f58c-e5c1-6431-d6ed-d6c32e29d63f/25UMGIM79234.rgb.jpg/55x55bb.png",
+            "attributes": {
+              "height": "55"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1e/39/f5/1e39f58c-e5c1-6431-d6ed-d6c32e29d63f/25UMGIM79234.rgb.jpg/60x60bb.png",
+            "attributes": {
+              "height": "60"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1e/39/f5/1e39f58c-e5c1-6431-d6ed-d6c32e29d63f/25UMGIM79234.rgb.jpg/170x170bb.png",
+            "attributes": {
+              "height": "170"
+            }
+          }
+        ],
+        "im:collection": {
+          "im:name": {
+            "label": "Tropicoqueta"
+          },
+          "link": {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/tropicoqueta/1819544141?uo=2"
+            }
+          },
+          "im:contentType": {
+            "im:contentType": {
+              "attributes": {
+                "term": "Album",
+                "label": "Álbum"
+              }
+            },
+            "attributes": {
+              "term": "Music",
+              "label": "Música"
+            }
+          }
+        },
+        "im:price": {
+          "label": "$15.00",
+          "attributes": {
+            "amount": "15.00",
+            "currency": "MXN"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Track",
+              "label": "Canción"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Música"
+          }
+        },
+        "rights": {
+          "label": "℗ 2025 Bichota Records LLC, under exclusive license to Interscope Records"
+        },
+        "title": {
+          "label": "Ese Hombre Es Malo - KAROL G"
+        },
+        "link": [
+          {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/ese-hombre-es-malo/1819544141?i=1819545031&uo=2"
+            }
+          },
+          {
+            "im:duration": {
+              "label": "30000"
+            },
+            "attributes": {
+              "title": "Vista previa",
+              "rel": "enclosure",
+              "type": "audio/x-m4a",
+              "href": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1a/ec/cb/1aeccb21-7132-2af9-56b0-442b8071ccc9/mzaf_4122229771510170689.plus.aac.p.m4a",
+              "im:assetType": "preview"
+            }
+          }
+        ],
+        "id": {
+          "label": "https://music.apple.com/mx/album/ese-hombre-es-malo/1819544141?i=1819545031&uo=2",
+          "attributes": {
+            "im:id": "1819545031"
+          }
+        },
+        "im:artist": {
+          "label": "KAROL G",
+          "attributes": {
+            "href": "https://music.apple.com/mx/artist/karol-g/290814601?uo=2"
+          }
+        },
+        "category": {
+          "attributes": {
+            "im:id": "12",
+            "term": "Latin",
+            "scheme": "https://music.apple.com/mx/genre/m%C3%BAsica-m%C3%BAsica-latina/id12?uo=2",
+            "label": "Música latina"
+          }
+        },
+        "im:releaseDate": {
+          "label": "2025-06-20T05:00:00-07:00",
+          "attributes": {
+            "label": "20/06/2025"
+          }
+        }
+      },
+      {
+        "im:name": {
+          "label": "All I Want for Christmas Is You"
+        },
+        "im:image": [
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c6/b7/27/c6b727f7-3a32-6b43-cee2-05bb71daf1cf/dj.itfmdeif.jpg/55x55bb.png",
+            "attributes": {
+              "height": "55"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c6/b7/27/c6b727f7-3a32-6b43-cee2-05bb71daf1cf/dj.itfmdeif.jpg/60x60bb.png",
+            "attributes": {
+              "height": "60"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c6/b7/27/c6b727f7-3a32-6b43-cee2-05bb71daf1cf/dj.itfmdeif.jpg/170x170bb.png",
+            "attributes": {
+              "height": "170"
+            }
+          }
+        ],
+        "im:collection": {
+          "im:name": {
+            "label": "Merry Christmas"
+          },
+          "link": {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/merry-christmas/585972750?uo=2"
+            }
+          },
+          "im:contentType": {
+            "im:contentType": {
+              "attributes": {
+                "term": "Album",
+                "label": "Álbum"
+              }
+            },
+            "attributes": {
+              "term": "Music",
+              "label": "Música"
+            }
+          }
+        },
+        "im:price": {
+          "label": "$15.00",
+          "attributes": {
+            "amount": "15.00",
+            "currency": "MXN"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Track",
+              "label": "Canción"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Música"
+          }
+        },
+        "rights": {
+          "label": "℗ 1994 Sony Music Entertainment"
+        },
+        "title": {
+          "label": "All I Want for Christmas Is You - Mariah Carey"
+        },
+        "link": [
+          {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/all-i-want-for-christmas-is-you/585972750?i=585972803&uo=2"
+            }
+          },
+          {
+            "im:duration": {
+              "label": "30000"
+            },
+            "attributes": {
+              "title": "Vista previa",
+              "rel": "enclosure",
+              "type": "audio/x-m4a",
+              "href": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/df/93/49/df93491d-65a6-bb2d-eb03-9ad3b3d62438/mzaf_10792594730801509593.plus.aac.p.m4a",
+              "im:assetType": "preview"
+            }
+          }
+        ],
+        "id": {
+          "label": "https://music.apple.com/mx/album/all-i-want-for-christmas-is-you/585972750?i=585972803&uo=2",
+          "attributes": {
+            "im:id": "585972803"
+          }
+        },
+        "im:artist": {
+          "label": "Mariah Carey",
+          "attributes": {
+            "href": "https://music.apple.com/mx/artist/mariah-carey/91853?uo=2"
+          }
+        },
+        "category": {
+          "attributes": {
+            "im:id": "1086",
+            "term": "Christmas: Pop",
+            "scheme": "https://music.apple.com/mx/genre/m%C3%BAsica-%C3%A9poca-festiva-navidad-pop/id1086?uo=2",
+            "label": "Navidad: Pop"
+          }
+        },
+        "im:releaseDate": {
+          "label": "1994-10-28T00:00:00-07:00",
+          "attributes": {
+            "label": "28/10/1994"
+          }
+        }
+      },
+      {
+        "im:name": {
+          "label": "Se Me Nota (Agárrame) [Prod By B - One]"
+        },
+        "im:image": [
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/30/11/16/30111644-4dd5-5ab2-cb7d-29545485bdf8/812429011891.png/55x55bb.png",
+            "attributes": {
+              "height": "55"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/30/11/16/30111644-4dd5-5ab2-cb7d-29545485bdf8/812429011891.png/60x60bb.png",
+            "attributes": {
+              "height": "60"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/30/11/16/30111644-4dd5-5ab2-cb7d-29545485bdf8/812429011891.png/170x170bb.png",
+            "attributes": {
+              "height": "170"
+            }
+          }
+        ],
+        "im:collection": {
+          "im:name": {
+            "label": "Se Me Nota (Agárrame) - Single"
+          },
+          "link": {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/se-me-nota-ag%C3%A1rrame-single/1564402492?uo=2"
+            }
+          },
+          "im:contentType": {
+            "im:contentType": {
+              "attributes": {
+                "term": "Album",
+                "label": "Álbum"
+              }
+            },
+            "attributes": {
+              "term": "Music",
+              "label": "Música"
+            }
+          }
+        },
+        "im:price": {
+          "label": "$15.00",
+          "attributes": {
+            "amount": "15.00",
+            "currency": "MXN"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Track",
+              "label": "Canción"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Música"
+          }
+        },
+        "rights": {
+          "label": "℗ 2021 Planet Records / Allegro Music [Powered by Planet Distribution]"
+        },
+        "title": {
+          "label": "Se Me Nota (Agárrame) [Prod By B - One] - Chimbala & Omega"
+        },
+        "link": [
+          {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/se-me-nota-ag%C3%A1rrame-prod-by-b-one/1564402492?i=1564402493&uo=2"
+            }
+          },
+          {
+            "im:duration": {
+              "label": "30000"
+            },
+            "attributes": {
+              "title": "Vista previa",
+              "rel": "enclosure",
+              "type": "audio/x-m4a",
+              "href": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5e/c4/63/5ec46344-bf75-dccb-263b-5251581dad1f/mzaf_7998088671834397681.plus.aac.p.m4a",
+              "im:assetType": "preview"
+            }
+          }
+        ],
+        "id": {
+          "label": "https://music.apple.com/mx/album/se-me-nota-ag%C3%A1rrame-prod-by-b-one/1564402492?i=1564402493&uo=2",
+          "attributes": {
+            "im:id": "1564402493"
+          }
+        },
+        "im:artist": {
+          "label": "Chimbala & Omega",
+          "attributes": {
+            "href": "https://music.apple.com/mx/artist/chimbala/484438165?uo=2"
+          }
+        },
+        "category": {
+          "attributes": {
+            "im:id": "1119",
+            "term": "Latin Urban",
+            "scheme": "https://music.apple.com/mx/genre/m%C3%BAsica-m%C3%BAsica-latina-urbano-latino/id1119?uo=2",
+            "label": "Urbano latino"
+          }
+        },
+        "im:releaseDate": {
+          "label": "2021-04-23T05:00:00-07:00",
+          "attributes": {
+            "label": "23/04/2021"
+          }
+        }
+      },
+      {
+        "im:name": {
+          "label": "Así Fue (Apple Music Sessions)"
+        },
+        "im:image": [
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/11/a2/df/11a2df76-4bc1-3fbc-2ceb-760ffd528c49/26UM1IM44880.rgb.jpg/55x55bb.png",
+            "attributes": {
+              "height": "55"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/11/a2/df/11a2df76-4bc1-3fbc-2ceb-760ffd528c49/26UM1IM44880.rgb.jpg/60x60bb.png",
+            "attributes": {
+              "height": "60"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/11/a2/df/11a2df76-4bc1-3fbc-2ceb-760ffd528c49/26UM1IM44880.rgb.jpg/170x170bb.png",
+            "attributes": {
+              "height": "170"
+            }
+          }
+        ],
+        "im:collection": {
+          "im:name": {
+            "label": "Sessions"
+          },
+          "link": {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/sessions/6833728350?uo=2"
+            }
+          },
+          "im:contentType": {
+            "im:contentType": {
+              "attributes": {
+                "term": "Album",
+                "label": "Álbum"
+              }
+            },
+            "attributes": {
+              "term": "Music",
+              "label": "Música"
+            }
+          }
+        },
+        "im:price": {
+          "label": "$15.00",
+          "attributes": {
+            "amount": "15.00",
+            "currency": "MXN"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Track",
+              "label": "Canción"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Música"
+          }
+        },
+        "rights": {
+          "label": "Hoy Es Un Buen Día / EMI; ℗ 2026 Universal Music Group México, S.A. de C.V."
+        },
+        "title": {
+          "label": "Así Fue (Apple Music Sessions) - Ed Maverick"
+        },
+        "link": [
+          {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/as%C3%AD-fue-apple-music-sessions/6833728350?i=6833728368&uo=2"
+            }
+          },
+          {
+            "im:duration": {
+              "label": "30000"
+            },
+            "attributes": {
+              "title": "Vista previa",
+              "rel": "enclosure",
+              "type": "audio/x-m4a",
+              "href": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/eb/d6/f5/ebd6f523-932d-7e2e-f4d4-f42c23c63e3a/mzaf_6185705280428701941.plus.aac.p.m4a",
+              "im:assetType": "preview"
+            }
+          }
+        ],
+        "id": {
+          "label": "https://music.apple.com/mx/album/as%C3%AD-fue-apple-music-sessions/6833728350?i=6833728368&uo=2",
+          "attributes": {
+            "im:id": "6833728368"
+          }
+        },
+        "im:artist": {
+          "label": "Ed Maverick",
+          "attributes": {
+            "href": "https://music.apple.com/mx/artist/ed-maverick/332360809?uo=2"
+          }
+        },
+        "category": {
+          "attributes": {
+            "im:id": "1117",
+            "term": "Pop in Spanish",
+            "scheme": "https://music.apple.com/mx/genre/m%C3%BAsica-m%C3%BAsica-latina-pop-en-espa%C3%B1ol/id1117?uo=2",
+            "label": "Pop en español"
+          }
+        },
+        "im:releaseDate": {
+          "label": "2026-11-12T04:00:00-07:00",
+          "attributes": {
+            "label": "12/11/2026"
+          }
+        }
+      },
+      {
+        "im:name": {
+          "label": "Careless Whisper"
+        },
+        "im:image": [
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/89/46/95/8946959a-e959-f22d-ced2-745feb799454/mzm.upagbaeg.jpg/55x55bb.png",
+            "attributes": {
+              "height": "55"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/89/46/95/8946959a-e959-f22d-ced2-745feb799454/mzm.upagbaeg.jpg/60x60bb.png",
+            "attributes": {
+              "height": "60"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/89/46/95/8946959a-e959-f22d-ced2-745feb799454/mzm.upagbaeg.jpg/170x170bb.png",
+            "attributes": {
+              "height": "170"
+            }
+          }
+        ],
+        "im:collection": {
+          "im:name": {
+            "label": "Ladies & Gentlemen"
+          },
+          "link": {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/ladies-gentlemen/429945575?uo=2"
+            }
+          },
+          "im:contentType": {
+            "im:contentType": {
+              "attributes": {
+                "term": "Album",
+                "label": "Álbum"
+              }
+            },
+            "attributes": {
+              "term": "Music",
+              "label": "Música"
+            }
+          }
+        },
+        "im:price": {
+          "label": "$15.00",
+          "attributes": {
+            "amount": "15.00",
+            "currency": "MXN"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Track",
+              "label": "Canción"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Música"
+          }
+        },
+        "rights": {
+          "label": "℗ This compilation (P) 2011 Sony Music Entertainment UK Limited"
+        },
+        "title": {
+          "label": "Careless Whisper - George Michael"
+        },
+        "link": [
+          {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/careless-whisper/429945575?i=429945616&uo=2"
+            }
+          },
+          {
+            "im:duration": {
+              "label": "30000"
+            },
+            "attributes": {
+              "title": "Vista previa",
+              "rel": "enclosure",
+              "type": "audio/x-m4a",
+              "href": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7c/bb/d8/7cbbd80c-29a1-6142-d0f3-de33e8569a0e/mzaf_12978360432335063808.plus.aac.p.m4a",
+              "im:assetType": "preview"
+            }
+          }
+        ],
+        "id": {
+          "label": "https://music.apple.com/mx/album/careless-whisper/429945575?i=429945616&uo=2",
+          "attributes": {
+            "im:id": "429945616"
+          }
+        },
+        "im:artist": {
+          "label": "George Michael",
+          "attributes": {
+            "href": "https://music.apple.com/mx/artist/george-michael/894337?uo=2"
+          }
+        },
+        "category": {
+          "attributes": {
+            "im:id": "14",
+            "term": "Pop",
+            "scheme": "https://music.apple.com/mx/genre/m%C3%BAsica-pop/id14?uo=2",
+            "label": "Pop"
+          }
+        },
+        "im:releaseDate": {
+          "label": "1984-07-24T00:00:00-07:00",
+          "attributes": {
+            "label": "24/07/1984"
+          }
+        }
+      },
+      {
+        "im:name": {
+          "label": "El Último Adiós"
+        },
+        "im:image": [
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/8b/b7/7b/8bb77bcf-fa48-de49-c57f-916dbfd870e8/00731454331920.rgb.jpg/55x55bb.png",
+            "attributes": {
+              "height": "55"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/8b/b7/7b/8bb77bcf-fa48-de49-c57f-916dbfd870e8/00731454331920.rgb.jpg/60x60bb.png",
+            "attributes": {
+              "height": "60"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/8b/b7/7b/8bb77bcf-fa48-de49-c57f-916dbfd870e8/00731454331920.rgb.jpg/170x170bb.png",
+            "attributes": {
+              "height": "170"
+            }
+          }
+        ],
+        "im:collection": {
+          "im:name": {
+            "label": "Paulina"
+          },
+          "link": {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/paulina/1443761111?uo=2"
+            }
+          },
+          "im:contentType": {
+            "im:contentType": {
+              "attributes": {
+                "term": "Album",
+                "label": "Álbum"
+              }
+            },
+            "attributes": {
+              "term": "Music",
+              "label": "Música"
+            }
+          }
+        },
+        "im:price": {
+          "label": "$15.00",
+          "attributes": {
+            "amount": "15.00",
+            "currency": "MXN"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Track",
+              "label": "Canción"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Música"
+          }
+        },
+        "rights": {
+          "label": "℗ 2000 Universal Music Mexico S.A. de C.V."
+        },
+        "title": {
+          "label": "El Último Adiós - Paulina Rubio"
+        },
+        "link": [
+          {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/el-%C3%BAltimo-adi%C3%B3s/1443761111?i=1443761140&uo=2"
+            }
+          },
+          {
+            "im:duration": {
+              "label": "30000"
+            },
+            "attributes": {
+              "title": "Vista previa",
+              "rel": "enclosure",
+              "type": "audio/x-m4a",
+              "href": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b6/e8/53/b6e8534c-e7d3-3edb-6359-4b76c493b33b/mzaf_13969784825536919904.plus.aac.p.m4a",
+              "im:assetType": "preview"
+            }
+          }
+        ],
+        "id": {
+          "label": "https://music.apple.com/mx/album/el-%C3%BAltimo-adi%C3%B3s/1443761111?i=1443761140&uo=2",
+          "attributes": {
+            "im:id": "1443761140"
+          }
+        },
+        "im:artist": {
+          "label": "Paulina Rubio",
+          "attributes": {
+            "href": "https://music.apple.com/mx/artist/paulina-rubio/264450?uo=2"
+          }
+        },
+        "category": {
+          "attributes": {
+            "im:id": "12",
+            "term": "Latin",
+            "scheme": "https://music.apple.com/mx/genre/m%C3%BAsica-m%C3%BAsica-latina/id12?uo=2",
+            "label": "Música latina"
+          }
+        },
+        "im:releaseDate": {
+          "label": "2000-01-01T04:00:00-07:00",
+          "attributes": {
+            "label": "01/01/2000"
+          }
+        }
+      },
+      {
+        "im:name": {
+          "label": "POKITO"
+        },
+        "im:image": [
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/24/2a/a4/242aa4a9-808f-419f-289c-e7e6a1517c08/4593106.jpg/55x55bb.png",
+            "attributes": {
+              "height": "55"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/24/2a/a4/242aa4a9-808f-419f-289c-e7e6a1517c08/4593106.jpg/60x60bb.png",
+            "attributes": {
+              "height": "60"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/24/2a/a4/242aa4a9-808f-419f-289c-e7e6a1517c08/4593106.jpg/170x170bb.png",
+            "attributes": {
+              "height": "170"
+            }
+          }
+        ],
+        "im:collection": {
+          "im:name": {
+            "label": "LA POSTAL"
+          },
+          "link": {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/la-postal/6826504720?uo=2"
+            }
+          },
+          "im:contentType": {
+            "im:contentType": {
+              "attributes": {
+                "term": "Album",
+                "label": "Álbum"
+              }
+            },
+            "attributes": {
+              "term": "Music",
+              "label": "Música"
+            }
+          }
+        },
+        "im:price": {
+          "label": "$12.00",
+          "attributes": {
+            "amount": "12.00",
+            "currency": "MXN"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Track",
+              "label": "Canción"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Música"
+          }
+        },
+        "rights": {
+          "label": "℗ 2026 DY Records"
+        },
+        "title": {
+          "label": "POKITO - Daddy Yankee & Diljit Dosanjh"
+        },
+        "link": [
+          {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/pokito/6826504720?i=6826504729&uo=2"
+            }
+          },
+          {
+            "im:duration": {
+              "label": "30000"
+            },
+            "attributes": {
+              "title": "Vista previa",
+              "rel": "enclosure",
+              "type": "audio/x-m4a",
+              "href": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/42/51/0a/42510ae4-97bb-e7c2-716b-d51a4a26ba07/mzaf_6647161232748581410.plus.aac.p.m4a",
+              "im:assetType": "preview"
+            }
+          }
+        ],
+        "id": {
+          "label": "https://music.apple.com/mx/album/pokito/6826504720?i=6826504729&uo=2",
+          "attributes": {
+            "im:id": "6826504729"
+          }
+        },
+        "im:artist": {
+          "label": "Daddy Yankee & Diljit Dosanjh",
+          "attributes": {
+            "href": "https://music.apple.com/mx/artist/daddy-yankee/25514958?uo=2"
+          }
+        },
+        "category": {
+          "attributes": {
+            "im:id": "12",
+            "term": "Latin",
+            "scheme": "https://music.apple.com/mx/genre/m%C3%BAsica-m%C3%BAsica-latina/id12?uo=2",
+            "label": "Música latina"
+          }
+        },
+        "im:releaseDate": {
+          "label": "2026-10-30T05:00:00-07:00",
+          "attributes": {
+            "label": "30/10/2026"
+          }
+        }
+      },
+      {
+        "im:name": {
+          "label": "Angel Bite"
+        },
+        "im:image": [
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a7/8b/7c/a78b7c36-7152-5541-6f0f-5f3182eb7bc1/823375408819_Cover.jpg/55x55bb.png",
+            "attributes": {
+              "height": "55"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a7/8b/7c/a78b7c36-7152-5541-6f0f-5f3182eb7bc1/823375408819_Cover.jpg/60x60bb.png",
+            "attributes": {
+              "height": "60"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a7/8b/7c/a78b7c36-7152-5541-6f0f-5f3182eb7bc1/823375408819_Cover.jpg/170x170bb.png",
+            "attributes": {
+              "height": "170"
+            }
+          }
+        ],
+        "im:collection": {
+          "im:name": {
+            "label": "PERFECT STORM - EP"
+          },
+          "link": {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/perfect-storm-ep/6815062084?uo=2"
+            }
+          },
+          "im:contentType": {
+            "im:contentType": {
+              "attributes": {
+                "term": "Album",
+                "label": "Álbum"
+              }
+            },
+            "attributes": {
+              "term": "Music",
+              "label": "Música"
+            }
+          }
+        },
+        "im:price": {
+          "label": "$9.00",
+          "attributes": {
+            "amount": "9.00",
+            "currency": "MXN"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Track",
+              "label": "Canción"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Música"
+          }
+        },
+        "rights": {
+          "label": "℗ 2026 BIGHIT MUSIC"
+        },
+        "title": {
+          "label": "Angel Bite - TOMORROW X TOGETHER"
+        },
+        "link": [
+          {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/angel-bite/6815062084?i=6815062086&uo=2"
+            }
+          },
+          {
+            "im:duration": {
+              "label": "30000"
+            },
+            "attributes": {
+              "title": "Vista previa",
+              "rel": "enclosure",
+              "type": "audio/x-m4a",
+              "href": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2e/e6/ed/2ee6ede8-1fc5-5c53-2354-11344297c712/mzaf_12862289294890988682.plus.aac.p.m4a",
+              "im:assetType": "preview"
+            }
+          }
+        ],
+        "id": {
+          "label": "https://music.apple.com/mx/album/angel-bite/6815062084?i=6815062086&uo=2",
+          "attributes": {
+            "im:id": "6815062086"
+          }
+        },
+        "im:artist": {
+          "label": "TOMORROW X TOGETHER",
+          "attributes": {
+            "href": "https://music.apple.com/mx/artist/tomorrow-x-together/1454642552?uo=2"
+          }
+        },
+        "category": {
+          "attributes": {
+            "im:id": "51",
+            "term": "K-Pop",
+            "scheme": "https://music.apple.com/mx/genre/m%C3%BAsica-pop-k-pop/id51?uo=2",
+            "label": "K-pop"
+          }
+        },
+        "im:releaseDate": {
+          "label": "2026-11-16T04:00:00-07:00",
+          "attributes": {
+            "label": "16/11/2026"
+          }
+        }
+      },
+      {
+        "im:name": {
+          "label": "Evil"
+        },
+        "rights": {
+          "label": "℗ 2027 CHVRCHES under exclusive license to Futures ✦"
+        },
+        "im:price": {
+          "label": "$15.00",
+          "attributes": {
+            "amount": "15.00",
+            "currency": "MXN"
+          }
+        },
+        "im:collection": {
+          "im:name": {
+            "label": "All The King's Men"
+          },
+          "link": {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/all-the-kings-men/6822790479?uo=2"
+            }
+          },
+          "im:contentType": {
+            "im:contentType": {
+              "attributes": {
+                "term": "Album",
+                "label": "Álbum"
+              }
+            },
+            "attributes": {
+              "term": "Music",
+              "label": "Música"
+            }
+          }
+        },
+        "im:image": [
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/26/8f/60/268f6064-3770-14e1-428a-9bb67329a9f6/823375530411_Cover.jpg/55x55bb.png",
+            "attributes": {
+              "height": "55"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/26/8f/60/268f6064-3770-14e1-428a-9bb67329a9f6/823375530411_Cover.jpg/60x60bb.png",
+            "attributes": {
+              "height": "60"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/26/8f/60/268f6064-3770-14e1-428a-9bb67329a9f6/823375530411_Cover.jpg/170x170bb.png",
+            "attributes": {
+              "height": "170"
+            }
+          }
+        ],
+        "im:artist": {
+          "label": "CHVRCHES",
+          "attributes": {
+            "href": "https://music.apple.com/mx/artist/chvrches/566867492?uo=2"
+          }
+        },
+        "title": {
+          "label": "Evil - CHVRCHES"
+        },
+        "link": [
+          {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/evil/6822790479?i=6822790494&uo=2"
+            }
+          },
+          {
+            "im:duration": {
+              "label": "30000"
+            },
+            "attributes": {
+              "title": "Vista previa",
+              "rel": "enclosure",
+              "type": "audio/x-m4a",
+              "href": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ad/f6/07/adf60763-2dda-a642-3c1d-806ed092dcec/mzaf_15125613195790384754.plus.aac.p.m4a",
+              "im:assetType": "preview"
+            }
+          }
+        ],
+        "id": {
+          "label": "https://music.apple.com/mx/album/evil/6822790479?i=6822790494&uo=2",
+          "attributes": {
+            "im:id": "6822790494"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Track",
+              "label": "Canción"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Música"
+          }
+        },
+        "category": {
+          "attributes": {
+            "im:id": "20",
+            "term": "Alternative",
+            "scheme": "https://music.apple.com/mx/genre/m%C3%BAsica-alternativa/id20?uo=2",
+            "label": "Alternativa"
+          }
+        }
+      },
+      {
+        "im:name": {
+          "label": "Coming Up Roses"
+        },
+        "im:image": [
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/07/41/6a/07416a78-38b9-2d47-7ce8-8a52a44c510f/196874010112.jpg/55x55bb.png",
+            "attributes": {
+              "height": "55"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/07/41/6a/07416a78-38b9-2d47-7ce8-8a52a44c510f/196874010112.jpg/60x60bb.png",
+            "attributes": {
+              "height": "60"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/07/41/6a/07416a78-38b9-2d47-7ce8-8a52a44c510f/196874010112.jpg/170x170bb.png",
+            "attributes": {
+              "height": "170"
+            }
+          }
+        ],
+        "im:collection": {
+          "im:name": {
+            "label": "Kiss All The Time. Disco, Occasionally."
+          },
+          "link": {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/kiss-all-the-time-disco-occasionally/1870984032?uo=2"
+            }
+          },
+          "im:contentType": {
+            "im:contentType": {
+              "attributes": {
+                "term": "Album",
+                "label": "Álbum"
+              }
+            },
+            "attributes": {
+              "term": "Music",
+              "label": "Música"
+            }
+          }
+        },
+        "im:price": {
+          "label": "$15.00",
+          "attributes": {
+            "amount": "15.00",
+            "currency": "MXN"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Track",
+              "label": "Canción"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Música"
+          }
+        },
+        "rights": {
+          "label": "℗ 2026 Erskine Records Limited, under exclusive license to Columbia Records, a Division of Sony Music Entertainment"
+        },
+        "title": {
+          "label": "Coming Up Roses - Harry Styles"
+        },
+        "link": [
+          {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/coming-up-roses/1870984032?i=1870984045&uo=2"
+            }
+          },
+          {
+            "im:duration": {
+              "label": "30000"
+            },
+            "attributes": {
+              "title": "Vista previa",
+              "rel": "enclosure",
+              "type": "audio/x-m4a",
+              "href": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/44/f1/8a/44f18a73-1e7b-90c1-8f0d-55e9f257463e/mzaf_12931732484760057017.plus.aac.p.m4a",
+              "im:assetType": "preview"
+            }
+          }
+        ],
+        "id": {
+          "label": "https://music.apple.com/mx/album/coming-up-roses/1870984032?i=1870984045&uo=2",
+          "attributes": {
+            "im:id": "1870984045"
+          }
+        },
+        "im:artist": {
+          "label": "Harry Styles",
+          "attributes": {
+            "href": "https://music.apple.com/mx/artist/harry-styles/471260289?uo=2"
+          }
+        },
+        "category": {
+          "attributes": {
+            "im:id": "14",
+            "term": "Pop",
+            "scheme": "https://music.apple.com/mx/genre/m%C3%BAsica-pop/id14?uo=2",
+            "label": "Pop"
+          }
+        },
+        "im:releaseDate": {
+          "label": "2026-03-06T04:00:00-07:00",
+          "attributes": {
+            "label": "06/03/2026"
+          }
+        }
+      },
+      {
+        "im:name": {
+          "label": "El Dueño De Tu Amor"
+        },
+        "im:image": [
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/8c/82/08/8c8208c8-c5ed-59c0-da91-81083cfb6311/729771482289.jpg/55x55bb.png",
+            "attributes": {
+              "height": "55"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/8c/82/08/8c8208c8-c5ed-59c0-da91-81083cfb6311/729771482289.jpg/60x60bb.png",
+            "attributes": {
+              "height": "60"
+            }
+          },
+          {
+            "label": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/8c/82/08/8c8208c8-c5ed-59c0-da91-81083cfb6311/729771482289.jpg/170x170bb.png",
+            "attributes": {
+              "height": "170"
+            }
+          }
+        ],
+        "im:collection": {
+          "im:name": {
+            "label": "El Dueño De Tu Amor  - Single"
+          },
+          "link": {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/el-due%C3%B1o-de-tu-amor-single/6828104629?uo=2"
+            }
+          },
+          "im:contentType": {
+            "im:contentType": {
+              "attributes": {
+                "term": "Album",
+                "label": "Álbum"
+              }
+            },
+            "attributes": {
+              "term": "Music",
+              "label": "Música"
+            }
+          }
+        },
+        "im:price": {
+          "label": "$15.00",
+          "attributes": {
+            "amount": "15.00",
+            "currency": "MXN"
+          }
+        },
+        "im:contentType": {
+          "im:contentType": {
+            "attributes": {
+              "term": "Track",
+              "label": "Canción"
+            }
+          },
+          "attributes": {
+            "term": "Music",
+            "label": "Música"
+          }
+        },
+        "rights": {
+          "label": "℗ 2026 10M"
+        },
+        "title": {
+          "label": "El Dueño De Tu Amor - Los Yes Yes, Sonido Los Jrs Oficial, Rolandos Show & Los JR's"
+        },
+        "link": [
+          {
+            "attributes": {
+              "rel": "alternate",
+              "type": "text/html",
+              "href": "https://music.apple.com/mx/album/el-due%C3%B1o-de-tu-amor/6828104629?i=6828104631&uo=2"
+            }
+          },
+          {
+            "im:duration": {
+              "label": "30000"
+            },
+            "attributes": {
+              "title": "Vista previa",
+              "rel": "enclosure",
+              "type": "audio/x-m4a",
+              "href": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c4/b2/33/c4b23309-6b45-f095-5ba4-b3847e21f9e0/mzaf_9719854960496204088.plus.aac.p.m4a",
+              "im:assetType": "preview"
+            }
+          }
+        ],
+        "id": {
+          "label": "https://music.apple.com/mx/album/el-due%C3%B1o-de-tu-amor/6828104629?i=6828104631&uo=2",
+          "attributes": {
+            "im:id": "6828104631"
+          }
+        },
+        "im:artist": {
+          "label": "Los Yes Yes, Sonido Los Jrs Oficial, Rolandos Show & Los JR's",
+          "attributes": {
+            "href": "https://music.apple.com/mx/artist/los-yes-yes/128904885?uo=2"
+          }
+        },
+        "category": {
+          "attributes": {
+            "im:id": "12",
+            "term": "Latin",
+            "scheme": "https://music.apple.com/mx/genre/m%C3%BAsica-m%C3%BAsica-latina/id12?uo=2",
+            "label": "Música latina"
+          }
+        },
+        "im:releaseDate": {
+          "label": "2024-08-23T05:00:00-07:00",
+          "attributes": {
+            "label": "23/08/2024"
+          }
+        }
+      }
+    ],
+    "updated": {
+      "label": "2026-11-19T06:05:53-07:00"
+    },
+    "rights": {
+      "label": "Copyright 2008 Apple Inc."
+    },
+    "title": {
+      "label": "iTunes Store: Top canciones"
+    },
+    "icon": {
+      "label": "http://itunes.apple.com/favicon.ico"
+    },
+    "link": [
+      {
+        "attributes": {
+          "rel": "alternate",
+          "type": "text/html",
+          "href": "https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewTop?cc=mx&id=26941&popId=1"
+        }
+      },
+      {
+        "attributes": {
+          "rel": "self",
+          "href": "https://itunes.apple.com/mx/rss/topsongs/limit=25/json"
+        }
+      }
+    ],
+    "id": {
+      "label": "https://itunes.apple.com/mx/rss/topsongs/limit=25/json"
+    }
+  }
+}

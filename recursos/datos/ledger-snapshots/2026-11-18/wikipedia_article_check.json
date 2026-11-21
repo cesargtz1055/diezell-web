@@ -1,0 +1,19 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 0,
+        "title": "Diezell",
+        "missing": "",
+        "contentmodel": "wikitext",
+        "pagelanguage": "es",
+        "pagelanguagehtmlcode": "es",
+        "pagelanguagedir": "ltr",
+        "fullurl": "https://es.wikipedia.org/wiki/Diezell",
+        "editurl": "https://es.wikipedia.org/w/index.php?title=Diezell&action=edit",
+        "canonicalurl": "https://es.wikipedia.org/wiki/Diezell"
+      }
+    }
+  }
+}

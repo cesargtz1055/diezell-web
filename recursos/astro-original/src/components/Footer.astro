@@ -1,0 +1,22 @@
+---
+import { LINKS } from "../data/diezell";
+---
+
+<footer class="overflow-hidden border-t border-outline-variant">
+  <div class="m3-container pt-16">
+    <p class="display rotate-180 select-none text-center text-[clamp(3rem,12vw,9rem)] text-outline-variant" aria-hidden="true">VINVSNI</p>
+    <div class="flex flex-col items-start justify-between gap-6 border-t border-outline-variant py-10 md:flex-row md:items-center">
+      <p class="m3-label-medium text-on-surface-variant">© 2026 DIEZELL · Web de fans, no oficial</p>
+      <ul class="flex flex-wrap gap-1">
+        <li><a href={LINKS.spotifyArtist} target="_blank" rel="noopener" class="state-layer m3-label-large inline-flex min-h-12 items-center rounded-full px-4 text-on-surface-variant hover:text-on-surface">Spotify ↗</a></li>
+        <li><a href={LINKS.youtube} target="_blank" rel="noopener" class="state-layer m3-label-large inline-flex min-h-12 items-center rounded-full px-4 text-on-surface-variant hover:text-on-surface">YouTube ↗</a></li>
+        <li><a href={LINKS.instagram} target="_blank" rel="noopener" class="state-layer m3-label-large inline-flex min-h-12 items-center rounded-full px-4 text-on-surface-variant hover:text-on-surface">Instagram ↗</a></li>
+        <li><a href={LINKS.tiktok} target="_blank" rel="noopener" class="state-layer m3-label-large inline-flex min-h-12 items-center rounded-full px-4 text-on-surface-variant hover:text-on-surface">TikTok ↗</a></li>
+        <li><a href={LINKS.linktree} target="_blank" rel="noopener" class="state-layer m3-label-large inline-flex min-h-12 items-center rounded-full px-4 text-on-surface-variant hover:text-on-surface">Linktree ↗</a></li>
+      </ul>
+    </div>
+    <p class="m3-body-small pb-8 text-on-surface-variant">
+      Hecho con Astro 5 + Tailwind CSS y Material Design 3. Sin reproductor propio: la música se escucha en los embeds oficiales de Spotify y YouTube. Las letras se citan solo en fragmentos cortos, con enlace a la letra completa.
+    </p>
+  </div>
+</footer>

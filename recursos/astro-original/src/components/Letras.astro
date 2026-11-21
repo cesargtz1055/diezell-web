@@ -1,0 +1,40 @@
+---
+import { LETRAS } from "../data/diezell";
+---
+
+<section id="letras" class="m3-container py-24 md:py-36" aria-labelledby="titulo-letras">
+  <div class="reveal">
+    <p class="m3-label-large text-primary">04 — Letras</p>
+    <h2 id="titulo-letras" class="m3-display-medium mt-4 text-on-surface">Desamor,<br />duelo, resiliencia.</h2>
+    <p class="m3-body-large mt-4 max-w-xl text-on-surface-variant">
+      Fragmentos cortos, citados con su canción de origen. Las letras completas viven en Letras.com — aquí solo el verso que se queda.
+    </p>
+  </div>
+
+  <div class="mt-12 grid gap-4 md:grid-cols-2">
+    {
+      LETRAS.map((l) => (
+        <blockquote class="card card--filled elevation-1 reveal rounded-lg p-8 md:p-10">
+          <p class="m3-headline-medium text-on-surface">“{l.fragmento}”</p>
+          <footer class="mt-6 flex min-h-12 flex-wrap items-center justify-between gap-3">
+            <cite class="m3-label-medium not-italic text-on-surface-variant">{l.cancion}</cite>
+            <a
+              href={l.url}
+              target="_blank"
+              rel="noopener"
+              class="state-layer m3-label-large inline-flex min-h-12 items-center rounded-full px-4 text-primary"
+            >
+              Letra completa ↗
+            </a>
+          </footer>
+        </blockquote>
+      ))
+    }
+  </div>
+
+  <p class="reveal m3-body-medium mt-8 max-w-2xl text-on-surface-variant">
+    Temas: desamor y despecho, desilusión, duelo, abandono, culpa, nostalgia, vulnerabilidad y resiliencia.
+    Así los describen Puro Rock Puro en sus notas de <a href="https://purorockpuro.com/diezell-nos-presentan-su-album-caotico/" target="_blank" rel="noopener" class="text-primary underline underline-offset-4">Caótico (5 oct 2023)</a> y de <a href="https://purorockpuro.com/diezell-presenta-insania-su-segundo-album-de-estudio/" target="_blank" rel="noopener" class="text-primary underline underline-offset-4">INSANIA (16 dic 2025)</a>.
+    “Donde Nada Puede Malir Sal” es el track 9 de INSANIA, escrito así en Spotify; los fans lo han convertido en frase.
+  </p>
+</section>

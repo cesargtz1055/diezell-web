@@ -1,0 +1,251 @@
+=== CORTE DIARIO DIEZELL — 2026-11-18T06:36:07Z UTC / 2026-11-18 00:36 America/Mexico_City ===
+--- deezer.py ---
+[2026-11-18T00:36:08-06:00]   + 2026-11-18 Deezer | deezer_fans = 884 fans
+[2026-11-18T00:36:08-06:00]   + 2026-11-18 Deezer | deezer_albums = 13 álbumes
+[2026-11-18T00:36:08-06:00]   + 2026-11-18 Deezer | deezer_artist_id = 134263372 id
+[2026-11-18T00:36:09-06:00]   + 2026-11-18 Deezer | deezer_track_rank = 94173 puesto
+[2026-11-18T00:36:09-06:00]   + 2026-11-18 Deezer | deezer_track_duration_s = 186 segundos
+[2026-11-18T00:36:09-06:00]   + 2026-11-18 Deezer | deezer_track_rank = 70583 puesto
+[2026-11-18T00:36:09-06:00]   + 2026-11-18 Deezer | deezer_track_duration_s = 190 segundos
+[2026-11-18T00:36:09-06:00]   + 2026-11-18 Deezer | deezer_track_rank = 120595 puesto
+[2026-11-18T00:36:09-06:00]   + 2026-11-18 Deezer | deezer_track_duration_s = 202 segundos
+[2026-11-18T00:36:09-06:00]   + 2026-11-18 Deezer | deezer_track_rank = 93714 puesto
+[2026-11-18T00:36:09-06:00]   + 2026-11-18 Deezer | deezer_track_duration_s = 220 segundos
+[2026-11-18T00:36:09-06:00]   + 2026-11-18 Deezer | deezer_track_rank = 79495 puesto
+[2026-11-18T00:36:09-06:00]   + 2026-11-18 Deezer | deezer_track_duration_s = 262 segundos
+[2026-11-18T00:36:10-06:00]   + 2026-11-18 Deezer | deezer_album = 1 álbum
+[2026-11-18T00:36:10-06:00]   + 2026-11-18 Deezer | deezer_album = 1 álbum
+[2026-11-18T00:36:10-06:00]   + 2026-11-18 Deezer | deezer_album = 1 álbum
+[2026-11-18T00:36:10-06:00]   + 2026-11-18 Deezer | deezer_album = 1 álbum
+[2026-11-18T00:36:10-06:00]   + 2026-11-18 Deezer | deezer_album = 1 álbum
+[2026-11-18T00:36:10-06:00]   + 2026-11-18 Deezer | deezer_album = 1 álbum
+[2026-11-18T00:36:10-06:00]   + 2026-11-18 Deezer | deezer_album = 1 álbum
+[2026-11-18T00:36:10-06:00]   + 2026-11-18 Deezer | deezer_album = 1 álbum
+[2026-11-18T00:36:10-06:00]   + 2026-11-18 Deezer | deezer_album = 1 álbum
+[2026-11-18T00:36:10-06:00]   + 2026-11-18 Deezer | deezer_album = 1 álbum
+[2026-11-18T00:36:10-06:00]   + 2026-11-18 Deezer | deezer_album = 1 álbum
+[2026-11-18T00:36:10-06:00]   + 2026-11-18 Deezer | deezer_album = 1 álbum
+[2026-11-18T00:36:10-06:00]   + 2026-11-18 Deezer | deezer_album = 1 álbum
+[2026-11-18T00:36:10-06:00]   Deezer: fans=884 álbumes=13 top=5 álbumes_listados=13
+[2026-11-18T00:36:10-06:00] OK deezer
+--- youtube_rss.py ---
+[2026-11-18T00:36:12-06:00]   + 2026-11-18 YouTube RSS | youtube_video_feed_count = 15 videos en el feed
+[2026-11-18T00:36:12-06:00]   + 2026-11-18 YouTube RSS | youtube_video_new = 1 video
+[2026-11-18T00:36:12-06:00]   + 2026-11-18 YouTube RSS | youtube_video_new = 1 video
+[2026-11-18T00:36:12-06:00]   + 2026-11-18 YouTube RSS | youtube_video_new = 1 video
+[2026-11-18T00:36:12-06:00]   + 2026-11-18 YouTube RSS | youtube_video_new = 1 video
+[2026-11-18T00:36:12-06:00]   + 2026-11-18 YouTube RSS | youtube_video_new = 1 video
+[2026-11-18T00:36:12-06:00]   + 2026-11-18 YouTube RSS | youtube_video_new = 1 video
+[2026-11-18T00:36:12-06:00]   + 2026-11-18 YouTube RSS | youtube_video_new = 1 video
+[2026-11-18T00:36:12-06:00]   + 2026-11-18 YouTube RSS | youtube_video_new = 1 video
+[2026-11-18T00:36:12-06:00]   + 2026-11-18 YouTube RSS | youtube_video_new = 1 video
+[2026-11-18T00:36:12-06:00]   + 2026-11-18 YouTube RSS | youtube_video_new = 1 video
+[2026-11-18T00:36:12-06:00]   + 2026-11-18 YouTube RSS | youtube_video_new = 1 video
+[2026-11-18T00:36:12-06:00]   + 2026-11-18 YouTube RSS | youtube_video_new = 1 video
+[2026-11-18T00:36:12-06:00]   + 2026-11-18 YouTube RSS | youtube_video_new = 1 video
+[2026-11-18T00:36:12-06:00]   + 2026-11-18 YouTube RSS | youtube_video_new = 1 video
+[2026-11-18T00:36:12-06:00]   + 2026-11-18 YouTube RSS | youtube_video_new = 1 video
+[2026-11-18T00:36:12-06:00]   YouTube RSS: 15 videos en el feed, 15 nuevos
+[2026-11-18T00:36:12-06:00] OK youtube_rss
+--- youtube_public.py ---
+[2026-11-18T00:36:15-06:00]   + 2026-11-18 YouTube | youtube_videos_total = 29 videos
+[2026-11-18T00:36:15-06:00]   YouTube canal: suscriptores y total de videos extraídos
+[2026-11-18T00:36:15-06:00] OK youtube_public
+--- youtube_video.py ---
+[2026-11-18T00:36:18-06:00]   + 2026-11-18 YouTube | youtube_video_likes = 8643 likes
+[2026-11-18T00:36:18-06:00]   + 2026-11-18 YouTube | youtube_video_duration_s = 223 segundos
+[2026-11-18T00:36:18-06:00]   + 2026-11-18 YouTube | youtube_video_published = 1 fecha de estreno
+[2026-11-18T00:36:18-06:00]   video MuvgZpXqsY8: views=None likes=8643 comentarios_incrustados=False
+[2026-11-18T00:36:19-06:00]   + 2026-11-18 YouTube | youtube_video_likes = 4493 likes
+[2026-11-18T00:36:19-06:00]   + 2026-11-18 YouTube | youtube_video_duration_s = 212 segundos
+[2026-11-18T00:36:19-06:00]   + 2026-11-18 YouTube | youtube_video_published = 1 fecha de estreno
+[2026-11-18T00:36:19-06:00]   video tIEk-WAnrLE: views=None likes=4493 comentarios_incrustados=False
+[2026-11-18T00:36:20-06:00]   + 2026-11-18 YouTube | youtube_video_likes = 1919 likes
+[2026-11-18T00:36:20-06:00]   + 2026-11-18 YouTube | youtube_video_duration_s = 221 segundos
+[2026-11-18T00:36:20-06:00]   + 2026-11-18 YouTube | youtube_video_published = 1 fecha de estreno
+[2026-11-18T00:36:20-06:00]   video yUvkRgX-RC8: views=None likes=1919 comentarios_incrustados=False
+[2026-11-18T00:36:21-06:00]   + 2026-11-18 YouTube | youtube_video_likes = 92 likes
+[2026-11-18T00:36:21-06:00]   + 2026-11-18 YouTube | youtube_video_duration_s = 210 segundos
+[2026-11-18T00:36:21-06:00]   + 2026-11-18 YouTube | youtube_video_published = 1 fecha de estreno
+[2026-11-18T00:36:21-06:00]   video Vex7ibUYCGE: views=None likes=92 comentarios_incrustados=False
+[2026-11-18T00:36:22-06:00]   + 2026-11-18 YouTube | youtube_video_likes = 97 likes
+[2026-11-18T00:36:22-06:00]   + 2026-11-18 YouTube | youtube_video_duration_s = 249 segundos
+[2026-11-18T00:36:22-06:00]   + 2026-11-18 YouTube | youtube_video_published = 1 fecha de estreno
+[2026-11-18T00:36:22-06:00]   video dHO9zYdvqRw: views=None likes=97 comentarios_incrustados=False
+[2026-11-18T00:36:23-06:00]   + 2026-11-18 YouTube | youtube_video_likes = 87 likes
+[2026-11-18T00:36:23-06:00]   + 2026-11-18 YouTube | youtube_video_duration_s = 222 segundos
+[2026-11-18T00:36:23-06:00]   + 2026-11-18 YouTube | youtube_video_published = 1 fecha de estreno
+[2026-11-18T00:36:23-06:00]   video dW5nYoljAiw: views=None likes=87 comentarios_incrustados=False
+[2026-11-18T00:36:24-06:00]   video https://www.youtube.com/shorts/frybXWNuNFM: sin vistas ni likes extraíbles
+[2026-11-18T00:36:25-06:00]   + 2026-11-18 YouTube | youtube_video_likes = 171 likes
+[2026-11-18T00:36:25-06:00]   + 2026-11-18 YouTube | youtube_video_duration_s = 236 segundos
+[2026-11-18T00:36:25-06:00]   + 2026-11-18 YouTube | youtube_video_published = 1 fecha de estreno
+[2026-11-18T00:36:25-06:00]   video fluD9OwLufg: views=None likes=171 comentarios_incrustados=False
+[2026-11-18T00:36:25-06:00] OK youtube_video
+--- tiktok_public.py ---
+[2026-11-18T00:36:28-06:00]   + 2026-11-18 TikTok | tiktok_followers = 13800 seguidores
+[2026-11-18T00:36:28-06:00]   + 2026-11-18 TikTok | tiktok_following = 0 seguidos
+[2026-11-18T00:36:28-06:00]   + 2026-11-18 TikTok | tiktok_videos_total = 75 videos
+[2026-11-18T00:36:28-06:00]   + 2026-11-18 TikTok | tiktok_total_likes = 129100 likes totales
+[2026-11-18T00:36:28-06:00]   + 2026-11-18 TikTok | tiktok_heart = 129100 corazones
+[2026-11-18T00:36:28-06:00]   + 2026-11-18 TikTok | tiktok_digg = 0 diggs
+[2026-11-18T00:36:28-06:00]   + 2026-11-18 TikTok | tiktok_friends = 0 amigos
+[2026-11-18T00:36:28-06:00]   + 2026-11-18 TikTok | tiktok_verified = 0 verificado (1=sí)
+[2026-11-18T00:36:28-06:00]   TikTok perfil: seguidores=13800 videos=75 likes=129100 itemList=0 (sin videos incrustados)
+[2026-11-18T00:36:28-06:00] OK tiktok_public
+--- tiktok_tag.py ---
+[2026-11-18T00:36:30-06:00]   #Diezell: HTTP 200, 386546 bytes, videoCount=no, ids de video encontrados: 0
+[2026-11-18T00:36:31-06:00]   #Caoticos: HTTP 200, 385171 bytes, videoCount=no, ids de video encontrados: 0
+[2026-11-18T00:36:33-06:00]   #INSANIA: HTTP 200, 386413 bytes, videoCount=no, ids de video encontrados: 0
+[2026-11-18T00:36:33-06:00]   ningún hashtag devolvió videos ni conteos parseables
+[2026-11-18T00:36:33-06:00] FAIL tiktok_tag: sin datos utilizables (ver log)
+--- instagram_public.py ---
+[2026-11-18T00:36:34-06:00]   Instagram web_profile_info: error: fetch_text() got an unexpected keyword argument 'headers'
+[2026-11-18T00:36:36-06:00]   Instagram página: HTTP 200, 540064 bytes — muro de login, sin datos del perfil
+[2026-11-18T00:36:36-06:00] FAIL instagram_public: sin datos utilizables (ver log)
+--- soundcloud.py ---
+[2026-11-18T00:36:37-06:00]   SoundCloud https://soundcloud.com/diezell: HTTP 200 → usuario: Alycyalyna
+[2026-11-18T00:36:40-06:00]   SoundCloud https://soundcloud.com/diezellmx: error: HTTP Error 404: Not Found
+[2026-11-18T00:36:41-06:00]   SoundCloud https://soundcloud.com/diezell-oficial: error: HTTP Error 404: Not Found
+[2026-11-18T00:36:41-06:00]   SoundCloud: perfil de Diezell no localizado en ningún slug
+[2026-11-18T00:36:41-06:00] FAIL soundcloud: sin datos utilizables (ver log)
+--- reddit.py ---
+[2026-11-18T00:36:43-06:00]   Reddit https://www.reddit.com/search.json?q=Diezell&sort=new&limit=25: error: HTTP Error 403: Blocked
+[2026-11-18T00:36:44-06:00]   Reddit https://api.reddit.com/search?q=Diezell&sort=new&limit=25: error: HTTP Error 403: Blocked
+[2026-11-18T00:36:45-06:00]   Reddit https://old.reddit.com/search.json?q=Diezell&sort=new&limit=25: HTTP 200, devuelve HTML (340930 bytes) en vez de JSON — bloqueado
+[2026-11-18T00:36:45-06:00]   Reddit: ningún endpoint .json devolvió datos utilizables
+[2026-11-18T00:36:45-06:00] FAIL reddit: sin datos utilizables (ver log)
+--- google_news_rss.py ---
+[2026-11-18T00:36:47-06:00]   + 2026-11-18 Google News RSS | news_mentions = 5 noticias
+[2026-11-18T00:36:47-06:00]   Google News 'Diezell': 5 noticias
+[2026-11-18T00:36:48-06:00]   + 2026-11-18 Google News RSS | news_mentions = 2 noticias
+[2026-11-18T00:36:48-06:00]   Google News 'Diezell banda Monterrey': 2 noticias
+[2026-11-18T00:36:48-06:00]   Google News total: 7 noticias, 5 menciones nuevas
+[2026-11-18T00:36:48-06:00] OK google_news_rss
+--- bing_news_rss.py ---
+[2026-11-18T00:36:49-06:00]   + 2026-11-18 Bing News RSS | news_mentions = 1 noticias
+[2026-11-18T00:36:49-06:00]   Bing News: 1 noticias, 1 menciones nuevas
+[2026-11-18T00:36:49-06:00] OK bing_news_rss
+--- press_rss.py ---
+[2026-11-18T00:36:52-06:00]   + 2026-11-18 Prensa RSS | press_mentions = 0 artículos sobre Diezell
+[2026-11-18T00:36:52-06:00]   Puro Rock Puro: 10 artículos en el feed, 0 sobre Diezell
+[2026-11-18T00:36:54-06:00]   + 2026-11-18 Prensa RSS | press_mentions = 0 artículos sobre Diezell
+[2026-11-18T00:36:54-06:00]   Follow Control: 9 artículos en el feed, 0 sobre Diezell
+[2026-11-18T00:36:55-06:00]   Mr Indie: error al descargar: Remote end closed connection without response
+[2026-11-18T00:36:56-06:00]   + 2026-11-18 Prensa RSS | press_mentions = 0 artículos sobre Diezell
+[2026-11-18T00:36:56-06:00]   Punkeando: 10 artículos en el feed, 0 sobre Diezell
+[2026-11-18T00:36:56-06:00]   Prensa: ningún artículo sobre Diezell en los feeds de hoy
+[2026-11-18T00:36:56-06:00] FAIL press_rss: sin datos utilizables (ver log)
+--- musicbrainz.py ---
+[2026-11-18T00:36:58-06:00]   MusicBrainz: artista 'Diezell' no encontrado (count 0)
+[2026-11-18T00:37:00-06:00]   MusicBrainz: lanzamiento 'Caótico' tampoco encontrado
+[2026-11-18T00:37:00-06:00] FAIL musicbrainz: sin datos utilizables (ver log)
+--- itunes.py ---
+[2026-11-18T00:37:02-06:00]   + 2026-11-18 iTunes | itunes_artist_id = 1569495760 id
+[2026-11-18T00:37:03-06:00]   + 2026-11-18 iTunes | itunes_albums = 15 álbumes
+[2026-11-18T00:37:03-06:00]   + 2026-11-18 iTunes | itunes_album = 1 álbum
+[2026-11-18T00:37:03-06:00]   + 2026-11-18 iTunes | itunes_album = 1 álbum
+[2026-11-18T00:37:03-06:00]   + 2026-11-18 iTunes | itunes_album = 1 álbum
+[2026-11-18T00:37:03-06:00]   + 2026-11-18 iTunes | itunes_album = 1 álbum
+[2026-11-18T00:37:03-06:00]   + 2026-11-18 iTunes | itunes_album = 1 álbum
+[2026-11-18T00:37:03-06:00]   + 2026-11-18 iTunes | itunes_album = 1 álbum
+[2026-11-18T00:37:03-06:00]   + 2026-11-18 iTunes | itunes_album = 1 álbum
+[2026-11-18T00:37:03-06:00]   + 2026-11-18 iTunes | itunes_album = 1 álbum
+[2026-11-18T00:37:03-06:00]   + 2026-11-18 iTunes | itunes_album = 1 álbum
+[2026-11-18T00:37:03-06:00]   + 2026-11-18 iTunes | itunes_album = 1 álbum
+[2026-11-18T00:37:03-06:00]   + 2026-11-18 iTunes | itunes_album = 1 álbum
+[2026-11-18T00:37:03-06:00]   + 2026-11-18 iTunes | itunes_album = 1 álbum
+[2026-11-18T00:37:03-06:00]   + 2026-11-18 iTunes | itunes_album = 1 álbum
+[2026-11-18T00:37:03-06:00]   + 2026-11-18 iTunes | itunes_album = 1 álbum
+[2026-11-18T00:37:03-06:00]   + 2026-11-18 iTunes | itunes_album = 1 álbum
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_songs = 35 canciones
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:04-06:00]   + 2026-11-18 iTunes | itunes_song = 1 canción
+[2026-11-18T00:37:05-06:00]   + 2026-11-18 iTunes | itunes_podcasts = 2 podcasts
+[2026-11-18T00:37:05-06:00]   + 2026-11-18 iTunes | itunes_podcast = 1 podcast
+[2026-11-18T00:37:05-06:00]   podcast con feed RSS directo: https://app.syndicast.co.uk/show/rss/untamed-radio-2
+[2026-11-18T00:37:05-06:00]   + 2026-11-18 iTunes | itunes_podcast = 1 podcast
+[2026-11-18T00:37:05-06:00]   podcast con feed RSS directo: https://feeds.soundcloud.com/users/soundcloud:users:192931327/sounds.rss
+[2026-11-18T00:37:05-06:00]   iTunes: álbumes=15 canciones=35 podcasts=2
+[2026-11-18T00:37:05-06:00] OK itunes
+--- spotify_public.py ---
+[2026-11-18T00:37:07-06:00]   Viberate: error: HTTP Error 403: Forbidden
+[2026-11-18T00:37:09-06:00]   Music Metrics Vault: error: HTTP Error 404: Not Found
+[2026-11-18T00:37:10-06:00]   Spotify web: HTTP 200, 169782 bytes, oyentes_mensuales=no
+[2026-11-18T00:37:10-06:00]   Spotify oyentes: ninguna vía pública devolvió el dato
+[2026-11-18T00:37:10-06:00] FAIL spotify_public: sin datos utilizables (ver log)
+--- lastfm_public.py ---
+[2026-11-18T00:37:16-06:00]   Last.fm: HTTP 200, 491186 bytes
+[2026-11-18T00:37:16-06:00] OK lastfm_public
+--- setlistfm_public.py ---
+[2026-11-18T00:37:17-06:00]   setlist.fm: HTTP 202, 2007 bytes — respuesta vacía (anti-bot)
+[2026-11-18T00:37:17-06:00] FAIL setlistfm_public: sin datos utilizables (ver log)
+--- bandsintown_public.py ---
+[2026-11-18T00:37:19-06:00]   Bandsintown: error: HTTP Error 403: Forbidden
+[2026-11-18T00:37:19-06:00] FAIL bandsintown_public: sin datos utilizables (ver log)
+--- songkick_public.py ---
+[2026-11-18T00:37:21-06:00]   Songkick: HTTP 200, 16 enlaces de artista, Diezell entre ellos: sí
+[2026-11-18T00:37:21-06:00] OK songkick_public
+--- facebook_public.py ---
+[2026-11-18T00:37:23-06:00]   Facebook: error: HTTP Error 400: Bad Request
+[2026-11-18T00:37:23-06:00] FAIL facebook_public: sin datos utilizables (ver log)
+--- wikipedia.py ---
+[2026-11-18T00:37:25-06:00]   Wikipedia: artículo 'Diezell' existe: False
+[2026-11-18T00:37:25-06:00] FAIL wikipedia: sin datos utilizables (ver log)
+--- wayback.py ---
+[2026-11-18T00:37:27-06:00]   Wayback CDX Spotify: 3 capturas (primera: 20220228041741, última: 20241007105455)
+[2026-11-18T00:37:30-06:00]   Wayback CDX Viberate: 4 capturas (primera: 20250815145512, última: 20260513152215)
+[2026-11-18T00:37:34-06:00]   Wayback CDX YouTube: 0 capturas (primera: -, última: -)
+[2026-11-18T00:37:36-06:00]   Wayback CDX Instagram: 0 capturas (primera: -, última: -)
+[2026-11-18T00:37:38-06:00]   Wayback CDX Music Metrics Vault: 0 capturas (primera: -, última: -)
+[2026-11-18T00:37:41-06:00]   Wayback snapshot 20250815145512: error: HTTP Error 429: Too Many Requests
+[2026-11-18T00:37:41-06:00] FAIL wayback: UnboundLocalError: cannot access local variable 'status' where it is not associated with a value
+--- trends.py ---
+[2026-11-18T00:37:42-06:00]   Google Trends explore: error: HTTP Error 429: unknown
+[2026-11-18T00:37:42-06:00] FAIL trends: sin datos utilizables (ver log)
+--- charts.py ---
+[2026-11-18T00:37:45-06:00]   Charts: Diezell no está en Deezer chart global (top 10)
+[2026-11-18T00:37:46-06:00]   Charts: Diezell no está en iTunes México top canciones (25)
+[2026-11-18T00:37:47-06:00]   Charts: Diezell no está en iTunes México top álbumes (25)
+[2026-11-18T00:37:47-06:00] OK charts
+--- stories.py ---
+[2026-11-18T00:37:51-06:00]   TikTok: sin indicador de historia activa en la página pública
+[2026-11-18T00:37:51-06:00]   Instagram: rescate imposible sin login (ver README)
+[2026-11-18T00:37:51-06:00] FAIL stories: sin datos utilizables (ver log)
+--- commenters.py ---
+[2026-11-18T00:37:52-06:00]   commenters: 0 autores en 0 mes(es)
+[2026-11-18T00:37:52-06:00] OK commenters
+=== FIN DEL CORTE — registros en el ledger: 152 ===

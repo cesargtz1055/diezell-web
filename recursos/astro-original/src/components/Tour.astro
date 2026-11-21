@@ -1,0 +1,131 @@
+---
+import { COUNTDOWN_TARGET, LINKS, TOUR } from "../data/diezell";
+---
+
+<section id="tour" class="bg-inverse-surface text-inverse-on-surface" aria-labelledby="titulo-tour">
+  <div class="m3-container py-24 md:py-36">
+    <div class="reveal">
+      <p class="m3-label-large text-inverse-primary">02 — Tour</p>
+      <h2 id="titulo-tour" class="m3-display-medium mt-4">Insania Tour<br />2026</h2>
+      <p class="m3-body-large mt-4 max-w-xl text-inverse-on-surface/70">
+        Nueve ciudades + Mexicali TBA. Arrancó el 6 de diciembre de 2025 en Foro Tims, Monterrey.
+        Cierra en casa: Foro Corona, 13 de noviembre.
+      </p>
+    </div>
+
+    <!-- Cuenta regresiva en vivo al cierre: Monterrey, 13 nov 2026, 21:00 -->
+    <div class="card card--elevated card--large reveal mt-12 bg-surface p-6 text-on-surface md:p-10" data-countdown data-target={COUNTDOWN_TARGET}>
+      <p class="m3-label-medium text-on-surface-variant">Cierre de gira · Monterrey — Foro Corona · vie 13 nov · 21:00</p>
+      <p class="m3-display-small mt-4 tabular-nums" data-countdown-text aria-live="polite">— días : — : — : —</p>
+      <p class="m3-body-medium mt-3 text-on-surface-variant" data-countdown-note>Contando para el show.</p>
+      <a
+        href={LINKS.linktree}
+        target="_blank"
+        rel="noopener"
+        class="btn btn-filled state-layer mt-6"
+        data-countdown-ticket
+      >
+        Boletos — Linktree oficial ↗
+      </a>
+    </div>
+
+    <ol class="mt-14 divide-y divide-inverse-on-surface/15 border-y border-inverse-on-surface/15">
+      {
+        TOUR.map((f) => (
+          <li
+            class={`reveal grid gap-2 py-6 md:grid-cols-12 md:items-center md:gap-6 ${f.estado === "pasado" ? "opacity-60" : ""}`}
+            data-tour-item
+            data-tour-estado={f.estado}
+            data-tour-fecha={f.fecha}
+          >
+            <span class="m3-headline-medium md:col-span-3">{f.fecha}</span>
+            <span class="md:col-span-4">
+              <span class="m3-title-medium block">{f.ciudad}</span>
+              <span class="m3-body-medium block text-inverse-on-surface/60">
+                {f.recinto}
+                {f.hora ? ` · ${f.hora}` : ""}
+                {f.boletera ? ` · ${f.boletera}` : ""}
+                {f.nota ? ` · ${f.nota}` : ""}
+              </span>
+            </span>
+            <span class="m3-label-medium text-inverse-on-surface/60 md:col-span-2">{f.diaSemana}</span>
+            <span class="md:col-span-3 md:text-right">
+              {f.estado === "sold-out" ? (
+                <span class="chip chip--primary"><span aria-hidden="true">●</span> Sold out</span>
+              ) : f.estado === "pasado" ? (
+                <span class="chip chip--muted">Ya pasó</span>
+              ) : f.estado === "proximo" ? (
+                <a
+                  href={f.boletos ?? LINKS.linktree}
+                  target="_blank"
+                  rel="noopener"
+                  class="btn btn-filled state-layer"
+                >
+                  {f.estadoTexto} ↗
+                </a>
+              ) : f.boletos ? (
+                <a
+                  href={f.boletos}
+                  target="_blank"
+                  rel="noopener"
+                  class="btn btn-outlined state-layer"
+                >
+                  {f.estadoTexto} ↗
+                </a>
+              ) : (
+                <span class="m3-label-medium text-inverse-on-surface/60">{f.estadoTexto}</span>
+              )}
+            </span>
+          </li>
+        ))
+      }
+    </ol>
+    <p class="m3-body-small mt-6 text-inverse-on-surface/60">
+      Estado de las fechas según la publicación de la banda del 4 nov 2026 y las boleteras citadas en la investigación.
+      La hora de Toluca no se encontró en las fuentes consultadas. Mexicali solo aparece como TBA en el póster general.
+    </p>
+  </div>
+</section>
+
+<script>
+  const box = document.querySelector<HTMLElement>("[data-countdown]");
+  const text = box?.querySelector<HTMLElement>("[data-countdown-text]");
+  const note = box?.querySelector<HTMLElement>("[data-countdown-note]");
+  const target = box ? new Date(box.dataset.target ?? "").getTime() : NaN;
+
+  const ticketBtn = box?.querySelector<HTMLElement>("[data-countdown-ticket]");
+
+  function markForoCoronaPasado() {
+    // Al pasar el cierre (13 nov 2026, 21:00 -06:00), el ítem deja de vender boletos.
+    document.querySelectorAll<HTMLElement>("[data-tour-item]").forEach((li) => {
+      if (li.dataset.tourEstado !== "proximo") return;
+      if (!li.textContent?.includes("Foro Corona")) return;
+      li.classList.add("opacity-60");
+      const slot = li.querySelector<HTMLElement>(".md\\:text-right") ?? li.lastElementChild;
+      if (slot) {
+        slot.innerHTML = '<span class="chip chip--muted">Ya pasó</span>';
+      }
+      li.dataset.tourEstado = "pasado";
+    });
+  }
+
+  function tick() {
+    if (!box || !text || !note || Number.isNaN(target)) return;
+    const diff = target - Date.now();
+    if (diff <= 0) {
+      text.textContent = "00 días : 00 : 00 : 00";
+      note.textContent = "La fecha ya llegó o ya pasó — revisa los canales oficiales para el siguiente show.";
+      if (ticketBtn) ticketBtn.style.display = "none";
+      markForoCoronaPasado();
+      return;
+    }
+    const d = Math.floor(diff / 86_400_000);
+    const h = Math.floor((diff % 86_400_000) / 3_600_000);
+    const m = Math.floor((diff % 3_600_000) / 60_000);
+    const s = Math.floor((diff % 60_000) / 1000);
+    const p = (n: number) => String(n).padStart(2, "0");
+    text.textContent = `${p(d)} días : ${p(h)} : ${p(m)} : ${p(s)}`;
+  }
+  tick();
+  setInterval(tick, 1000);
+</script>

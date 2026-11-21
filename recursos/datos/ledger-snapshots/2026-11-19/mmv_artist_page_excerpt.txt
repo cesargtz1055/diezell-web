@@ -1,0 +1,37 @@
+    <title>Diezell - Spotify Statistics &amp; Monthly Listeners | Music Metrics Vault</title>
+  <meta name="description" content="Discover Diezell Spotify statistics: 44,147 monthly listeners, 16,525 followers, top tracks, and streaming analytics.">
+    <meta name="keywords" content="spotify analytics, artist statistics, monthly listeners, spotify followers, stream count, music metrics">
+ property="og:description" content="Discover Diezell Spotify statistics: 44,147 monthly listeners, 16,525 followers, top tracks, and streaming analytics.">
+name="twitter:description" content="Discover Diezell Spotify statistics: 44,147 monthly listeners, 16,525 followers, top tracks, and streaming analytics.">
+                        Last updated: 3 days ago
+                          <p class="text-sm font-medium text-gray-500 truncate">Monthly Listeners</p>
+                                                Monthly Listeners History
+                                            Track the evolution of monthly listeners over the last 28 days.
+              <!--[if BLOCK]><![endif]-->                    <div x-data="{ showFollowersModal: false }" class="bg-white rounded-xl shadow-sm border border-gray-100 p-5"
+                          <p class="text-sm font-medium text-gray-500 truncate">Followers</p>
+                                        @click="showFollowersModal = true"
+                            x-show="showFollowersModal"
+                            aria-labelledby="followers-modal-title"
+                                    x-show="showFollowersModal"
+                                    @click="showFollowersModal = false"
+                                    x-show="showFollowersModal"
+                                    @click.away="showFollowersModal = false"
+                            <h3 class="text-lg font-semibold text-gray-900" id="followers-modal-title">
+                                                Followers History
+                                                @click="showFollowersModal = false"
+                                            Track the evolution of followers over the last 28 days.
+                                            x-data="followersChart()"
+                                            x-effect="if (showFollowersModal) initChart(JSON.parse('[{\u0022date\u0022:\u00222026-10-22\u0022,\u0022fol
+lowers\u0022:16352},{\u0022date\u0022:\u00222026-10-23\u0022,\u0022followers\u0022:16360},{\u0022date\u0022:\u00222026-10-24\u0022,\u0022followers\u0022:163
+66},{\u0022date\u0022:\u00222026-10-25\u0022,\u0022followers\u0022:16371},{\u0022date\u0022:\u00222026-10-26\u0022,\u0022followers\u0022:163
+76},{\u0022date\u0022:\u00222026-10-27\u0022,\u0022followers\u0022:16382},{\u0022date\u0022:\u00222026-10-28\u0022,\u0022followers\u0022:163
+85},{\u0022date\u0022:\u00222026-10-29\u0022,\u0022followers\u0022:16390},{\u0022date\u0022:\u00222026-10-30\u0022,\u0022followers\u0022:164
+03},{\u0022date\u0022:\u00222026-10-31\u0022,\u0022followers\u0022:16409},{\u0022date\u0022:\u00222026-11-01\u0022,\u0022followers\u0022:164
+14},{\u0022date\u0022:\u00222026-11-02\u0022,\u0022followers\u0022:16421},{\u0022date\u0022:\u00222026-11-03\u0022,\u0022followers\u0022:164
+26},{\u0022date\u0022:\u00222026-11-05\u0022,\u0022followers\u0022:16437},{\u0022date\u0022:\u00222026-11-06\u0022,\u0022followers\u0022:164
+44},{\u0022date\u0022:\u00222026-11-07\u0022,\u0022followers\u0022:16454},{\u0022date\u0022:\u00222026-11-08\u0022,\u0022followers\u0022:164
+60},{\u0022date\u0022:\u00222026-11-09\u0022,\u0022followers\u0022:16471},{\u0022date\u0022:\u00222026-11-10\u0022,\u0022followers\u0022:164
+75},{\u0022date\u0022:\u00222026-11-11\u0022,\u0022followers\u0022:16485},{\u0022date\u0022:\u00222026-11-12\u0022,\u0022followers\u0022:164
+96},{\u0022date\u0022:\u00222026-11-13\u0022,\u0022followers\u0022:16502},{\u0022date\u0022:\u00222026-11-14\u0022,\u0022followers\u0022:165
+13},{\u0022date\u0022:\u00222026-11-15\u0022,\u0022followers\u0022:16525}]'))"
+  

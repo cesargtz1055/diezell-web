@@ -1,0 +1,117 @@
+---
+import { ALBUMS, SINGLES } from "../data/diezell";
+---
+
+<section id="discografia" class="m3-container py-24 md:py-36" aria-labelledby="titulo-discografia">
+  <div class="reveal">
+    <p class="m3-label-large text-primary">03 — Discografía</p>
+    <h2 id="titulo-discografia" class="m3-display-medium mt-4 text-on-surface">Dos discos.<br />Para cantar el desamor.</h2>
+  </div>
+
+  <!-- Tabs primarias M3: indicador animado, teclado con flechas -->
+  <div class="m3-tabs reveal mt-12" role="tablist" aria-label="Álbumes">
+    {ALBUMS.map((a, i) => (
+      <button
+        type="button"
+        role="tab"
+        aria-selected={i === 0 ? "true" : "false"}
+        aria-controls={`panel-${a.id}`}
+        id={`tab-${a.id}`}
+        tabindex={i === 0 ? 0 : -1}
+        data-tab={a.id}
+        class="m3-tab"
+      >
+        {a.titulo} · {a.fecha.split(" ").pop()}
+      </button>
+    ))}
+  </div>
+
+  {ALBUMS.map((a, i) => (
+    <div id={`panel-${a.id}`} role="tabpanel" aria-labelledby={`tab-${a.id}`} tabindex="0" data-panel={a.id} class={i === 0 ? "mt-10" : "mt-10 hidden"}>
+      <div class="grid gap-6 lg:grid-cols-5">
+        <div class="lg:col-span-2">
+          <figure class="card card--elevated card--large overflow-hidden">
+            <img
+              src={a.portada}
+              alt={a.portadaAlt}
+              width="640"
+              height="640"
+              loading="lazy"
+              class="block aspect-square w-full object-cover"
+            />
+            <figcaption class="m3-body-small px-5 py-4 text-on-surface-variant">
+              Portada oficial · Spotify{a.id === "insania" ? " — En la portada, INSANIA aparece invertido." : ""}
+            </figcaption>
+          </figure>
+          <p class="m3-body-medium mt-4 text-on-surface-variant">{a.concepto}</p>
+          <blockquote class="mt-5 border-l-2 border-primary pl-4">
+            <p class="m3-body-medium text-on-surface">“{a.prensa.cita}”</p>
+            <footer class="m3-body-small mt-2 text-on-surface-variant">
+              — {a.prensa.medio}, {a.prensa.fecha} ·
+              <a href={a.prensa.url} target="_blank" rel="noopener" class="text-primary underline underline-offset-4">Leer fuente ↗</a>
+            </footer>
+          </blockquote>
+          <p class="m3-headline-small mt-4 text-on-surface">{a.cita}</p>
+          <p class="mt-4">
+            <a href={a.spotify} target="_blank" rel="noopener" class="state-layer m3-label-large inline-flex min-h-12 items-center rounded-full px-4 text-primary">Abrir en Spotify ↗</a>
+          </p>
+        </div>
+        <div class="lg:col-span-3">
+          <p class="m3-label-medium text-on-surface-variant">{a.fecha} · {a.canciones} canciones · {a.duracionTotal}</p>
+          <ol class="card card--outlined mt-6 divide-y divide-outline-variant">
+            {a.tracks.map((t) => (
+              <li class="flex min-h-12 items-baseline justify-between gap-4 px-4 py-3">
+                <span class="m3-body-medium text-on-surface"><span class="mr-3 font-display text-on-surface-variant" aria-label={`Canción ${t.n}`}>{String(t.n).padStart(2, "0")}</span>{t.titulo}</span>
+                <span class="m3-body-small shrink-0 tabular-nums text-on-surface-variant">{t.duracion}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+    </div>
+  ))}
+
+  <div class="reveal mt-16">
+    <h3 class="m3-label-medium mb-5 text-on-surface-variant">Sencillos · antes y entre discos</h3>
+    <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {SINGLES.map((s) => (
+        <li class="card card--filled elevation-1 rounded-md p-5">
+          <p class="m3-title-small text-on-surface">{s.titulo}</p>
+          <p class="m3-body-small mt-1 text-on-surface-variant">{s.anio}</p>
+        </li>
+      ))}
+    </ul>
+    <p class="m3-body-small mt-4 text-on-surface-variant">Nombre del primer EP por confirmar: “La Tormenta Antes De La Calma” (Mr Indie, Monterrey Live) vs. “La Tormenta Después de la Calma” (cuentas fan). Tracklist no verificada.</p>
+  </div>
+</section>
+
+<script>
+  const tabs = Array.from(document.querySelectorAll<HTMLElement>("[data-tab]"));
+  const panels = document.querySelectorAll<HTMLElement>("[data-panel]");
+
+  function activate(tab: HTMLElement, focus = false) {
+    const id = tab.dataset.tab;
+    tabs.forEach((t) => {
+      const active = t === tab;
+      t.setAttribute("aria-selected", String(active));
+      t.tabIndex = active ? 0 : -1;
+      if (active && focus) t.focus();
+    });
+    panels.forEach((p) => p.classList.toggle("hidden", p.dataset.panel !== id));
+  }
+
+  tabs.forEach((tab, i) => {
+    tab.addEventListener("click", () => activate(tab));
+    tab.addEventListener("keydown", (e) => {
+      let next: number | null = null;
+      if (e.key === "ArrowRight") next = (i + 1) % tabs.length;
+      if (e.key === "ArrowLeft") next = (i - 1 + tabs.length) % tabs.length;
+      if (e.key === "Home") next = 0;
+      if (e.key === "End") next = tabs.length - 1;
+      if (next !== null) {
+        e.preventDefault();
+        activate(tabs[next], true);
+      }
+    });
+  });
+</script>

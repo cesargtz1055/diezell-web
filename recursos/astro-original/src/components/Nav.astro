@@ -1,0 +1,74 @@
+---
+import { LINKS } from "../data/diezell";
+---
+
+<!-- Top App Bar M3: surface-container + elevación 2, 64px, un solo título -->
+<header class="m3-appbar fixed inset-x-0 top-0 z-50">
+  <nav class="m3-container flex min-h-16 items-center justify-between gap-4 py-2" aria-label="Principal">
+    <a href="#inicio" class="display text-xl tracking-tight text-on-surface md:text-2xl" aria-label="Diezell — ir al inicio">
+      DIEZELL<span class="text-primary">.</span>
+    </a>
+
+    <ul class="hidden items-center gap-1 md:flex">
+      <li><a class="state-layer m3-label-large inline-flex min-h-12 items-center rounded-full px-4 text-on-surface-variant hover:text-on-surface" href="#inicio">Inicio</a></li>
+      <li><a class="state-layer m3-label-large inline-flex min-h-12 items-center rounded-full px-4 text-on-surface-variant hover:text-on-surface" href="#musica">Música</a></li>
+      <li><a class="state-layer m3-label-large inline-flex min-h-12 items-center rounded-full px-4 text-on-surface-variant hover:text-on-surface" href="#tour">Tour</a></li>
+      <li><a class="state-layer m3-label-large inline-flex min-h-12 items-center rounded-full px-4 text-on-surface-variant hover:text-on-surface" href="#banda">La banda</a></li>
+    </ul>
+
+    <div class="hidden items-center gap-1 md:flex">
+      <a href={LINKS.spotifyArtist} target="_blank" rel="noopener" class="state-layer m3-label-large inline-flex min-h-12 items-center rounded-full px-4 text-on-surface-variant hover:text-on-surface">Spotify ↗</a>
+      <a href={LINKS.instagram} target="_blank" rel="noopener" class="state-layer m3-label-large inline-flex min-h-12 items-center rounded-full px-4 text-on-surface-variant hover:text-on-surface">Instagram ↗</a>
+    </div>
+
+    <button
+      id="menu-btn"
+      type="button"
+      class="state-layer inline-flex min-h-12 min-w-12 items-center justify-center rounded-full text-on-surface md:hidden"
+      aria-expanded="false"
+      aria-controls="menu-movil"
+      aria-label="Abrir menú"
+    >
+      <span aria-hidden="true" class="text-xl leading-none">☰</span>
+      <span class="sr-only">Menú</span>
+    </button>
+  </nav>
+
+  <div id="menu-movil" class="card card--elevated mx-4 mb-4 hidden rounded-xl p-2 md:hidden">
+    <ul class="flex flex-col">
+      <li><a class="state-layer m3-label-large flex min-h-12 items-center rounded-lg px-4 text-on-surface" href="#inicio">Inicio</a></li>
+      <li><a class="state-layer m3-label-large flex min-h-12 items-center rounded-lg px-4 text-on-surface" href="#musica">Música</a></li>
+      <li><a class="state-layer m3-label-large flex min-h-12 items-center rounded-lg px-4 text-on-surface" href="#tour">Tour</a></li>
+      <li><a class="state-layer m3-label-large flex min-h-12 items-center rounded-lg px-4 text-on-surface" href="#banda">La banda</a></li>
+      <li><a class="state-layer m3-label-large flex min-h-12 items-center rounded-lg px-4 text-primary" href={LINKS.spotifyArtist} target="_blank" rel="noopener">Spotify ↗</a></li>
+      <li><a class="state-layer m3-label-large flex min-h-12 items-center rounded-lg px-4 text-primary" href={LINKS.instagram} target="_blank" rel="noopener">Instagram ↗</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- Navigation Bar M3 (móvil): barra inferior con indicador activo -->
+<nav class="m3-nav-bar" aria-label="Secciones">
+  <a href="#inicio" aria-current="page"><span class="nav-indicator" aria-hidden="true">⌂</span>Inicio</a>
+  <a href="#musica"><span class="nav-indicator" aria-hidden="true">♪</span>Música</a>
+  <a href="#tour"><span class="nav-indicator" aria-hidden="true">◉</span>Tour</a>
+  <a href="#banda"><span class="nav-indicator" aria-hidden="true">✦</span>Banda</a>
+</nav>
+
+<script>
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("menu-movil");
+  btn?.addEventListener("click", () => {
+    const open = menu?.classList.toggle("hidden");
+    btn.setAttribute("aria-expanded", String(!open));
+    btn.setAttribute("aria-label", open ? "Abrir menú" : "Cerrar menú");
+  });
+  menu?.querySelectorAll("a").forEach((a) =>
+    a.addEventListener("click", () => {
+      menu.classList.add("hidden");
+      if (btn) {
+        btn.setAttribute("aria-expanded", "false");
+        btn.setAttribute("aria-label", "Abrir menú");
+      }
+    })
+  );
+</script>

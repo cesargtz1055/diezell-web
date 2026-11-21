@@ -1,0 +1,85 @@
+---
+import { LINKS, STATS } from "../data/diezell";
+---
+
+<section id="inicio" data-hero class="relative flex min-h-svh flex-col justify-end overflow-hidden pb-10 pt-28" aria-labelledby="titulo-hero">
+  <!-- Línea decorativa fina -->
+  <svg
+    class="pointer-events-none absolute right-0 top-1/2 hidden h-[70vh] w-auto -translate-y-1/2 text-outline-variant md:block"
+    viewBox="0 0 120 600"
+    fill="none"
+    aria-hidden="true"
+  >
+    <path d="M60 10 C 30 90, 90 150, 60 230 C 30 310, 90 370, 60 450 C 40 510, 80 560, 60 590" stroke="currentColor" stroke-width="1" />
+    <circle cx="60" cy="10" r="3" fill="currentColor" class="text-inverse-primary" />
+    <circle cx="60" cy="230" r="2" stroke="currentColor" />
+    <circle cx="60" cy="450" r="2" stroke="currentColor" />
+  </svg>
+
+  <div class="m3-container w-full">
+    <p class="m3-label-medium text-on-surface-variant">Monterrey, México · Rock en español · Desde 2018</p>
+
+    <h1 id="titulo-hero" class="display mt-4 text-[clamp(4.5rem,18vw,15rem)] text-on-surface" aria-label="Diezell">
+      DIEZELL
+    </h1>
+
+    <div class="mt-2 flex flex-wrap items-end gap-x-8 gap-y-4">
+      <button
+        type="button"
+        data-flip
+        class="flip-word display cursor-pointer text-[clamp(2.6rem,9vw,7rem)] text-on-surface-variant"
+        title="Toca para girar: INSANIA / VINVSNI"
+        aria-label="INSANIA, al girar se lee VINVSNI"
+      >
+        INSANIA
+      </button>
+      <p class="m3-body-large max-w-xs pb-3 text-on-surface-variant md:pb-5">
+        El segundo álbum. Ya disponible.
+      </p>
+    </div>
+
+    <div class="mt-10 flex flex-wrap items-center gap-4">
+      <a href="#musica" class="btn btn-filled state-layer">Escuchar →</a>
+      <a
+        href={LINKS.youtubeVideoCuento}
+        target="_blank"
+        rel="noopener"
+        class="btn btn-tonal state-layer"
+      >
+        Ver video ↗
+      </a>
+      <span class="m3-label-medium text-on-surface-variant">28 nov 2025 · 10 canciones · 36:46</span>
+    </div>
+
+    <dl class="mt-14 grid grid-cols-2 gap-4 md:grid-cols-4">
+      <div class="card card--filled elevation-1 rounded-md p-4">
+        <dt class="m3-label-medium text-on-surface-variant">Spotify</dt>
+        <dd class="m3-headline-medium mt-2 text-on-surface">{STATS.spotifyOyentes}</dd>
+        <dd class="m3-body-small mt-1 text-on-surface-variant">oyentes mensuales</dd>
+      </div>
+      <div class="card card--filled elevation-1 rounded-md p-4">
+        <dt class="m3-label-medium text-on-surface-variant">YouTube</dt>
+        <dd class="m3-headline-medium mt-2 text-on-surface">{STATS.youtubeSubs}</dd>
+        <dd class="m3-body-small mt-1 text-on-surface-variant">suscriptores · @diezellmx</dd>
+      </div>
+      <div class="card card--filled elevation-1 rounded-md p-4">
+        <dt class="m3-label-medium text-on-surface-variant">TikTok</dt>
+        <dd class="m3-headline-medium mt-2 text-on-surface">{STATS.tiktokSeguidores}</dd>
+        <dd class="m3-body-small mt-1 text-on-surface-variant">seguidores · @diezellmx</dd>
+      </div>
+      <div class="card card--filled elevation-1 rounded-md p-4">
+        <dt class="m3-label-medium text-on-surface-variant">Instagram</dt>
+        <dd class="m3-headline-medium mt-2 text-on-surface">{STATS.instagramSeguidores}</dd>
+        <dd class="m3-body-small mt-1 text-on-surface-variant">seguidores · cifras al {STATS.fecha}</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- Marquee: una sola frase, como Bad Omens -->
+<div class="marquee border-y border-outline-variant py-3" aria-hidden="true">
+  <p class="marquee-track m3-label-medium text-on-surface-variant">
+    <span>Insania Tour 2026&nbsp;&nbsp;·&nbsp;&nbsp;Monterrey · Foro Corona · 13 nov&nbsp;&nbsp;·&nbsp;&nbsp;Sold out: Aguascalientes · Guadalajara · Toluca · Querétaro · Puebla · CDMX&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+    <span>Insania Tour 2026&nbsp;&nbsp;·&nbsp;&nbsp;Monterrey · Foro Corona · 13 nov&nbsp;&nbsp;·&nbsp;&nbsp;Sold out: Aguascalientes · Guadalajara · Toluca · Querétaro · Puebla · CDMX&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+  </p>
+</div>

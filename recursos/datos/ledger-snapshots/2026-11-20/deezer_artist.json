@@ -1,0 +1,16 @@
+{
+  "id": 134263372,
+  "name": "Diezell",
+  "link": "https://www.deezer.com/artist/134263372",
+  "share": "https://www.deezer.com/artist/134263372?utm_source=deezer&utm_content=artist-134263372&utm_term=0_1795222547&utm_medium=web",
+  "picture": "https://api.deezer.com/artist/134263372/image",
+  "picture_small": "https://cdn-images.dzcdn.net/images/artist/a2d94f75406e0ef2fa91c1641277ecad/56x56-000000-80-0-0.jpg",
+  "picture_medium": "https://cdn-images.dzcdn.net/images/artist/a2d94f75406e0ef2fa91c1641277ecad/250x250-000000-80-0-0.jpg",
+  "picture_big": "https://cdn-images.dzcdn.net/images/artist/a2d94f75406e0ef2fa91c1641277ecad/500x500-000000-80-0-0.jpg",
+  "picture_xl": "https://cdn-images.dzcdn.net/images/artist/a2d94f75406e0ef2fa91c1641277ecad/1000x1000-000000-80-0-0.jpg",
+  "nb_album": 13,
+  "nb_fan": 886,
+  "radio": true,
+  "tracklist": "https://api.deezer.com/artist/134263372/top?limit=50",
+  "type": "artist"
+}

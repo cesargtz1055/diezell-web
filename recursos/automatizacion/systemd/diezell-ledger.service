@@ -1,0 +1,19 @@
+[Unit]
+Description=Diezell — corte diario del archivo (ledger)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+# Sin esto el servicio no tiene proxy ni CA y todo HTTPS falla
+# (SSL WRONG_VERSION_NUMBER). /etc/environment trae el proxy de
+# salida de la VM y el bundle CA; no lleva contraseñas.
+EnvironmentFile=/etc/environment
+WorkingDirectory=/home/hatch/workspace/diezell-html/automatizacion
+ExecStart=/home/hatch/workspace/diezell-html/automatizacion/run_daily.sh
+User=root
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,42 @@
+=== CORTE DIARIO DIEZELL — 2026-11-18T06:42:00Z UTC / 2026-11-18 00:42 America/Mexico_City ===
+--- deezer.py ---
+[2026-11-18T00:42:25-06:00] FAIL deezer: URLError: <urlopen error timed out>
+--- youtube_rss.py ---
+[2026-11-18T00:42:52-06:00] FAIL youtube_rss: URLError: <urlopen error timed out>
+--- youtube_public.py ---
+[2026-11-18T00:43:18-06:00] FAIL youtube_public: URLError: <urlopen error timed out>
+--- youtube_video.py ---
+[2026-11-18T00:43:44-06:00]   video MuvgZpXqsY8: error al descargar: <urlopen error timed out>
+[2026-11-18T00:44:09-06:00]   video tIEk-WAnrLE: error al descargar: <urlopen error timed out>
+[2026-11-18T00:44:34-06:00]   video yUvkRgX-RC8: error al descargar: <urlopen error timed out>
+[2026-11-18T00:44:59-06:00]   video Vex7ibUYCGE: error al descargar: <urlopen error timed out>
+[2026-11-18T00:45:24-06:00]   video dHO9zYdvqRw: error al descargar: <urlopen error timed out>
+[2026-11-18T00:45:49-06:00]   video dW5nYoljAiw: error al descargar: <urlopen error timed out>
+[2026-11-18T00:46:14-06:00]   video frybXWNuNFM: error al descargar: <urlopen error timed out>
+[2026-11-18T00:46:39-06:00]   video fluD9OwLufg: error al descargar: <urlopen error timed out>
+[2026-11-18T00:46:39-06:00]   ningún video devolvió datos
+[2026-11-18T00:46:39-06:00] FAIL youtube_video: sin datos utilizables (ver log)
+--- tiktok_public.py ---
+[2026-11-18T00:47:05-06:00] FAIL tiktok_public: URLError: <urlopen error timed out>
+--- tiktok_tag.py ---
+[2026-11-18T00:47:31-06:00]   #Diezell: error al descargar: <urlopen error timed out>
+[2026-11-18T00:47:56-06:00]   #Caoticos: error al descargar: <urlopen error timed out>
+[2026-11-18T00:48:21-06:00]   #INSANIA: error al descargar: <urlopen error timed out>
+[2026-11-18T00:48:21-06:00]   ningún hashtag devolvió videos ni conteos parseables
+[2026-11-18T00:48:21-06:00] FAIL tiktok_tag: sin datos utilizables (ver log)
+--- instagram_public.py ---
+[2026-11-18T00:48:47-06:00]   Instagram web_profile_info: error: <urlopen error timed out>
+[2026-11-18T00:49:12-06:00]   Instagram página: error: <urlopen error timed out>
+[2026-11-18T00:49:12-06:00] FAIL instagram_public: sin datos utilizables (ver log)
+--- soundcloud.py ---
+[2026-11-18T00:49:39-06:00]   SoundCloud https://soundcloud.com/diezell: error: <urlopen error timed out>
+[2026-11-18T00:50:04-06:00]   SoundCloud https://soundcloud.com/diezellmx: error: <urlopen error timed out>
+[2026-11-18T00:50:29-06:00]   SoundCloud https://soundcloud.com/diezell-oficial: error: <urlopen error timed out>
+[2026-11-18T00:50:29-06:00]   SoundCloud: perfil de Diezell no localizado en ningún slug
+[2026-11-18T00:50:29-06:00] FAIL soundcloud: sin datos utilizables (ver log)
+--- reddit.py ---
+[2026-11-18T00:50:55-06:00]   Reddit https://www.reddit.com/search.json?q=Diezell&sort=new&limit=25: error: <urlopen error timed out>
+[2026-11-18T00:51:20-06:00]   Reddit https://api.reddit.com/search?q=Diezell&sort=new&limit=25: error: <urlopen error timed out>
+[2026-11-18T00:51:32-06:00]   Reddit https://old.reddit.com/search.json?q=Diezell&sort=new&limit=25: error: <urlopen error Remote end closed connection without response>
+[2026-11-18T00:51:32-06:00]   Reddit: ningún endpoint .json devolvió datos utilizables
+[2026-11-18T00:51:32-06:00] FAIL reddit: sin datos utilizables (ver log)

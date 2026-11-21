@@ -1,0 +1,608 @@
+@import "tailwindcss";
+
+/* ─── Material Design 3 · Material You — sobre la identidad DIEZELL ───
+   Un solo acento (rojo Diezell). La paleta negro / hueso no cambia de
+   identidad: se traduce a roles M3. En tema oscuro el primario es el tono
+   claro del mismo rojo (#E8AFAF) para que el contraste sea AA; el rojo
+   oscuro original #8E1B1B vive como primary-container oscuro e
+   inverse-primary. Sin colores nuevos. */
+@theme {
+  /* Roles de color M3 (tema oscuro) */
+  --color-primary: #e8afaf;
+  --color-on-primary: #3a0b0b;
+  --color-primary-container: #5e1515;
+  --color-on-primary-container: #f6d9d9;
+  --color-secondary: #c9c9c4;
+  --color-on-secondary: #171715;
+  --color-secondary-container: #2e2e2a;
+  --color-on-secondary-container: #edede8;
+  --color-tertiary: #8a8a85;
+  --color-on-tertiary: #171715;
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+  --color-surface: #0a0a0a;
+  --color-on-surface: #f2f0eb;
+  --color-surface-variant: #2e2e2a;
+  --color-on-surface-variant: #c9c9c4;
+  --color-surface-dim: #070707;
+  --color-surface-bright: #1e1e1c;
+  --color-surface-container-lowest: #070707;
+  --color-surface-container-low: #111110;
+  --color-surface-container: #1a1a18;
+  --color-surface-container-high: #242422;
+  --color-surface-container-highest: #2f2f2c;
+  --color-inverse-surface: #f2f0eb;
+  --color-inverse-on-surface: #0a0a0a;
+  --color-inverse-primary: #8e1b1b;
+  --color-outline: #757570;
+  --color-outline-variant: #2a2a2a;
+  --color-scrim: #000000;
+  --color-shadow: #000000;
+  /* Alias de identidad (apuntan a roles M3, no a hex sueltos) */
+  --color-ink: var(--color-surface);
+  --color-bone: var(--color-on-surface-variant);
+  --color-cream: var(--color-on-surface);
+  --color-muted: var(--color-on-surface-variant);
+  --color-blood: var(--color-inverse-primary);
+  --color-line: var(--color-outline-variant);
+
+  /* Tipografía M3: Fraunces SOLO display/headline, Archivo para el resto */
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Archivo", "Inter", system-ui, -apple-system, sans-serif;
+
+  /* Forma M3 (shape scale) */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 28px;
+  --radius-full: 999px;
+
+  /* Elevación M3 (niveles 0–5): sombra + tinte de superficie */
+  --shadow-m3-1: 0 1px 2px rgb(0 0 0 / 0.3), 0 1px 3px 1px rgb(0 0 0 / 0.15);
+  --shadow-m3-2: 0 1px 2px rgb(0 0 0 / 0.3), 0 2px 6px 2px rgb(0 0 0 / 0.15);
+  --shadow-m3-3: 0 1px 3px rgb(0 0 0 / 0.3), 0 4px 8px 3px rgb(0 0 0 / 0.15);
+  --shadow-m3-4: 0 2px 3px rgb(0 0 0 / 0.3), 0 6px 10px 4px rgb(0 0 0 / 0.15);
+  --shadow-m3-5: 0 4px 4px rgb(0 0 0 / 0.3), 0 8px 12px 6px rgb(0 0 0 / 0.15);
+
+  /* Motion M3 */
+  --ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --ease-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
+  --ease-emphasized-accelerate: cubic-bezier(0.3, 0, 0.8, 0.15);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  background: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* La Navigation Bar móvil ocupa el borde inferior: reserva su altura */
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 80px;
+  }
+}
+
+::selection {
+  background: var(--color-primary-container);
+  color: var(--color-on-primary-container);
+}
+
+/* ─── Escala tipográfica M3 ─── */
+.m3-display-large {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(3.5rem, 11vw, 7rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.m3-display-medium {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.75rem, 7vw, 4.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+}
+.m3-display-small {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.25rem, 6vw, 3.25rem);
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+.m3-headline-large {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+.m3-headline-medium {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+.m3-headline-small {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+.m3-title-large {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1.375rem;
+  line-height: 1.27;
+  letter-spacing: 0;
+}
+.m3-title-medium {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+.m3-title-small {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01em;
+}
+.m3-body-large {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
+.m3-body-medium {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.02em;
+}
+.m3-body-small {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.33;
+  letter-spacing: 0.03em;
+}
+.m3-label-large {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01em;
+}
+.m3-label-medium {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+}
+.m3-label-small {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.6875rem;
+  line-height: 1.45;
+  letter-spacing: 0.05em;
+}
+/* Alias heredados: .display = Display, .label = Label Large en versales */
+.display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 0.92;
+  letter-spacing: -0.01em;
+}
+.label {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+/* ─── Layout M3: márgenes/gutters compact 16 / medium 24 / expanded 32 ─── */
+.m3-container {
+  margin-inline: auto;
+  max-width: 80rem; /* 1280px */
+  padding-inline: 1rem;
+}
+@media (min-width: 600px) {
+  .m3-container {
+    padding-inline: 1.5rem;
+  }
+}
+@media (min-width: 840px) {
+  .m3-container {
+    padding-inline: 2rem;
+  }
+}
+.m3-divider {
+  height: 1px;
+  background: var(--color-outline-variant);
+  border: 0;
+}
+
+/* ─── Focus visible M3: outline 2px primary ─── */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
+}
+
+/* Skip link M3 */
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: -100%;
+  z-index: 100;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  transition: top 200ms var(--ease-emphasized);
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ─── State layer M3 (hover 8% · focus 12% · pressed 12%) ─── */
+.state-layer {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.state-layer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  opacity: 0;
+  transition: opacity 200ms var(--ease-emphasized);
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: -1;
+}
+.state-layer:hover::after {
+  opacity: 0.08;
+}
+.state-layer:focus-visible::after {
+  opacity: 0.12;
+}
+.state-layer:active::after {
+  opacity: 0.12;
+}
+
+/* ─── Botones M3: mínimo 48dp, forma full, un CTA primario por pantalla ─── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 3rem; /* 48dp */
+  min-width: 3rem;
+  padding: 0.625rem 1.5rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition:
+    background-color 200ms var(--ease-emphasized),
+    color 200ms var(--ease-emphasized),
+    border-color 200ms var(--ease-emphasized),
+    box-shadow 200ms var(--ease-emphasized),
+    transform 200ms var(--ease-emphasized);
+}
+.btn-filled {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  box-shadow: var(--shadow-m3-1);
+}
+.btn-filled:hover {
+  box-shadow: var(--shadow-m3-2);
+}
+.btn-tonal {
+  background: var(--color-secondary-container);
+  color: var(--color-on-secondary-container);
+}
+.btn-outlined {
+  background: transparent;
+  border-color: var(--color-outline);
+  color: var(--color-primary);
+}
+.btn-outlined:hover {
+  border-color: var(--color-primary);
+}
+.btn-on-inverse {
+  background: var(--color-inverse-on-surface);
+  color: var(--color-inverse-surface);
+}
+.btn:disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ─── Chips M3 ─── */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  min-height: 2rem;
+  padding: 0.375rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-outline);
+  background: transparent;
+  color: var(--color-on-surface);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01em;
+}
+.chip--selected {
+  background: var(--color-secondary-container);
+  color: var(--color-on-secondary-container);
+  border-color: transparent;
+}
+.chip--primary {
+  background: var(--color-primary-container);
+  color: var(--color-on-primary-container);
+  border-color: transparent;
+}
+.chip--tonal {
+  background: var(--color-secondary-container);
+  color: var(--color-on-secondary-container);
+  border-color: transparent;
+}
+.chip--muted {
+  color: var(--color-on-surface-variant);
+  border-color: var(--color-outline-variant);
+}
+
+/* ─── Tarjetas M3 ─── */
+.card {
+  border-radius: var(--radius-md);
+  background: var(--color-surface-container);
+  color: var(--color-on-surface);
+}
+.card--filled {
+  background: var(--color-surface-container-highest);
+}
+.card--elevated {
+  background: var(--color-surface-container-low);
+  box-shadow: var(--shadow-m3-2);
+}
+.card--outlined {
+  background: var(--color-surface);
+  border: 1px solid var(--color-outline-variant);
+}
+.card--large {
+  border-radius: var(--radius-lg);
+}
+.card--xl {
+  border-radius: var(--radius-xl);
+}
+
+/* Elevación M3 por niveles */
+.elevation-0 { box-shadow: none; }
+.elevation-1 { box-shadow: var(--shadow-m3-1); }
+.elevation-2 { box-shadow: var(--shadow-m3-2); }
+.elevation-3 { box-shadow: var(--shadow-m3-3); }
+.elevation-4 { box-shadow: var(--shadow-m3-4); }
+.elevation-5 { box-shadow: var(--shadow-m3-5); }
+
+/* ─── Tabs primarias M3 ─── */
+.m3-tabs {
+  display: flex;
+  gap: 0.25rem;
+  border-bottom: 1px solid var(--color-outline-variant);
+}
+.m3-tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem; /* 48dp */
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full) var(--radius-full) 0 0;
+  background: transparent;
+  border: 0;
+  color: var(--color-on-surface-variant);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: color 200ms var(--ease-emphasized), background-color 200ms var(--ease-emphasized);
+}
+.m3-tab:hover {
+  background: rgb(232 175 175 / 0.08);
+  color: var(--color-on-surface);
+}
+.m3-tab[aria-selected="true"] {
+  color: var(--color-primary);
+}
+.m3-tab[aria-selected="true"]::after {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: -1px;
+  height: 3px;
+  border-radius: 3px 3px 0 0;
+  background: var(--color-primary);
+}
+
+/* ─── Top App Bar M3 ─── */
+.m3-appbar {
+  background: var(--color-surface-container);
+  box-shadow: var(--shadow-m3-2);
+}
+
+/* ─── Navigation Bar M3 (móvil, inferior) ─── */
+.m3-nav-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-around;
+  min-height: 5rem; /* 80px con etiqueta */
+  padding-bottom: env(safe-area-inset-bottom);
+  background: var(--color-surface-container);
+  box-shadow: var(--shadow-m3-3);
+}
+.m3-nav-bar a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  flex: 1;
+  min-height: 3rem;
+  padding: 0.75rem 0.25rem 0.5rem;
+  color: var(--color-on-surface-variant);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  border-radius: var(--radius-md);
+}
+.m3-nav-bar a .nav-indicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 4rem;
+  height: 2rem;
+  padding-inline: 1rem;
+  border-radius: var(--radius-full);
+  font-size: 1.125rem;
+  line-height: 1;
+  transition: background-color 200ms var(--ease-emphasized);
+}
+.m3-nav-bar a[aria-current="page"] {
+  color: var(--color-on-surface);
+}
+.m3-nav-bar a[aria-current="page"] .nav-indicator {
+  background: var(--color-secondary-container);
+  color: var(--color-on-secondary-container);
+}
+@media (min-width: 768px) {
+  .m3-nav-bar {
+    display: none;
+  }
+}
+
+/* ─── Skeleton M3 (estado de carga de embeds) ─── */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-surface-container-high);
+  border-radius: var(--radius-md);
+}
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgb(242 240 235 / 0.08),
+    transparent
+  );
+  animation: skeleton-shimmer 1.6s var(--ease-emphasized) infinite;
+}
+@keyframes skeleton-shimmer {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}
+
+/* ─── Reveal M3: fade + slide corto, easing enfatizado ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 400ms var(--ease-emphasized),
+    transform 400ms var(--ease-emphasized);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Flip INSANIA -> VINVSNI: rotación 180°, easing M3, 500ms */
+.flip-word {
+  display: inline-block;
+  transition: transform 500ms var(--ease-emphasized);
+  will-change: transform;
+}
+.flip-word.is-flipped {
+  transform: rotate(180deg);
+}
+
+/* Marquee de una sola frase */
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee-track {
+  display: inline-block;
+  animation: marquee 28s linear infinite;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .flip-word {
+    transition: none;
+  }
+  .marquee-track,
+  .skeleton::after {
+    animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

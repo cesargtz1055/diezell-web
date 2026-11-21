@@ -1,0 +1,36 @@
+            Listeners
+            Scrobbles
+s="artist-header-featured-items-item-aux-text artist-header-featured-items-item-listeners">
+            13 listeners
+            Listeners
+            Scrobbles
+            <ul class="catalogue-callout-listeners">
+                    <th>Listeners</th>
+                13 <span class="stat-name">listeners</span>
+                9 <span class="stat-name">listeners</span>
+                9 <span class="stat-name">listeners</span>
+                9 <span class="stat-name">listeners</span>
+                9 <span class="stat-name">listeners</span>
+                8 <span class="stat-name">listeners</span>
+                7 <span class="stat-name">listeners</span>
+                7 <span class="stat-name">listeners</span>
+                6 <span class="stat-name">listeners</span>
+                6 <span class="stat-name">listeners</span>
+        <p class="artist-top-albums-item-aux-text artist-top-albums-item-listeners">
+            1,353 listeners
+        <p class="artist-top-albums-item-aux-text artist-top-albums-item-listeners">
+            776 listeners
+        <p class="artist-top-albums-item-aux-text artist-top-albums-item-listeners">
+            482 listeners
+        <p class="artist-top-albums-item-aux-text artist-top-albums-item-listeners">
+            411 listeners
+                            <th>Listeners</th>
+-overview-similar-artists-item-aux-text catalogue-overview-similar-artists-item-listeners">
+            4,915 listeners
+-overview-similar-artists-item-aux-text catalogue-overview-similar-artists-item-listeners">
+            5,348 listeners
+-overview-similar-artists-item-aux-text catalogue-overview-similar-artists-item-listeners">
+            5,068 listeners
+-overview-similar-artists-item-aux-text catalogue-overview-similar-artists-item-listeners">
+            5,522 listeners
+                            <th>Listeners</th>
