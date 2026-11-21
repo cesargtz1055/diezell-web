@@ -44,6 +44,38 @@ def check(root: Path) -> list[str]:
         require('id="dz3-sheet-spotify"' in html and
                 'id="dz3-sheet-youtube"' in html,
                 f"{page.relative_to(root)}: missing platform links")
+    # Catch broken local assets before a Pages deployment. Resolve paths relative
+    # to each HTML document, not the repository root (song pages are nested).
+    from html.parser import HTMLParser
+    from urllib.parse import unquote, urlsplit
+    class LocalAssets(HTMLParser):
+        def __init__(self, page):
+            super().__init__(convert_charrefs=True)
+            self.page = page
+        def handle_starttag(self, tag, attrs):
+            values = dict(attrs)
+            key = 'src' if tag in ('script', 'img', 'audio', 'source') else 'href' if tag == 'link' else None
+            if not key or not values.get(key):
+                return
+            value = values[key].strip()
+            if value.startswith(('data:', '//', '#')):
+                return
+            parts = urlsplit(value)
+            if parts.scheme or parts.netloc:
+                return
+            pathname = unquote(parts.path)
+            if not pathname or pathname.startswith('/'):
+                return  # absolute Pages paths are checked by browser smoke tests
+            asset = (self.page.parent / pathname).resolve()
+            try:
+                asset.relative_to(root)
+            except ValueError:
+                require(False, f'{self.page.relative_to(root)}: asset escapes site: {value}')
+                return
+            require(asset.is_file(), f'{self.page.relative_to(root)}: missing asset {value}')
+    for page in [root / 'index.html', root / 'escuchar.html', *pages]:
+        if page.is_file():
+            LocalAssets(page).feed(page.read_text(encoding='utf-8'))
     # Every song page must also survive under /nuevo/, not only at the root.
     for page in pages:
         counterpart = root / "nuevo" / "canciones" / page.name
