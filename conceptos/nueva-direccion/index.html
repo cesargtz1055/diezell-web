@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diezell — Archivo de música y conciertos · Prototipo de portada</title>
+<meta name="description" content="Prototipo visual de portada para el sitio de Diezell, banda de pop punk de Monterrey. INSANIA (28 nov 2025), Caótico (29 sep 2023) y el archivo del Insania Tour 2026.">
+<style>
+/* ============================================================
+   DIEZELL — Prototipo de portada · Dirección «Papel / Archivo INSANIA»
+   Papel claro, serif editorial, acento azul petróleo de la luz
+   de escenario real. Sin librerías. Tipografía Fraunces
+   autocontenida (fonts/). Sin peticiones externas.
+   ============================================================ */
+@font-face{
+  font-family:"Fraunces"; font-style:normal; font-weight:400;
+  font-display:swap;
+  src:url("fonts/latin-400-normal.woff2") format("woff2");
+}
+@font-face{
+  font-family:"Fraunces"; font-style:italic; font-weight:400;
+  font-display:swap;
+  src:url("fonts/latin-400-italic.woff2") format("woff2");
+}
+@font-face{
+  font-family:"Fraunces"; font-style:normal; font-weight:600;
+  font-display:swap;
+  src:url("fonts/latin-600-normal.woff2") format("woff2");
+}
+@font-face{
+  font-family:"Fraunces"; font-style:normal; font-weight:900;
+  font-display:swap;
+  src:url("fonts/latin-900-normal.woff2") format("woff2");
+}
+
+:root{
+  --paper:#f3f0e8;
+  --paper-2:#eae6d9;
+  --ink:#1a1712;
+  --ink-2:#57503f;
+  --line:#cfc7b2;
+  --line-strong:#1a1712;
+  --blue:#0e5a72;        /* azul petróleo: de la luz azul de las fotos en vivo */
+  --blue-ink:#0a4254;
+  --blue-light:#8fc7d8;  /* solo sobre fondo oscuro */
+  --serif:"Fraunces", Georgia, "Times New Roman", serif;
+  --sans:system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --wrap:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:17px; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block; max-width:100%; height:auto}
+a{color:var(--blue); text-decoration-thickness:1px; text-underline-offset:3px}
+a:hover{color:var(--blue-ink)}
+:focus-visible{outline:3px solid var(--blue); outline-offset:2px}
+.wrap{max-width:var(--wrap); margin:0 auto; padding:0 20px}
+::selection{background:var(--blue); color:var(--paper)}
+
+/* ---------- skip link ---------- */
+.skip-link{
+  position:absolute; left:16px; top:-60px; z-index:60;
+  background:var(--ink); color:var(--paper); padding:10px 16px;
+  font:600 14px var(--sans); text-decoration:none;
+}
+.skip-link:focus{top:12px; color:var(--paper)}
+
+/* ---------- dateline + masthead ---------- */
+.dateline{
+  border-top:3px solid var(--line-strong); border-bottom:1px solid var(--line);
+  font:600 11px/1.5 var(--sans); letter-spacing:.14em; text-transform:uppercase;
+  color:var(--ink-2); padding:8px 0;
+}
+.dateline .wrap{display:flex; flex-wrap:wrap; gap:4px 24px; justify-content:space-between}
+.masthead{border-bottom:1px solid var(--line-strong); padding:14px 0}
+.masthead .wrap{display:flex; align-items:center; justify-content:space-between; gap:16px}
+.wordmark{
+  font:900 26px/1 var(--serif); letter-spacing:.22em; color:var(--ink);
+  text-decoration:none; white-space:nowrap;
+}
+.wordmark small{font:600 11px var(--sans); letter-spacing:.28em; color:var(--blue); vertical-align:super}
+.nav{display:flex; gap:4px 26px; flex-wrap:wrap}
+.nav a{
+  font:600 13px var(--sans); letter-spacing:.12em; text-transform:uppercase;
+  color:var(--ink); text-decoration:none; padding:6px 2px;
+  border-bottom:2px solid transparent;
+}
+.nav a:hover{border-bottom-color:var(--blue); color:var(--blue)}
+.menu-btn{
+  display:none; font:600 13px var(--sans); letter-spacing:.12em; text-transform:uppercase;
+  background:none; border:1.5px solid var(--ink); color:var(--ink);
+  padding:9px 14px; cursor:pointer; min-height:44px;
+}
+.menu-btn[aria-expanded="true"]{background:var(--ink); color:var(--paper)}
+
+/* ---------- hero ---------- */
+.hero{padding:28px 0 8px}
+.hero-grid{display:grid; gap:24px}
+.hero-foto{margin:0}
+.hero-foto img{width:100%; aspect-ratio:4/5; object-fit:cover; object-position:50% 20%}
+figcaption{
+  font:400 12.5px/1.5 var(--sans); color:var(--ink-2);
+  padding-top:8px; border-top:1px solid var(--line); margin-top:8px;
+}
+figcaption strong{color:var(--ink); font-weight:600}
+.kicker{
+  font:600 12px var(--sans); letter-spacing:.22em; text-transform:uppercase;
+  color:var(--blue); margin:0 0 10px;
+}
+.kicker .dot{color:var(--ink-2); font-weight:400}
+.hero h1{
+  font:900 clamp(52px, 14vw, 60px)/0.95 var(--serif);
+  letter-spacing:.04em; margin:0 0 6px; text-wrap:balance;
+}
+.hero .sub-titulo{
+  font:600 clamp(21px, 4.5vw, 30px)/1.25 var(--serif); margin:0 0 14px;
+}
+.standfirst{font-size:18px; line-height:1.55; color:var(--ink-2); margin:0 0 20px; max-width:34em}
+.standfirst strong{color:var(--ink)}
+.cta-row{display:flex; flex-wrap:wrap; gap:12px; margin:0 0 18px}
+.btn{
+  display:inline-block; font:600 14px var(--sans); letter-spacing:.06em;
+  padding:13px 20px; min-height:48px; text-decoration:none; cursor:pointer;
+  border:1.5px solid var(--ink);
+}
+.btn-solid{background:var(--ink); color:var(--paper)}
+.btn-solid:hover{background:var(--blue); border-color:var(--blue); color:var(--paper)}
+.btn-line{background:transparent; color:var(--ink)}
+.btn-line:hover{border-color:var(--blue); color:var(--blue)}
+.actividad{
+  border-top:1px solid var(--line); padding-top:12px;
+  font-size:14.5px; color:var(--ink-2); max-width:34em;
+}
+.actividad b{color:var(--ink)}
+.actividad .sold{color:var(--blue); font-weight:700; letter-spacing:.08em; font-size:12px; text-transform:uppercase}
+
+/* ---------- índice ---------- */
+.indice{padding:26px 0 6px}
+.indice ol{list-style:none; margin:0; padding:0; border-top:1px solid var(--line-strong)}
+.indice li{border-bottom:1px solid var(--line)}
+.indice a{
+  display:grid; grid-template-columns:44px 1fr auto auto; gap:14px; align-items:baseline;
+  padding:14px 0; color:var(--ink); text-decoration:none;
+}
+.indice a:hover .indice-titulo{color:var(--blue)}
+.indice-num{font:600 13px var(--sans); color:var(--blue); letter-spacing:.1em}
+.indice-titulo{font:600 20px var(--serif)}
+.indice-desc{font-size:13.5px; color:var(--ink-2)}
+.indice-flecha{font-size:18px; color:var(--ink-2)}
+
+/* ---------- secciones ---------- */
+section.bloque{padding:44px 0 8px}
+.sec-head{border-top:3px solid var(--line-strong); padding-top:14px; margin-bottom:22px}
+.sec-head h2{font:600 clamp(30px, 6vw, 44px)/1.1 var(--serif); margin:2px 0 6px}
+.sec-head p{margin:0; color:var(--ink-2); max-width:38em}
+.sec-head .kicker{margin:0}
+
+/* cita editorial */
+.pull{
+  margin:0 0 26px; padding:22px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+}
+.pull blockquote{
+  margin:0; font:italic 400 clamp(22px, 4.5vw, 30px)/1.35 var(--serif);
+}
+.pull cite{display:block; margin-top:10px; font:600 12px var(--sans); letter-spacing:.14em; text-transform:uppercase; color:var(--ink-2); font-style:normal}
+
+/* disco */
+.disco-grid{display:grid; gap:26px}
+.portada{margin:0}
+.portada img{width:100%; aspect-ratio:1; object-fit:cover}
+.disco h3{font:600 24px var(--serif); margin:0 0 4px}
+.disco .meta{font:600 12.5px var(--sans); letter-spacing:.12em; text-transform:uppercase; color:var(--ink-2); margin:0 0 14px}
+.disco p{margin:0 0 14px}
+.nota-vinvsni{
+  border-left:3px solid var(--blue); padding:2px 0 2px 14px; margin:0 0 18px;
+  font-size:15px; color:var(--ink-2);
+}
+.nota-vinvsni b{color:var(--ink)}
+.tracklist{list-style:none; margin:0 0 18px; padding:0; border-top:1px solid var(--line)}
+.tracklist li{
+  display:flex; justify-content:space-between; gap:16px;
+  padding:9px 0; border-bottom:1px solid var(--line); font-size:15.5px;
+}
+.tracklist .n{color:var(--ink-2); font:600 13px var(--sans); width:24px; flex:none; padding-top:2px}
+.tracklist .t{flex:1}
+.tracklist .d{color:var(--ink-2); font-variant-numeric:tabular-nums; white-space:nowrap}
+.caotico-mini{display:flex; gap:14px; align-items:center; border-top:1px solid var(--line); padding-top:16px}
+.caotico-mini img{width:76px; height:76px; object-fit:cover; flex:none}
+.caotico-mini p{margin:0; font-size:14.5px}
+.caotico-mini strong{font-family:var(--serif); font-size:17px}
+
+/* en vivo */
+.gira{width:100%; border-collapse:collapse; margin:0 0 20px; font-size:15px}
+.gira caption{text-align:left; font:600 12px var(--sans); letter-spacing:.14em; text-transform:uppercase; color:var(--ink-2); padding-bottom:8px}
+.gira th,.gira td{padding:10px 8px 10px 0; border-bottom:1px solid var(--line); text-align:left; vertical-align:top}
+.gira th{font:600 11.5px var(--sans); letter-spacing:.14em; text-transform:uppercase; color:var(--ink-2)}
+.gira .fecha{white-space:nowrap; font-variant-numeric:tabular-nums}
+.gira .estado{font:700 11.5px var(--sans); letter-spacing:.1em; text-transform:uppercase; color:var(--blue); white-space:nowrap}
+.gira .cierre{color:var(--ink)}
+.gira-fotos{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+.gira-fotos figure{margin:0}
+.gira-fotos img{width:100%; aspect-ratio:4/5; object-fit:cover}
+.gira-fotos figure:nth-child(2) img{aspect-ratio:4/3}
+.aviso{font-size:14.5px; color:var(--ink-2); border-top:1px solid var(--line); padding-top:12px}
+
+/* banda */
+.banda-lista{list-style:none; margin:0 0 22px; padding:0; border-top:1px solid var(--line-strong)}
+.banda-lista li{display:grid; grid-template-columns:1fr auto; gap:6px 16px; padding:14px 0; border-bottom:1px solid var(--line); align-items:baseline}
+.banda-lista .nombre{font:600 23px var(--serif)}
+.banda-lista .rol{font:600 12px var(--sans); letter-spacing:.12em; text-transform:uppercase; color:var(--blue)}
+.banda-fotos{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+.banda-fotos figure{margin:0}
+.banda-fotos img{width:100%; aspect-ratio:4/5; object-fit:cover}
+.origen{margin:22px 0 0; font:italic 400 20px/1.5 var(--serif); max-width:34em}
+.origen cite{display:block; margin-top:8px; font:600 12px var(--sans); letter-spacing:.14em; text-transform:uppercase; color:var(--ink-2); font-style:normal}
+
+/* caóticos */
+.caoticos-grid{display:grid; gap:22px}
+.caoticos-lema{font:900 clamp(30px, 6.5vw, 52px)/1.08 var(--serif); margin:0 0 12px; text-wrap:balance}
+.caoticos-lema em{color:var(--blue); font-style:normal}
+.caoticos-foto{margin:0}
+.caoticos-foto img{width:100%; aspect-ratio:4/5; object-fit:cover; object-position:50% 18%}
+
+/* números */
+.cifras{display:grid; gap:0; border-top:1px solid var(--line-strong)}
+.cifra{padding:18px 0; border-bottom:1px solid var(--line)}
+.cifra .num{font:900 clamp(34px, 7vw, 52px)/1 var(--serif); font-variant-numeric:tabular-nums}
+.cifra .num small{font-size:.5em; font-weight:600}
+.cifra p{margin:6px 0 0; color:var(--ink-2); font-size:14.5px}
+.cifra p b{color:var(--ink)}
+
+/* footer */
+footer{background:var(--ink); color:var(--paper); margin-top:56px; padding:36px 0 28px}
+footer .wrap{display:grid; gap:26px}
+footer h2{font:900 22px var(--serif); letter-spacing:.18em; margin:0 0 4px}
+footer p{margin:0 0 10px; color:#cfc9b8; font-size:14.5px}
+footer a{color:var(--blue-light)}
+footer a:hover{color:var(--paper)}
+footer ul{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:6px 20px}
+footer ul a{font:600 13px var(--sans); letter-spacing:.1em; text-transform:uppercase; text-decoration:none}
+footer .creditos{font-size:12.5px; color:#9a937e; border-top:1px solid #3a352a; padding-top:14px}
+footer .creditos a{color:#cfc9b8}
+
+/* reveal sutil: SOLO cuando JS está activo (mejora progresiva:
+   sin JS el contenido siempre es visible) */
+html.js .reveal{opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease}
+html.js .reveal.in{opacity:1; transform:none}
+
+/* ---------- ≥760px ---------- */
+@media (min-width:760px){
+  .hero-grid{grid-template-columns:7fr 5fr; gap:36px; align-items:start}
+  .hero-foto{order:2}
+  .hero-texto{order:1; padding-top:8px}
+  .hero h1{font-size:clamp(54px, 8.2vw, 104px); letter-spacing:.05em}
+  .disco-grid{grid-template-columns:5fr 7fr; gap:36px}
+  .caoticos-grid{grid-template-columns:7fr 5fr; gap:36px; align-items:start}
+  .cifras{grid-template-columns:1fr 1fr; gap:36px}
+  .cifra:first-child{border-right:1px solid var(--line); padding-right:36px}
+  footer .wrap{grid-template-columns:1.2fr 1fr; gap:40px}
+}
+
+/* ---------- ≥1024px ---------- */
+@media (min-width:1024px){
+  .hero{padding:44px 0 12px}
+  section.bloque{padding:60px 0 12px}
+  .hero h1{letter-spacing:.1em}
+}
+
+/* ---------- menú móvil ---------- */
+@media (max-width:759px){
+  .dateline{display:none}
+  .hero{padding-top:16px}
+  .hero .sub-titulo{margin-bottom:10px}
+  .kicker{margin-bottom:8px}
+  .standfirst{margin-bottom:14px}
+  .menu-btn{display:inline-block}
+  .nav{
+    display:none; position:absolute; top:100%; left:0; right:0; z-index:50;
+    background:var(--paper); border-bottom:3px solid var(--line-strong);
+    flex-direction:column; gap:0; padding:8px 20px 14px;
+  }
+  .nav.open{display:flex}
+  .nav a{padding:13px 0; border-bottom:1px solid var(--line); font-size:15px}
+  .masthead{position:relative}
+  /* en móvil la foto del hero es más baja (16/10) para que banda + música +
+     actividad quepan en el primer viewport; el rostro queda arriba */
+  .hero-foto img{aspect-ratio:16/10; object-position:50% 12%}
+  /* en móvil las fotos de la gira van apiladas a ancho completo:
+     a dos columnas quedan demasiado pequeñas para apreciarse */
+  .gira-fotos{grid-template-columns:1fr}
+  .gira-fotos figure:nth-child(2) img{aspect-ratio:4/3}
+  /* la tabla de la gira se comprime en móvil: columnas fijas y letra menor */
+  .gira{font-size:13.5px; table-layout:fixed}
+  .gira .fecha{white-space:normal}
+  .gira .estado{white-space:normal}
+  .gira th,.gira td{padding:8px 6px 8px 0; overflow-wrap:break-word; hyphens:auto}
+  .gira th:nth-child(1),.gira td:nth-child(1){width:23%}
+  .gira th:nth-child(2),.gira td:nth-child(2){width:25%}
+  .gira th:nth-child(3),.gira td:nth-child(3){width:32%}
+  .gira th:nth-child(4),.gira td:nth-child(4){width:20%}
+  .indice a{grid-template-columns:34px 1fr auto auto}
+  .indice-desc{display:none}
+}
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  html.js .reveal{opacity:1; transform:none; transition:none}
+  *,*::before,*::after{animation-duration:.01ms !important; transition-duration:.01ms !important}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<header>
+  <div class="dateline">
+    <div class="wrap">
+      <span>Monterrey, Nuevo León</span>
+      <span>Pop punk · Proyecto original desde 2018</span>
+      <span>Archivo de fans</span>
+    </div>
+  </div>
+  <div class="masthead">
+    <div class="wrap">
+      <a class="wordmark" href="index.html">DIEZELL<small> · MX</small></a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-principal">Menú</button>
+      <nav class="nav" id="nav-principal" aria-label="Navegación principal">
+        <a href="escuchar.html">Música</a>
+        <a href="en-vivo.html">En vivo</a>
+        <a href="banda.html">Banda</a>
+        <a href="caoticos.html">Caóticos</a>
+        <a href="crecimiento.html">Números</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-labelledby="titulo-principal">
+    <div class="wrap hero-grid">
+      <figure class="hero-foto">
+        <img src="images/en-vivo-insania.jpg" alt="René Guzmán cantando en vivo con guitarra acústica, bajo haces de luz azul" width="1200" height="1500" fetchpriority="high">
+        <figcaption><strong>René Guzmán en vivo, bajo las luces azules.</strong><br>Foto: Balleza Photography, Behance, 9 feb 2026. <a href="https://www.behance.net/gallery/243838225/Diezell-INSANIA" target="_blank" rel="noopener">Fuente ↗</a></figcaption>
+      </figure>
+      <div class="hero-texto">
+        <p class="kicker">Pop punk <span class="dot">·</span> Monterrey</p>
+        <h1 id="titulo-principal">DIEZELL</h1>
+        <p class="sub-titulo">El segundo álbum ya suena: INSANIA</p>
+        <p class="standfirst">Banda de Monterrey formada como proyecto original en <strong>2018</strong>. Su segundo álbum, <strong>INSANIA</strong>, salió el <strong>28 de noviembre de 2025</strong>. El <strong>Insania Tour 2026</strong> recorrió <strong>9 ciudades</strong> y cerró el <strong>13 de noviembre</strong> en Foro Corona, Monterrey.</p>
+        <div class="cta-row">
+          <a class="btn btn-solid" href="https://open.spotify.com/album/3LGm9FVg9cswGMo5YneJ88" target="_blank" rel="noopener">Escuchar INSANIA en Spotify ↗</a>
+          <a class="btn btn-line" href="en-vivo.html">Archivo en vivo</a>
+        </div>
+        <p class="actividad">Último concierto registrado: <b>13 nov 2026 · Foro Corona, Monterrey</b> — cierre de gira. <span class="sold">6 de 9 fechas sold out</span>. Sin fechas anunciadas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ÍNDICE ============ -->
+  <nav class="indice wrap" aria-label="Índice de la portada">
+    <ol>
+      <li><a href="#disco"><span class="indice-num">01</span><span class="indice-titulo">Música</span><span class="indice-desc">INSANIA y Caótico · 27 canciones</span><span class="indice-flecha" aria-hidden="true">→</span></a></li>
+      <li><a href="#envivo"><span class="indice-num">02</span><span class="indice-titulo">En vivo</span><span class="indice-desc">Archivo del Insania Tour 2026</span><span class="indice-flecha" aria-hidden="true">→</span></a></li>
+      <li><a href="#banda"><span class="indice-num">03</span><span class="indice-titulo">La banda</span><span class="indice-desc">René, Bernie y Emmash</span><span class="indice-flecha" aria-hidden="true">→</span></a></li>
+      <li><a href="#caoticos"><span class="indice-num">04</span><span class="indice-titulo">Caóticos</span><span class="indice-desc">La comunidad de fans</span><span class="indice-flecha" aria-hidden="true">→</span></a></li>
+      <li><a href="#numeros"><span class="indice-num">05</span><span class="indice-titulo">Números</span><span class="indice-desc">Oyentes y archivo de datos · 15 nov 2026</span><span class="indice-flecha" aria-hidden="true">→</span></a></li>
+    </ol>
+  </nav>
+
+  <!-- ============ EL DISCO ============ -->
+  <section class="bloque" id="disco" aria-labelledby="t-disco">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="kicker">01 · Música</p>
+        <h2 id="t-disco">El disco</h2>
+        <p>Dos álbumes de estudio. INSANIA es un álbum conceptual: diez canciones como casos de una «autopsia emocional».</p>
+      </div>
+
+      <figure class="pull reveal">
+        <blockquote>«Hace frío aquí, no pude salir / Cuesta respirar hacia el final»</blockquote>
+        <cite>«Suspensión...» · INSANIA, pista 1</cite>
+      </figure>
+
+      <div class="disco-grid">
+        <figure class="portada reveal">
+          <img src="images/insania.jpg" alt="Portada oficial de INSANIA: fondo gris claro, tres paneles verticales con ilustraciones anatómicas en blanco y negro" width="640" height="640" loading="lazy">
+          <figcaption><strong>INSANIA · 2025.</strong> Portada oficial. <a href="https://open.spotify.com/album/3LGm9FVg9cswGMo5YneJ88" target="_blank" rel="noopener">Spotify ↗</a></figcaption>
+        </figure>
+        <div class="disco reveal">
+          <h3>INSANIA</h3>
+          <p class="meta">28 de noviembre de 2025 · 10 canciones · 36:46</p>
+          <p>«Una etapa más cruda, intensa y emocional… ritmos más contundentes, atmósferas densas y una identidad sonora más definida, sin perder la esencia.»</p>
+          <p style="font-size:14px; color:var(--ink-2)">— Puro Rock Puro, 16 dic 2025</p>
+          <p class="nota-vinvsni">La portada trae el título <b>invertido</b>: al derecho se lee <b>VINVSNI</b>. Por eso en algunos listados aparece mal leído.</p>
+          <ol class="tracklist">
+            <li><span class="n">01</span><span class="t">Suspensión...</span><span class="d">3:58</span></li>
+            <li><span class="n">02</span><span class="t">Más Que Ayer, Menos Que Mañana</span><span class="d">3:29</span></li>
+            <li><span class="n">03</span><span class="t">Días Felices: Los Lunes</span><span class="d">3:04</span></li>
+            <li><span class="n">04</span><span class="t">Tus Flores Fueron Entregadas</span><span class="d">3:52</span></li>
+            <li><span class="n">05</span><span class="t">El Último Soldado En Pie</span><span class="d">4:21</span></li>
+            <li><span class="n">06</span><span class="t">El Monstruo De Gizmo</span><span class="d">3:41</span></li>
+            <li><span class="n">07</span><span class="t">La Paradoja De Tennessee</span><span class="d">3:42</span></li>
+            <li><span class="n">08</span><span class="t">Resiliencia</span><span class="d">3:50</span></li>
+            <li><span class="n">09</span><span class="t">Donde Nada Puede Malir Sal</span><span class="d">3:44</span></li>
+            <li><span class="n">10</span><span class="t">Una Triste Mañana de Noviembre</span><span class="d">3:01</span></li>
+          </ol>
+          <p><a class="btn btn-solid" href="https://open.spotify.com/album/3LGm9FVg9cswGMo5YneJ88" target="_blank" rel="noopener">INSANIA en Spotify ↗</a>
+          <a class="btn btn-line" href="escuchar.html">Las 27 canciones</a></p>
+          <div class="caotico-mini">
+            <img src="images/caotico.jpg" alt="Portada oficial de Caótico: fondo oscuro con la palabra CAÓTICO en blanco" width="640" height="640" loading="lazy">
+            <p><strong>Caótico</strong><br>29 de septiembre de 2023 · 11 canciones · 37:56<br><a href="https://open.spotify.com/album/738DN211pKelLzZTRzIC28" target="_blank" rel="noopener">Caótico en Spotify ↗</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EN VIVO ============ -->
+  <section class="bloque" id="envivo" aria-labelledby="t-envivo">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="kicker">02 · En vivo</p>
+        <h2 id="t-envivo">El archivo de la gira</h2>
+        <p>Insania Tour 2026: nueve ciudades en tres meses. La gira está cerrada; esto es el registro, no una agenda.</p>
+      </div>
+      <div class="reveal">
+        <table class="gira">
+          <caption>Insania Tour 2026 — fechas realizadas</caption>
+          <thead>
+            <tr><th scope="col">Fecha</th><th scope="col">Ciudad</th><th scope="col">Recinto</th><th scope="col">Estado</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="fecha">21 ago 2026</td><td>Aguascalientes</td><td>Rocksí</td><td class="estado">Sold out</td></tr>
+            <tr><td class="fecha">22 ago 2026</td><td>Guadalajara</td><td>C3 Rooftop</td><td class="estado">Sold out</td></tr>
+            <tr><td class="fecha">16 oct 2026</td><td>Toluca</td><td>Foro Landó</td><td class="estado">Sold out</td></tr>
+            <tr><td class="fecha">17 oct 2026</td><td>Querétaro</td><td>Centro Cultural El Árbol</td><td class="estado">Sold out</td></tr>
+            <tr><td class="fecha">23 oct 2026</td><td>Puebla</td><td>Madre Santa Pulquería</td><td class="estado">Sold out</td></tr>
+            <tr><td class="fecha">24 oct 2026</td><td>Ciudad de México</td><td>Fuck Off Room</td><td class="estado">Sold out</td></tr>
+            <tr><td class="fecha">6 nov 2026</td><td>León</td><td>El Callejón</td><td class="estado">—</td></tr>
+            <tr><td class="fecha">7 nov 2026</td><td>San Luis Potosí</td><td>Estación Wadley</td><td class="estado">—</td></tr>
+            <tr><td class="fecha">13 nov 2026</td><td>Monterrey</td><td>Foro Corona · 21:00</td><td class="estado cierre">Cierre de gira</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="gira-fotos reveal">
+        <figure>
+          <img src="images/en-vivo-monterrey.jpg" alt="Diezell en vivo en Monterrey" width="1200" height="1500" loading="lazy">
+          <figcaption><strong>Diezell en Monterrey.</strong><br>Foto: Balleza Photography — «Diezell | Monterrey, Nuevo León», Behance, 10 dic 2025.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/en-vivo-tims-talvez.jpg" alt="Diezell en vivo en Foro Tims" width="1200" height="900" loading="lazy">
+          <figcaption><strong>Foro Tims, «TAL VEZ».</strong><br>Primera Noche Caótica, enero de 2024. Foto: Follow Control.</figcaption>
+        </figure>
+      </div>
+      <p class="aviso reveal">Gira cerrada. Sin fechas anunciadas. <a href="en-vivo.html">Ver el archivo completo en vivo →</a></p>
+    </div>
+  </section>
+
+  <!-- ============ LA BANDA ============ -->
+  <section class="bloque" id="banda" aria-labelledby="t-banda">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="kicker">03 · La banda</p>
+        <h2 id="t-banda">Tres de Monterrey</h2>
+        <p>Empezaron tocando covers en la calle Morelos, en el centro de Monterrey, en 2015. En 2018 se consolidaron como proyecto original.</p>
+      </div>
+      <ul class="banda-lista reveal">
+        <li><span class="nombre">René Guzmán</span><span class="rol">Voz</span></li>
+        <li><span class="nombre">José Bernardo «Bernie»</span><span class="rol">Guitarra</span></li>
+        <li><span class="nombre">Emmanuel Batarse «Emmash»</span><span class="rol">Batería · Producción</span></li>
+      </ul>
+      <div class="banda-fotos reveal">
+        <figure>
+          <img src="images/en-vivo-cantando.jpg" alt="René Guzmán cantando en vivo con Emmash Batarse en la batería detrás" width="1200" height="1500" loading="lazy">
+          <figcaption><strong>René cantando, Emmash en la batería.</strong><br>Foto: Balleza Photography — «Diezell | INSANIA», Behance, 9 feb 2026.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/en-vivo-guitarra-rosa.jpg" alt="Bernie tocando su guitarra eléctrica rosa en vivo" width="1200" height="1500" loading="lazy">
+          <figcaption><strong>Bernie y su guitarra rosa.</strong><br>Foto: Balleza Photography — «Diezell | INSANIA», Behance, 9 feb 2026.</figcaption>
+        </figure>
+      </div>
+      <p class="origen reveal">«El nombre de Diezell fue parte de una broma entre ellos y así se les quedó.»
+        <cite>Follow Control, enero de 2024</cite></p>
+      <p class="reveal" style="margin-top:18px"><a class="btn btn-line" href="banda.html">Conocer a la banda →</a></p>
+    </div>
+  </section>
+
+  <!-- ============ CAÓTICOS ============ -->
+  <section class="bloque" id="caoticos" aria-labelledby="t-caoticos">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="kicker">04 · Caóticos</p>
+        <h2 id="t-caoticos">La comunidad</h2>
+      </div>
+      <div class="caoticos-grid">
+        <div class="reveal">
+          <p class="caoticos-lema">Unidos, <em>jamás</em> serán vencidos.</p>
+          <p>La comunidad de fans se organiza en cuentas como <strong>@caoticosmty</strong>, <strong>@caotico_gdl</strong> e <strong>@insanialovermty</strong>. El 29 de septiembre de 2026 celebraron el tercer aniversario de <em>Caótico</em> con carruseles de letras.</p>
+          <p><a class="btn btn-line" href="caoticos.html">Caóticos en Instagram →</a></p>
+        </div>
+        <figure class="caoticos-foto reveal">
+          <img src="images/en-vivo-pose.jpg" alt="René Guzmán cantando con el puño en alto bajo luces azules" width="1200" height="1500" loading="lazy">
+          <figcaption><strong>René, puño en alto, luces azules.</strong><br>Foto: Balleza Photography — «Diezell | INSANIA», Behance, 9 feb 2026.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NÚMEROS ============ -->
+  <section class="bloque" id="numeros" aria-labelledby="t-numeros">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="kicker">05 · Números</p>
+        <h2 id="t-numeros">Diezell en números</h2>
+        <p>Dos cifras, con fecha y fuente. Nada más: el resto vive en el archivo de datos.</p>
+      </div>
+      <div class="cifras reveal">
+        <div class="cifra">
+          <div class="num">44,147</div>
+          <p><b>Oyentes mensuales en Spotify.</b><br>Corte 15 nov 2026 · Music Metrics Vault. El 8 nov eran 44,822.</p>
+        </div>
+        <div class="cifra">
+          <div class="num">1,678,233</div>
+          <p><b>Reproducciones de «El Cuento De Aquel Imperfecto Ser» en Spotify.</b><br>La canción más escuchada de la banda · corte 15 nov 2026.</p>
+        </div>
+      </div>
+      <p class="reveal" style="margin-top:18px"><a class="btn btn-line" href="crecimiento.html">Ver el archivo de datos →</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h2>DIEZELL</h2>
+      <p>Archivo independiente creado por fans. No afiliado a la banda.</p>
+      <p>Prototipo visual de portada — dirección «Papel / Archivo INSANIA». No publicado.</p>
+    </div>
+    <div>
+      <ul>
+        <li><a href="https://open.spotify.com/artist/2mEQCZzgLbG0mWCwaAEb3g" target="_blank" rel="noopener">Spotify ↗</a></li>
+        <li><a href="https://www.youtube.com/@diezellmx" target="_blank" rel="noopener">YouTube ↗</a></li>
+        <li><a href="https://www.tiktok.com/@diezellmx" target="_blank" rel="noopener">TikTok ↗</a></li>
+        <li><a href="https://www.instagram.com/diezellmx" target="_blank" rel="noopener">Instagram ↗</a></li>
+        <li><a href="https://www.facebook.com/diezelloficial" target="_blank" rel="noopener">Facebook ↗</a></li>
+        <li><a href="https://linktr.ee/diezellmx" target="_blank" rel="noopener">Linktree ↗</a></li>
+      </ul>
+      <p class="creditos">Fotos en vivo: Balleza Photography («Diezell | INSANIA», Behance, 9 feb 2026; «Diezell | Monterrey», 10 dic 2025) y Follow Control (ene 2024). Portadas: oficiales, Spotify. Crédito no equivale a permiso de reutilización fuera de este sitio.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  document.documentElement.classList.add("js");
+  /* Menú móvil: accesible por teclado (Escape cierra, foco visible). */
+  var btn=document.getElementById("menu-btn");
+  var nav=document.getElementById("nav-principal");
+  if(!btn||!nav) return;
+  function close(){ nav.classList.remove("open"); btn.setAttribute("aria-expanded","false"); btn.textContent="Menú"; }
+  btn.addEventListener("click", function(){
+    var open=nav.classList.toggle("open");
+    btn.setAttribute("aria-expanded", String(open));
+    btn.textContent=open?"Cerrar":"Menú";
+  });
+  document.addEventListener("keydown", function(e){ if(e.key==="Escape") close(); });
+  nav.addEventListener("click", function(e){ if(e.target.closest("a")) close(); });
+  document.addEventListener("click", function(e){
+    if(nav.classList.contains("open") && !e.target.closest(".masthead")) close();
+  });
+
+  /* Reveal sutil: solo si NO hay reduced-motion. */
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  if(!("IntersectionObserver" in window)) return;
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
+  }, {threshold:.12});
+  document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
