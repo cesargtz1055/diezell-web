@@ -26,13 +26,16 @@ for item in items:
     pending=('TBA' in date or 'anunciar' in date.lower())
     cls=' dz3-tour-date--pending' if pending else ''
     badge='Sin fecha confirmada' if pending else 'Concierto registrado'
-    cards.append('<article class="dz3-tour-date'+cls+'">'
+    cards.append('<article class="dz3-tour-date'+cls+'"'+(' id="ultimo-show"' if city=='Monterrey' and '13 NOV' in date else '')+'>');
                  +'<time>'+escape(date)+'</time><div><h3>'+escape(city)+'</h3>'
                  +'<p>'+escape(detail)+'</p><span class="dz3-tour-label">'+badge+'</span></div></article>')
-figures=re.findall(r'<figure class="foto-wrap">([\s\S]*?)</figure>',source)
-assert len(figures)>=8, f'Only {len(figures)} photos in archive'
+figures=re.findall(r'<figure class="foto-wrap"([^>]*)>([\s\S]*?)</figure>',source)
+assert len(figures)==10, f'Expected all ten original photos, found {len(figures)}'
 gallery=[]
-for figure in figures:
+for attrs,figure in figures:
+    id_match=re.search(r'\bid="([^"]+)"',attrs)
+    preserved_id=id_match.group(1) if id_match else ''
+    id_attr=' id="'+escape(preserved_id,quote=True)+'"' if preserved_id else ''
     img=re.search(r'<img\s+[^>]*src="([^"]+)"[^>]*>',figure)
     if not img: continue
     src=img.group(1)
@@ -45,7 +48,7 @@ for figure in figures:
     credit_match=re.search(r'<div class="foto-popover"[^>]*>[\s\S]*?<p>([\s\S]*?)</p>',figure)
     credit=credit_match.group(1) if credit_match else ''
     details=('<details class="dz3-photo-credit"><summary>Fotografía y créditos</summary><div>'+credit+'</div></details>') if credit else ''
-    gallery.append('<figure class="dz3-photo"><img src="'+escape(src,quote=True)+'" alt="'+escape(description,quote=True)+'" loading="lazy" width="680" height="850">'
+    gallery.append('<figure class="dz3-photo"'+id_attr+'><img src="'+escape(src,quote=True)+'" alt="'+escape(description,quote=True)+'" loading="lazy" width="680" height="850">'
                    +'<figcaption><span>'+escape(description)+'</span>'+details+('' if details else link)+'</figcaption></figure>')
 template=template.replace('<!-- DZ3_TOUR -->','\n'.join(cards))
 template=template.replace('<!-- DZ3_GALLERY -->','\n'.join(gallery))
