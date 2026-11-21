@@ -59,3 +59,27 @@ input,select,textarea{background:#171d23;color:#f5f6f4;border:1px solid #59616a;
  body.dz-music-page .page-head{padding-top:28px!important}
  body.dz-music-page .reproductor{padding-top:8px!important}
 }
+
+/* Content architecture: visual hierarchy follows actual fan tasks. */
+.dz-data-secondary{border-top:1px solid #333b44!important;background:#10151b!important}.dz-data-secondary .dato-num{font-size:clamp(1.5rem,5vw,2.5rem)!important;color:#f5f6f4!important}.dz-data-secondary .dato-label{font-size:.88rem!important;color:#d4d8df!important}
+.page-head .lead{max-width:72ch!important;line-height:1.65!important}
+.section .fuente-nota,.album-screen .fuente-nota{font-size:.8rem!important;color:#bdc3cc!important}
+.reproductor .dz-link{min-height:42px;display:inline-flex;align-items:center;color:#f5f6f4!important;border-color:#69717b!important}
+.dz-player .dz-badge{border-color:#c9ff12!important;color:#c9ff12!important}
+.dz-player .dz-tiempo{color:#d9dce2!important}
+.dz-player .dz-progreso{background:#515a63!important}
+.dz-player .dz-progreso-relleno{background:#c9ff12!important}
+.dz-song-context{display:none!important}
+.slogan-band .circulo-rojo{display:none!important}
+.slogan-band .brutal-head{display:block!important}
+.slogan-band h1{font-size:clamp(3.5rem,12vw,8rem)!important;line-height:.96!important;letter-spacing:-.07em!important;color:#f5f6f4!important}
+.slogan-band .dz-page-slogan{color:#c9ff12!important;font-size:clamp(1.35rem,4vw,2.5rem)!important}
+@media(max-width:767px){
+ .album-screen,.section{overflow-wrap:break-word}
+ .datos-grid{display:grid!important;grid-template-columns:1fr!important;gap:12px!important}
+ .dz-data-secondary .dato{margin:0!important;padding:16px!important;border:1px solid #39434c!important;border-radius:14px!important}
+ .slogan-band{padding-block:40px!important}
+ .slogan-band h1{font-size:clamp(3.2rem,15vw,5rem)!important}
+ .reproductor .dz-volumen{display:none!important}
+ .dz-section-nav{gap:8px!important}
+}
