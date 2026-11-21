@@ -1,7 +1,7 @@
 /* ══════════════════════════════════════════════════════════════════
    DIEZELL — INSANIA design system (rebuild 2026-11-17)
    Bone-grey like the INSANIA cover, black, ONE deep red.
-   Anton display + Archivo body. Mobile-first, 5 pages.
+   Anton display + Archivo body. Mobile-first, 37 pages.
    Tokens: gutter 20px mobile, wrap 1120px, section 48px / 80px.
    ══════════════════════════════════════════════════════════════════ */
 
@@ -634,3 +634,9 @@ button.historia { background: none; border: 0; padding: 0; font: inherit; cursor
 .miembro-foto--grupo img { aspect-ratio: 1 / 1; object-fit: cover; }
 .miembro-enlaces { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 32px; }
 .miembro-enlaces .btn-text { font-weight: 700; }
+
+/* Movimiento reducido: anula scroll suave y animaciones (accesibilidad). */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
