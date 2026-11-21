@@ -83,3 +83,19 @@ input,select,textarea{background:#171d23;color:#f5f6f4;border:1px solid #59616a;
  .reproductor .dz-volumen{display:none!important}
  .dz-section-nav{gap:8px!important}
 }
+
+/* Final mobile overlap safeguards: only the primary cover is shown. */
+.dock-cover{position:relative!important;overflow:hidden!important;isolation:isolate!important}
+.dock-cover>img{position:relative!important;z-index:1!important}
+.dock-cover>.dock-cover-dzl{z-index:2!important;display:grid;place-items:center;font-size:11px!important;font-weight:900!important;background:#222b33!important;color:#fff!important}
+.dock-cover>.dock-cover-dzl[hidden]{display:none!important}
+.dz-cover{position:relative!important;overflow:hidden!important;isolation:isolate!important}
+.dz-cover>img{max-width:100%!important;max-height:100%!important;object-fit:cover!important}
+.dz-cover-dzl[hidden]{display:none!important}
+@media(max-width:767px){
+ .page-head .stripes,.stripes,.stripes--light{display:none!important}
+ body.dz-music-page #reproductor{scroll-margin-top:82px}
+ body.dz-music-page .dz-player{position:relative;z-index:1}
+ body.dz-music-page .dz-controls{display:flex!important;align-items:center!important;justify-content:center!important}
+ body.dz-music-page .dz-btn--play{background:#f18a64!important;color:#1b100c!important}
+}
