@@ -60,6 +60,19 @@ for name,config in pages.items():
     if name=='caoticos.html':
         # Keep the historic slogan visible while making the H1 intelligible.
         source=re.sub(r'(<h1\b[^>]*>)[\s\S]*?(</h1>)',r'\g<1>Caóticos\g<2><p class="dz-page-slogan">Unidos, jamás serán vencidos.</p>',source,count=1,flags=re.I)
+    if name=='caoticos.html':
+        source=source.replace('Unirme en Instagram','Ver la comunidad en Instagram')
+        source=source.replace('29 SEP 2026 · 3.er aniversario · Luces azules 100% · Días Felices: Los Lunes · @caoticosmty','Tradiciones, encuentros y recuerdos de los fans.')
+    if name=='en-vivo.html':
+        source=source.replace('No hay fechas anunciadas por ahora — cuando la banda publique una, aparecerá aquí.','Este apartado reúne presentaciones documentadas. Para próximas fechas, consulta los canales de la banda.')
+        source=source.replace('Último show','Concierto documentado')
+        source=source.replace('Lo último que tocaron, en fotos y video.','Conciertos, fotografías y videos que forman parte del archivo.')
+    if name=='crecimiento.html':
+        source=source.replace('Cada cifra que ves aquí se guardó con su fecha y su fuente. Nada se borra: cuando un número cambia, el viejo queda y el nuevo se suma. Así se ve crecer a una banda.','Compara la evolución de Diezell con registros fechados y fuentes identificadas.')
+        source=source.replace('Los que más comentan','Actividad en comentarios')
+        source=source.replace('Lo que dicen los números','Claves de la evolución')
+    if name=='banda.html':
+        source=source.replace('<h1>Banda</h1>','<h1>La banda</h1>')
     path.write_text(source,encoding='utf-8')
 # The homepage is an editorial gateway, not a live analytics dashboard.
 home=root/'index.html'
