@@ -44,6 +44,23 @@ jobs:
             git show "FETCH_HEAD:$file" > "site/preview/$file"
           done
 
+      - name: Add independent mobile-first concept at /nuevo/
+        run: |
+          set -e
+          mkdir -p site/nuevo
+          git fetch --depth=1 origin chatgpt/direccion-visual-material-editorial
+          git show "FETCH_HEAD:conceptos/editorial-material/index.html" > site/nuevo/index.html
+          # The source lives two directories deep, but the published preview
+          # lives one directory below the website root.
+          sed -i 's|../../|../|g' site/nuevo/index.html
+          test -s site/nuevo/index.html
+          test -f site/images/en-vivo-insania.jpg
+          test -f site/images/insania.jpg
+          test -f site/images/caotico.jpg
+          test -f site/images/en-vivo-monterrey.jpg
+          grep -q 'class="quick"' site/nuevo/index.html
+          grep -q 'class="menu-btn"' site/nuevo/index.html
+
       - name: Verify original and preview stay separate
         run: |
           set -e
