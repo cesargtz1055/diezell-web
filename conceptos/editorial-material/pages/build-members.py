@@ -29,7 +29,9 @@ for slug in slugs:
         src=cap(r'src="([^"]+)"',img)
         alt=plain(cap(r'alt="([^"]*)"',img)) or (name+' en vivo')
         href=cap(r'<a href="(https?://[^"]+)"',fig)
-        photos.append('<figure class="dz3-member-photo"><img src="'+escape(src,quote=True)+'" alt="'+escape(alt,quote=True)+'" width="720" height="900" loading="lazy"><figcaption>'+escape(alt)+(' · <a href="'+escape(href,quote=True)+'" target="_blank" rel="noopener">Fuente ↗</a>' if href else '')+'</figcaption></figure>')
+        credit=cap(r'<div class="foto-popover"[^>]*>[\\s\\S]*?<p>([\\s\\S]*?)</p>',fig)
+        details=('<details class="dz3-member-credit"><summary>Créditos y fuente</summary><div>'+credit+'</div></details>') if credit else ''
+        photos.append('<figure class="dz3-member-photo"><img src="'+escape(src,quote=True)+'" alt="'+escape(alt,quote=True)+'" width="720" height="900" loading="lazy"><figcaption>'+escape(alt)+details+(' · <a href="'+escape(href,quote=True)+'" target="_blank" rel="noopener">Fuente ↗</a>' if href and not details else '')+'</figcaption></figure>')
     # External profile links already present in original content.
     social=re.findall(r'<a href="(https://www\.instagram\.com/[^"]+)"[^>]*>([\s\S]*?)</a>',source)
     social_unique=[]
