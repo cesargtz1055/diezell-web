@@ -22,6 +22,19 @@
   let previouslyFocused=null;
   let expanded=false;
   const MAX_SECONDS=90;
+  // The expanded player must not offer playback/seek before a track is loaded.
+  function hasPlayableTrack(){
+    return Boolean(audio.currentSrc||audio.getAttribute('src')||audio.querySelector('source[src]'));
+  }
+  function syncAvailability(){
+    const ready=hasPlayableTrack() && audio.error===null;
+    for(const control of [play,next,previous,sheetPlay,sheetNext,sheetPrevious,byId('dz3-sheet-next-after')]){
+      if(control)control.disabled=!ready;
+    }
+    progress.setAttribute('aria-disabled',String(!ready));
+    progress.tabIndex=ready?0:-1;
+    if(!ready)byId('dz3-sheet-cta').hidden=true;
+  }
 
   function track(){
     const title=byId('dock-titulo')?.textContent?.trim();
@@ -33,6 +46,7 @@
     return Math.floor(seconds/60)+':'+String(seconds%60).padStart(2,'0');
   }
   function sync(){
+    syncAvailability();
     const label=byId('dock-titulo')?.textContent?.trim()||'Diezell';
     const subtitle=byId('dock-album')?.textContent?.trim()||'Adelantos de 90 segundos';
     byId('dz3-sheet-title').textContent=label;
@@ -122,7 +136,7 @@
   });
   byId('dz3-sheet-next-after').addEventListener('click',()=>next?.click());
   function seek(frac){
-    if(!audio.src)return;
+    if(!hasPlayableTrack()||audio.error)return;
     audio.currentTime=Math.min(MAX_SECONDS,Math.max(0,frac*MAX_SECONDS));
     // Seeking backwards must dismiss the finished-preview CTA immediately.
     // The app engine owns the primary CTA; this sheet has its own state.
@@ -141,7 +155,7 @@
     if(event.key==='Home'){event.preventDefault();seek(0);}
     if(event.key==='End'){event.preventDefault();seek(1);}
   });
-  ['play','pause','timeupdate','loadedmetadata','ended','emptied'].forEach(name=>audio.addEventListener(name,sync));
+  ['play','pause','timeupdate','loadedmetadata','loadeddata','canplay','loadstart','ended','emptied','error'].forEach(name=>audio.addEventListener(name,sync));
   audio.addEventListener('error',()=>{
     setStatus('Este adelanto no está disponible. Puedes escucharlo en Spotify o YouTube.');
     sync();
@@ -159,6 +173,6 @@
   document.querySelectorAll('.dz3-album-embed').forEach(details=>{
     details.hidden=true;
   });
-  if(!audio.src)setStatus('');
+  if(!hasPlayableTrack())setStatus('');
   sync();
 })();
