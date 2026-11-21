@@ -50,6 +50,11 @@ for name,config in pages.items():
     path=root/name
     if not path.exists():raise SystemExit(f'Missing expected page {path}')
     source=path.read_text(encoding='utf-8')
+    if name=='escuchar.html':
+        # One visible player on Music: keep the audio element and JS bound to
+        # the hidden dock; controls remain available in the full player.
+        source=source.replace('<body>', '<body class="dz-music-page">', 1)
+        source=source.replace('Primero INSANIA, luego Caótico, luego los sencillos.', 'Canciones, álbumes y adelantos en un solo lugar.')
     source=replace_headings(source,config['labels'])
     source=add_intro(source,config)
     if name=='caoticos.html':
